@@ -1,0 +1,34 @@
+{
+  "name": "agencysite",
+  "private": true,
+  "description": "agencysite",
+  "version": "1.0.0",
+  "author": "agencysite",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "env-cmd": "^10.1.0",
+    "gatsby": "next",
+    "gatsby-plugin-sass": "next",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "5.1.2",
+    "react-slick": "^0.30.3",
+    "redux": "3.7.2",
+    "sass": "^1.84.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "develop": "env-cmd -f .env.development gatsby develop",
+    "build:stag": "cross-env GENERATE_SOURCEMAP=false env-cmd -f .env.staging gatsby build",
+    "build:prod": "cross-env GENERATE_SOURCEMAP=false env-cmd -f .env.prod gatsby build",
+    "start": "env-cmd -f .env.development gatsby develop",
+    "serve": "gatsby serve"
+  },
+  "devDependencies": {
+    "ajv": "^7.2.4"
+  }
+}
