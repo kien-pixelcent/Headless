@@ -4,7 +4,7 @@ import "../styles/lightbox.min.css"
 import "../styles/slick.css"
 import "../styles/main.scss"
 import "../styles/customStyle.scss"
-// import "../styles/dashicons.min.css"
+import "../styles/dashicons.min.css"
 import Header from './Header'
 import Footer from './Footer'
 
