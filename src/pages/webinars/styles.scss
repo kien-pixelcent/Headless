@@ -1,0 +1,80 @@
+.sc-webinars {
+  padding: 100px 0px;
+}
+.webinars-lists .lists {
+  gap: 90px 30px;
+}
+.box-webinar {
+  flex: 0 0 auto;
+  width: calc((100% - 60px) / 3);
+  gap: 20px;
+}
+.box-webinar figure {
+  overflow: hidden;
+  max-height: 433px;
+  height: 100%;
+  margin-bottom: 22px;
+}
+.box-webinar > * {
+  flex: 0 0 100%;
+}
+.box-webinar figure img {
+  object-fit: cover;
+  height: 100%;
+}
+.box-webinar h3 {
+  font-size: 26px;
+  line-height: 1.2;
+}
+.box-webinar .desc {
+  font-size: 20px;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 1199px) {
+  .box-webinar {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media only screen and (max-width: 999px) {
+  .box-webinar figure {
+    max-height: unset;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .webinars-lists .lists {
+    gap: 30px;
+  }
+  .box-webinar {
+    width: 100%;
+  }
+}
+.banner {
+  padding: 100px 0px;
+}
+.banner .h1-title {
+  font-size: 75px;
+  line-height: 122.667%;
+}
+.banner .desc,
+.banner .sub-title {
+  font-size: 45px;
+  line-height: 204.444%;
+}
+@media only screen and (max-width: 1199px) {
+  .banner .h1-title {
+    font-size: 36px;
+  }
+  .banner .desc {
+    font-size: 24px;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .banner {
+    height: 332px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
