@@ -1,0 +1,8 @@
+{
+  "buildCommand": "gatsby build",
+  "git": {
+    "deploymentEnabled": {
+      "development": true
+    }
+  }
+}
