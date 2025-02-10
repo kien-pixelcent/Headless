@@ -110,7 +110,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-5.svg`} className="image wp-image-239  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-858" id="mega-menu-item-858">
-                                        <Link  to={`${process.env.REACT_APP_BASE_URL}/service/facebook-advertising`} className="mega-menu-link" href="#">Facebook Advertising</Link>
+                                        <Link  to="/service/facebook-advertising" className="mega-menu-link" href="#">Facebook Advertising</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-10" id="mega-menu-item-text-10">
                                         <div className="textwidget">
@@ -129,7 +129,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-2.svg`} className="image wp-image-240  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-859" id="mega-menu-item-859">
-                                        <Link className="mega-menu-link" to={`${process.env.REACT_APP_BASE_URL}/service/search-engine-optimization`}>Search Engine Marketing</Link>
+                                        <Link className="mega-menu-link" to="/service/search-engine-optimization">Search Engine Marketing</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-11" id="mega-menu-item-text-11">
                                         <div className="textwidget">
@@ -144,7 +144,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-6.svg`} className="image wp-image-241  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-860" id="mega-menu-item-860"> 
-                                        <Link className="mega-menu-link" to={`${process.env.REACT_APP_BASE_URL}/service/lead-management`}>Lead Management (CRM)</Link>
+                                        <Link className="mega-menu-link" to="/service/lead-management">Lead Management (CRM)</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-12" id="mega-menu-item-text-12">
                                         <div className="textwidget">
@@ -163,7 +163,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-3.svg`} className="image wp-image-242  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-861" id="mega-menu-item-861">
-                                      <Link className="mega-menu-link" to={`${process.env.REACT_APP_BASE_URL}/service/google-maps-marketing`}>Google Maps Marketing</Link>
+                                      <Link className="mega-menu-link" to="/service/google-maps-marketing">Google Maps Marketing</Link>
                                         </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-17" id="mega-menu-item-text-17">
                                         <div className="textwidget">
@@ -178,7 +178,7 @@ const Header = () => {
                                         <img width={40} height={40} src={`${process.env.REACT_APP_BASE_URL}/img/icon-reputation-management.png`} className="image wp-image-864  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-862" id="mega-menu-item-862">
-                                      <Link className="mega-menu-link" to={`${process.env.REACT_APP_BASE_URL}/service/digital-reputation-management`}>Reputation Management</Link>
+                                      <Link className="mega-menu-link" to="/service/digital-reputation-management">Reputation Management</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-15" id="mega-menu-item-text-15">
                                         <div className="textwidget">
@@ -197,7 +197,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-4.svg`} className="image wp-image-244  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-863" id="mega-menu-item-863">
-                                      <Link className="mega-menu-link" to={`${process.env.REACT_APP_BASE_URL}/service/google-advertising`}>Google Paid Advertising</Link>
+                                      <Link className="mega-menu-link" to="/service/google-advertising">Google Paid Advertising</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-14" id="mega-menu-item-text-14">
                                         <div className="textwidget">
@@ -405,13 +405,13 @@ const Header = () => {
                               </svg> </span></button>
                         <ul className="sub-menu">
                           <li id="menu-item-409" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-409">
-                            <Link to={`${process.env.REACT_APP_BASE_URL}/our-team`} className="menu-link"> <span className="ast-icon icon-arrow"> <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043">
+                            <Link to="/our-team" className="menu-link"> <span className="ast-icon icon-arrow"> <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043">
                               <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
                             </svg> </span> <span className="menu-text">Our Team</span>
                             </Link>
                           </li>
                           <li id="menu-item-408" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-408">
-                            <Link to={`${process.env.REACT_APP_BASE_URL}/event`} className="menu-link"> <span className="ast-icon icon-arrow"> <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043">
+                            <Link to="/event" className="menu-link"> <span className="ast-icon icon-arrow"> <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043">
                               <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
                             </svg> </span> <span className="menu-text">Events</span>
                             </Link>
