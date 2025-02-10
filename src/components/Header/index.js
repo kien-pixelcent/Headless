@@ -39,7 +39,7 @@ const Header = () => {
                           </div>
                         </div>
                         <ul id="mega-menu-primary" className="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="fade_up" data-effect-speed={200} data-effect-mobile="disabled" data-effect-speed-mobile={0} data-mobile-force-width="false" data-second-click="go" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint={768} data-unbind="true" data-mobile-state="collapse_all" data-mobile-direction="vertical" data-hover-intent-timeout={300} data-hover-intent-interval={100}>
-                          <li className="mega-two-column mega-max-w-560 mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-30 two-column max-w-560" id="mega-menu-item-30">
+                          {/* <li className="mega-two-column mega-max-w-560 mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-30 two-column max-w-560" id="mega-menu-item-30">
                             <a className="mega-menu-link" href="#" aria-expanded="false" tabIndex={0}> Who We Help <span className="mega-indicator">
                             </span> </a>
                             <ul className="mega-sub-menu">
@@ -86,7 +86,7 @@ const Header = () => {
                                 </ul>
                               </li>
                             </ul>
-                          </li>
+                          </li> */}
                           <li className="mega-full-w-columns mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-31 full-w-columns" id="mega-menu-item-31"> <a className="mega-menu-link" href="#" aria-expanded="false" tabIndex={0}>Our Services<span className="mega-indicator"> </span> </a>
                             <ul className="mega-sub-menu">
                               <li className="mega-menu-row" id="mega-menu-31-0">
@@ -96,7 +96,7 @@ const Header = () => {
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-8" id="mega-menu-item-media_image-8">
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-1.svg`} className="image wp-image-238  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
-                                      <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-857" id="mega-menu-item-857"> <Link className="mega-menu-link" to="service/website-development">Website Development</Link> </li>
+                                      <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-857" id="mega-menu-item-857"> <Link className="mega-menu-link" to="/service/website-development">Website Development</Link> </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-9" id="mega-menu-item-text-9">
                                         <div className="textwidget">
                                           <p>Let us help you make it perfect with a personalized website that converts website visits into new patients.</p>
@@ -110,7 +110,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-5.svg`} className="image wp-image-239  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-858" id="mega-menu-item-858">
-                                        <Link  to="service/facebook-advertising" className="mega-menu-link" href="#">Facebook Advertising</Link>
+                                        <Link  to="/service/facebook-advertising" className="mega-menu-link" href="#">Facebook Advertising</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-10" id="mega-menu-item-text-10">
                                         <div className="textwidget">
@@ -129,7 +129,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-2.svg`} className="image wp-image-240  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-859" id="mega-menu-item-859">
-                                        <Link className="mega-menu-link" to="service/search-engine-optimization">Search Engine Marketing</Link>
+                                        <Link className="mega-menu-link" to="/service/search-engine-optimization">Search Engine Marketing</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-11" id="mega-menu-item-text-11">
                                         <div className="textwidget">
@@ -144,7 +144,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-6.svg`} className="image wp-image-241  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-860" id="mega-menu-item-860"> 
-                                        <Link className="mega-menu-link" to="service/lead-management">Lead Management (CRM)</Link>
+                                        <Link className="mega-menu-link" to="/service/lead-management">Lead Management (CRM)</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-12" id="mega-menu-item-text-12">
                                         <div className="textwidget">
@@ -163,7 +163,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-3.svg`} className="image wp-image-242  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-861" id="mega-menu-item-861">
-                                      <Link className="mega-menu-link" to="service/google-maps-marketing">Google Maps Marketing</Link>
+                                      <Link className="mega-menu-link" to="/service/google-maps-marketing">Google Maps Marketing</Link>
                                         </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-17" id="mega-menu-item-text-17">
                                         <div className="textwidget">
@@ -178,7 +178,7 @@ const Header = () => {
                                         <img width={40} height={40} src={`${process.env.REACT_APP_BASE_URL}/img/icon-reputation-management.png`} className="image wp-image-864  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-862" id="mega-menu-item-862">
-                                      <Link className="mega-menu-link" to="service/digital-reputation-management">Reputation Management</Link>
+                                      <Link className="mega-menu-link" to="/service/digital-reputation-management">Reputation Management</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-15" id="mega-menu-item-text-15">
                                         <div className="textwidget">
@@ -197,7 +197,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-4.svg`} className="image wp-image-244  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-863" id="mega-menu-item-863">
-                                      <Link className="mega-menu-link" to="service/google-advertising">Google Paid Advertising</Link>
+                                      <Link className="mega-menu-link" to="/service/google-advertising">Google Paid Advertising</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-14" id="mega-menu-item-text-14">
                                         <div className="textwidget">
@@ -220,7 +220,7 @@ const Header = () => {
                               </li>
                             </ul>
                           </li>
-                          <li className="mega-cus_header_call_text mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-hide-on-mobile mega-disable-link mega-menu-item-494 cus_header_call_text" id="mega-menu-item-494"> <a className="mega-menu-link" tabIndex={0}>Call Text</a> </li>
+                          {/* <li className="mega-cus_header_call_text mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-hide-on-mobile mega-disable-link mega-menu-item-494 cus_header_call_text" id="mega-menu-item-494"> <a className="mega-menu-link" tabIndex={0}>Call Text</a> </li> */}
                           <li className="mega-is_hide mega-btn-get-started mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-222 is_hide btn-get-started" id="mega-menu-item-222"> <a className="mega-menu-link" href="#" tabIndex={0}>Get Started</a> </li>
                         </ul>
                       </div>
