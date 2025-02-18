@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../../components/layout"
+import FaqItem from '../../../components/FaqItem'
 import './styles.scss';
 
 const FBAdvertising = () => {
@@ -135,35 +136,7 @@ const FBAdvertising = () => {
               <div className="ast-container">
                 <h2 className="h2-title f-soleto fw-800 color-0659A9 text-center">Frequently Asked Questions</h2>
                 <div className="faq-list">
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How can you get Botox patients with Facebook ads?
-                    </h3>
-                    <div className="content">
-                      <p>Facebook ads are an effective way to target women and men in an ideal age range. Our ads are
-                        crafted in a way that speaks to people who can benefit from a fresher look and are familiar with
-                        aesthetic procedures. Combining these creatives with a qualifying funnel, we entice prospective
-                        patients to reach out for an appointment,</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">What types of medical practices can benefit from
-                      Facebook ads?</h3>
-                    <div className="content">
-                      <p>Med Spas and Medical Wellness Centers that offer aesthetic, wellness, and body contouring
-                        procedures are having great success with Facebook ads. However, due to platform restrictions,
-                        other strategies may be needed for sensitive services like hormone therapy or sexual wellness.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How much does Facebook advertising cost?</h3>
-                    <div className="content">
-                      <p>The fee for implementing and managing Facebook/ Instagram advertising will range from
-                        $1,500-2,500/mo, depending on the total marketing program. In terms of an advertising budget,
-                        you want to allocate a minimum of $1,000/mo per procedure advertised. In a busy season, you want
-                        to scale that 3x and more, as long as you get a positive RO.</p>
-                    </div>
-                  </div>
+                  <FaqItem title="How can you get Botox patients with Facebook ads?" description="Facebook ads are an effective way to target women and men in an ideal age range. Our ads are crafted in a way that speaks to people who can benefit from a fresher look and are familiar with aesthetic procedures. Combining these creatives with a qualifying funnel, we entice prospective patients to reach out for an appointment," />
                 </div>
               </div>
             </section>

@@ -1,0 +1,32 @@
+.latest-podcast .lists .box {
+  width: calc((100% - 60px) / 3);
+}
+@media only screen and (max-width: 1199px) {
+  .latest-podcast .lists .box {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .featured-podcast .h2-title,
+  .latest-podcast .h2-title,
+  .featured-podcast-box .box-content .h2-title {
+    font-size: 36px;
+  }
+  .box-host {
+    max-width: unset;
+    width: 100%;
+  }
+  .featured-podcast-box .box-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .box-podcast .h3-title {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .latest-podcast .lists .box {
+    width: 100%;
+  }
+}

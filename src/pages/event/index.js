@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
+import AboutBanner from "../../components/AboutBanner"
 import './styles.scss';
 
 const FBAdvertising = () => {
@@ -9,15 +10,7 @@ const FBAdvertising = () => {
       <div className="hfeed site" id="page">
         <div id="content" className="site-content">
           <div className="main-content">
-            <section className="banner" style={{ "background": "no-repeat center/cover url('https://agencysite.bwpsites.com/wp-content/uploads/2024/11/default-banner.jpg')" }}>
-              <div className="ast-container">
-                <div className="ast-full-width ast-flex align-items-center justify-content-center banner-inner">
-                  <div className="banner-content ast-flex gap-24 flex-column">
-                    <h1 className="h1-title fw-800 f-soleto text-white text-center">Events</h1>
-                  </div>
-                </div>
-              </div>
-            </section>
+            <AboutBanner title="Events" description=""/>
             <section className="section sc-events-list">
               <div className="ast-container">
                 <div className="cols-2 ast-flex">

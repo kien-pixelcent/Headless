@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../../components/layout"
+import FaqItem from '../../../components/FaqItem'
 import './styles.scss';
 
 const SearchEngine = () => {
@@ -192,56 +193,7 @@ const SearchEngine = () => {
               <div className="ast-container">
                 <h2 className="h2-title f-soleto fw-800 color-0659A9 text-center">Frequently Asked Questions</h2>
                 <div className="faq-list">
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Why is SEO crucial for my medical practice?</h3>
-                    <div className="content">
-                      <p>SEO helps your practice rank higher on search engines, ensuring that patients find your services
-                        when searching for relevant treatments.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How long does it take to see results from SEO?</h3>
-                    <div className="content">
-                      <p>SEO is a long-term strategy, and results typically start to show within 3-6 months, depending on
-                        your competition and the scope of your optimization. However, the benefits of SEO, such as
-                        increased visibility and consistent lead generation, continue to grow over time.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Will SEO work for my clinic if I’m in a competitive
-                      market?</h3>
-                    <div className="content">
-                      <p>Absolutely. While competitive markets may take more time and effort to see top rankings, our
-                        proven SEO strategies are designed to get your clinic noticed, even in highly competitive areas.
-                        We focus on targeting the best keywords and optimizing your site for maximum conversion.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How do I know if SEO is working for my practice?
-                    </h3>
-                    <div className="content">
-                      <p>We provide regular reports and analytics that track your website’s rankings, traffic, and lead
-                        generation. You’ll be able to see clear metrics showing how your practice is improving its
-                        online visibility and attracting more patients.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Can SEO help my practice in addition to paid ads?
-                    </h3>
-                    <div className="content">
-                      <p>Yes! SEO and paid ads can work together for maximum results. While paid ads bring quick, targeted
-                        traffic, SEO creates long-term organic traffic that builds over time. Both strategies complement
-                        each other and can be integrated into a well-rounded digital marketing plan.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Do I need a new website for SEO to work?</h3>
-                    <div className="content">
-                      <p>Not necessarily. If your website is already mobile-friendly, fast, and easy to navigate, we can
-                        optimize it for SEO without a complete redesign. However, if your website is outdated or not
-                        optimized for performance, a refresh might be beneficial to get the best results.</p>
-                    </div>
-                  </div>
+                  <FaqItem title="Why is SEO crucial for my medical practice?" description="SEO helps your practice rank higher on search engines, ensuring that patients find your services when searching for relevant treatments." />
                 </div>
               </div>
             </section>

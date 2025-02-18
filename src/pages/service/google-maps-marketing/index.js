@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../../components/layout"
+import FaqItem from '../../../components/FaqItem'
 import './styles.scss';
 
 const GoogleMapMarketing = () => {
@@ -154,41 +155,7 @@ const GoogleMapMarketing = () => {
                 <h2 className="h2-title f-soleto fw-800 color-0659A9 text-center">FAQ: Google Maps Marketing for Medical Practices
                 </h2>
                 <div className="faq-list">
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">What is Google Maps Marketing?</h3>
-                    <div className="content">
-                      <p>Google Maps Marketing involves optimizing your Google My Business profile to ensure your practice
-                        shows up in local search results. This helps prospective patients find you when searching for
-                        medical services near them.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Why is Google Maps Marketing important for my
-                      medical practice?</h3>
-                    <div className="content">
-                      <p>With the rise of “near me” searches, having your practice listed and optimized on
-                        Google Maps increases your visibility and credibility. It directly influences the
-                        decision-making process of local patients searching for medical wellness treatments.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How can I ensure my practice appears on Google Maps?
-                    </h3>
-                    <div className="content">
-                      <p>By creating a fully optimized Google My Business profile, keeping your information accurate and
-                        up to date, and collecting reviews, you’ll boost your chances of appearing at the top of
-                        relevant local searches.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Can Google Maps Marketing help me stand out from
-                      competitors?</h3>
-                    <div className="content">
-                      <p>Yes! With Google Maps Marketing, you can display your positive reviews, location, hours, and
-                        services in front of people actively searching for medical wellness services, giving you an edge
-                        over competitors who aren’t utilizing this tool effectively.</p>
-                    </div>
-                  </div>
+                  <FaqItem title="What is Google Maps Marketing?" description="Google Maps Marketing involves optimizing your Google My Business profile to ensure your practice shows up in local search results. This helps prospective patients find you when searching for medical services near them." />
                 </div>
               </div>
             </section>

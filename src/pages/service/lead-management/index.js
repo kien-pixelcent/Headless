@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../../components/layout"
+import FaqItem from '../../../components/FaqItem'
 import './styles.scss';
 
 const LeadManagement = () => {
@@ -190,53 +191,7 @@ const LeadManagement = () => {
               <div className="ast-container">
                 <h2 className="h2-title f-soleto fw-800 color-0659A9 text-center">FAQ</h2>
                 <div className="faq-list">
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How does PracticeFlow help me convert leads into
-                      patients?</h3>
-                    <div className="content">
-                      <p>PracticeFlow automates follow-ups with prospects through text, email, voicemail, and more. This
-                        helps engage leads until they’re ready to schedule an appointment, increasing conversion rates.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Can I manage all my communications in one place?
-                    </h3>
-                    <div className="content">
-                      <p>Yes! PracticeFlow integrates text messages, emails, phone calls, and social media messages into
-                        one platform for seamless communication.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Is the appointment scheduling process automated with
-                      AI?</h3>
-                    <div className="content">
-                      <p>Yes! PracticeFlow uses AI to handle appointment booking and inquiries, ensuring that your leads
-                        are scheduled promptly and efficiently, 24/7.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Is PracticeFlow HIPAA-compliant?</h3>
-                    <div className="content">
-                      <p>Yes, PracticeFlow is fully HIPAA-compliant, ensuring that your patient data is kept secure and
-                        private.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How can I manage reviews with PracticeFlow?</h3>
-                    <div className="content">
-                      <p>PracticeFlow allows you to request reviews via SMS or email, automatically post positive feedback
-                        to Google, and flag negative reviews for further action.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Can I track the effectiveness of my marketing
-                      campaigns?</h3>
-                    <div className="content">
-                      <p>Yes, PracticeFlow’s advanced analytics dashboard tracks the performance of your marketing
-                        campaigns, providing insights into ROI, appointment rates, and lead conversion.</p>
-                    </div>
-                  </div>
+                  <FaqItem title="How does PracticeFlow help me convert leads into patients" description="PracticeFlow automates follow-ups with prospects through text, email, voicemail, and more. This helps engage leads until they’re ready to schedule an appointment, increasing conversion rates." />
                 </div>
               </div>
             </section>

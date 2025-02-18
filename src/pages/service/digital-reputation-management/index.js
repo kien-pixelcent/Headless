@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../../components/layout"
+import FaqItem from '../../../components/FaqItem'
 import './styles.scss';
 
 const DigitalReputationManagement = () => {
@@ -136,53 +137,7 @@ const DigitalReputationManagement = () => {
               <div className="ast-container">
                 <h2 className="h2-title f-soleto fw-800 color-0659A9 text-center">FAQ</h2>
                 <div className="faq-list">
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Why is my practice's online reputation important?
-                    </h3>
-                    <div className="content">
-                      <p>Your online reputation is often the first impression potential patients have of your practice. A
-                        strong, positive reputation builds trust and influences decisions, helping attract new patients.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How do you help generate more positive reviews?</h3>
-                    <div className="content">
-                      <p>We use a variety of strategies to encourage satisfied patients to leave positive reviews. Our
-                        system automates review requests, making it easier for your patients to share their experiences.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">What platforms do you manage for reviews?</h3>
-                    <div className="content">
-                      <p>We specialize in managing your reviews on key platforms like Google, Facebook, and Yelp, which
-                        are the most important for both prospective patients and search engines.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How do you handle negative reviews?</h3>
-                    <div className="content">
-                      <p>We monitor reviews continuously and respond to negative feedback quickly. We ensure negative
-                        reviews are addressed professionally and are not allowed to negatively impact your search
-                        rankings.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Can you help me improve my Google reviews?</h3>
-                    <div className="content">
-                      <p>Yes! Our team works with you to ensure that your practice is getting positive reviews on Google,
-                        which is crucial for local SEO and building trust with new patients.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Is your reputation management service
-                      HIPAA-compliant?</h3>
-                    <div className="content">
-                      <p>Yes, all of our services, including reputation management, are fully HIPAA-compliant, ensuring
-                        that patient privacy is maintained at all times.</p>
-                    </div>
-                  </div>
+                  <FaqItem title="Why is my practice's online reputation important?" description="Your online reputation is often the first impression potential patients have of your practice. A strong, positive reputation builds trust and influences decisions, helping attract new patients." />
                 </div>
               </div>
             </section>

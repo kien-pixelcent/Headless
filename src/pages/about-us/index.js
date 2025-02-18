@@ -1,4 +1,5 @@
 import React from "react"
+import AboutBanner from "../../components/AboutBanner";
 import Layout from "../../components/layout"
 import './styles.scss';
 
@@ -7,16 +8,7 @@ const AboutUs = () => {
   return (
     <Layout>
       <div className="main-content">
-        <section className="banner" style={{ "background": "no-repeat center/cover url('https://agencysite.bwpsites.com/wp-content/uploads/2024/11/default-banner.jpg')" }}>
-          <div className="ast-container">
-            <div className="ast-full-width ast-flex align-items-center justify-content-center banner-inner">
-              <div className="banner-content ast-flex flex-column">
-                <h1 className="h1-title fw-800 f-soleto text-white text-center">About Us</h1>
-                <div className="desc text-white text-center">Dedicated to Success Through Results!</div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <AboutBanner title="About Us" description="Dedicated to Success Through Results!"/>
         <section className="section sc-about-main-content pt-100 pb-100">
           <div className="ast-container">
             <figure className="wcm-logo"><img src="https://agencysite.bwpsites.com/wp-content/uploads/2024/11/WCM-logo-1.png" height={97} alt="Who We Are" /></figure>

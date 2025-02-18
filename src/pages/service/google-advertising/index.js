@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../../components/layout"
+import FaqItem from '../../../components/FaqItem'
 import './styles.scss';
 
 const GoogleAdvertising = () => {
@@ -140,51 +141,7 @@ const GoogleAdvertising = () => {
                 <h2 className="h2-title f-soleto fw-800 color-0659A9 text-center">FAQ: Google Paid Advertising for Medical Practices
                 </h2>
                 <div className="faq-list">
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">What is Google Paid Advertising?</h3>
-                    <div className="content">
-                      <p>Google Paid Advertising, or Google Ads, is a platform where you pay for your medical practice’s
-                        website to appear at the top of Google search results. This allows you to target patients
-                        actively searching for services you provide, such as hormone optimization, anti-aging
-                        treatments, or weight loss solutions.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How can Google Ads help my medical practice attract
-                      new patients?</h3>
-                    <div className="content">
-                      <p>Google Ads increases your medical practice’s visibility by placing it at the top of search
-                        results for relevant keywords. Patients searching for specific medical treatments will be
-                        directed to your practice’s website, increasing the chances of them booking an appointment.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">Can I track the results of my Google Ads campaigns?
-                    </h3>
-                    <div className="content">
-                      <p>Yes, Google Ads provides detailed analytics that allows you to track the performance of your
-                        campaigns, including clicks, impressions, and conversions. This helps you understand the return
-                        on investment (ROI) of your advertising spend.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How do you keep Google Ads campaigns cost-effective?
-                    </h3>
-                    <div className="content">
-                      <p>Our team of experts specializes in optimizing your Google Ads campaigns to ensure the best
-                        results with the lowest costs. By targeting high-converting keywords and continuously refining
-                        ad copy, we maximize the efficiency of your advertising budget.</p>
-                    </div>
-                  </div>
-                  <div className="faq-item position-relative">
-                    <h3 className="title f-soleto fw-700 color-0659A9 mb-0">How soon can I expect to see results from Google
-                      Ads?</h3>
-                    <div className="content">
-                      <p>Google Ads can provide quick results. Your ads will appear at the top of relevant search results
-                        within days, driving immediate visibility and increasing the chances of attracting new patients.
-                      </p>
-                    </div>
-                  </div>
+                  <FaqItem title="What is Google Paid Advertising?" description="Google Paid Advertising, or Google Ads, is a platform where you pay for your medical practice’s website to appear at the top of Google search results. This allows you to target patients actively searching for services you provide, such as hormone optimization, anti-aging treatments, or weight loss solutions." />
                 </div>
               </div>
             </section>

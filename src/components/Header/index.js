@@ -212,11 +212,13 @@ const Header = () => {
                             </ul>
                           </li>
                           <li className="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-33" id="mega-menu-item-33"> <a className="mega-menu-link" href="#" tabIndex={0}>Our Method</a> </li>
-                          <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-372" id="mega-menu-item-372"> <a className="mega-menu-link" href="#" aria-expanded="false" tabIndex={0}>About Us<span className="mega-indicator"> </span> </a>
+                          <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-372" id="mega-menu-item-372"> <Link to="/about-us" className="mega-menu-link" aria-expanded="false" tabIndex={0}>About Us<span className="mega-indicator"> </span> </Link>
                             <ul className="mega-sub-menu">
-                              <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-409" id="mega-menu-item-409"> <a className="mega-menu-link" href="#">Our
-                                Team</a> </li>
-                              <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-408" id="mega-menu-item-408"> <a className="mega-menu-link" href="#">Events</a>
+                              <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-409" id="mega-menu-item-409"> <Link className="mega-menu-link" to="/our-team">Our
+                                Team</Link> </li>
+                              <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-408" id="mega-menu-item-408"> <Link className="mega-menu-link" to="/event">Events</Link>
+                              </li>
+                              <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-408" id="mega-menu-item-407"> <Link className="mega-menu-link" to="/webinars">Webinars</Link>
                               </li>
                             </ul>
                           </li>
