@@ -1,8 +1,29 @@
 import * as React from "react"
 import "./styles.scss"
 import { Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      cms {
+        themeSettings {
+          menuTitle
+          pageTitle
+          themeOptionsSettings {
+            defaultLogo {
+              node {
+                altText
+                id
+                sourceUrl
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+  const content = data.cms.themeSettings
   return (
     <header className="site-header header-main-layout-1 ast-primary-menu-enabled ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline" id="masthead">
       <div id="ast-desktop-header" data-toggle-type="dropdown">
@@ -15,7 +36,7 @@ const Header = () => {
                     <div className="site-branding ast-site-identity">
                       <span className="site-logo-img">
                         <Link className="custom-logo-link" to="/">
-                          <img width={250} height={72} src={`${process.env.REACT_APP_BASE_URL}/img/logo-1.png`} className="custom-logo" alt="MD Marketing Agency" decoding="async" />
+                          <img width={250} height={72} src={content?.themeOptionsSettings?.defaultLogo?.node?.sourceUrl} className="custom-logo" alt="MD Marketing Agency" decoding="async" />
                         </Link>
                       </span>
                     </div>
@@ -26,8 +47,8 @@ const Header = () => {
                     <div className="ast-main-header-bar-alignment">
                       <div id="mega-menu-wrap-primary" className="mega-menu-wrap">
                         <div className="mega-menu-toggle">
-                          <div className="mega-toggle-blocks-left"> </div>
-                          <div className="mega-toggle-blocks-center"> </div>
+                          <div className="mega-toggle-blocks-left"></div>
+                          <div className="mega-toggle-blocks-center"></div>
                           <div className="mega-toggle-blocks-right">
                             <div className="mega-toggle-block mega-menu-toggle-animated-block mega-toggle-block-0" id="mega-toggle-block-0">
                               <button aria-label="Toggle Menu" className="mega-toggle-animated mega-toggle-animated-slider" type="button" aria-expanded="false">
@@ -110,7 +131,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-5.svg`} className="image wp-image-239  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-858" id="mega-menu-item-858">
-                                        <Link  to="/service/facebook-advertising" className="mega-menu-link" href="#">Facebook Advertising</Link>
+                                        <Link to="/service/facebook-advertising" className="mega-menu-link" href="#">Facebook Advertising</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-10" id="mega-menu-item-text-10">
                                         <div className="textwidget">
@@ -143,7 +164,7 @@ const Header = () => {
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-12" id="mega-menu-item-media_image-12">
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-6.svg`} className="image wp-image-241  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
-                                      <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-860" id="mega-menu-item-860"> 
+                                      <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-860" id="mega-menu-item-860">
                                         <Link className="mega-menu-link" to="/service/lead-management">Lead Management (CRM)</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-12" id="mega-menu-item-text-12">
@@ -163,8 +184,8 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-3.svg`} className="image wp-image-242  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-861" id="mega-menu-item-861">
-                                      <Link className="mega-menu-link" to="/service/google-maps-marketing">Google Maps Marketing</Link>
-                                        </li>
+                                        <Link className="mega-menu-link" to="/service/google-maps-marketing">Google Maps Marketing</Link>
+                                      </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-17" id="mega-menu-item-text-17">
                                         <div className="textwidget">
                                           <p>Position your medical practice in Google Maps for people searching local clinics for medical wellness providers.</p>
@@ -178,7 +199,7 @@ const Header = () => {
                                         <img width={40} height={40} src={`${process.env.REACT_APP_BASE_URL}/img/icon-reputation-management.png`} className="image wp-image-864  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-862" id="mega-menu-item-862">
-                                      <Link className="mega-menu-link" to="/service/digital-reputation-management">Reputation Management</Link>
+                                        <Link className="mega-menu-link" to="/service/digital-reputation-management">Reputation Management</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-15" id="mega-menu-item-text-15">
                                         <div className="textwidget">
@@ -197,7 +218,7 @@ const Header = () => {
                                         <img src={`${process.env.REACT_APP_BASE_URL}/img/improvement-4.svg`} className="image wp-image-244  attachment-full size-full" alt="" style={{ maxWidth: '100%', height: 'auto' }} decoding="async" />
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-863" id="mega-menu-item-863">
-                                      <Link className="mega-menu-link" to="/service/google-advertising">Google Paid Advertising</Link>
+                                        <Link className="mega-menu-link" to="/service/google-advertising">Google Paid Advertising</Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-14" id="mega-menu-item-text-14">
                                         <div className="textwidget">

@@ -1,17 +1,25 @@
+const path = require(`path`)
+
 module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     {
-      resolve: "gatsby-source-graphql",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        // Arbitrary name for the remote schema Query type
-        typeName: "SWAPI",
-        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-        fieldName: "swapi",
-        // Url to query from
-        url: "https://agencysite.bwpsites.com/graphql",
+        path: path.resolve(`./src`),
       },
     },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        url: 'https://www.wellnessclinicmarketing.com/graphql',
+        fieldName: `cms`,
+        typeName: `GraphCMS`,
+      }
+    }
   ],
   siteMetadata: {
     title: `Gatsby Redux`,

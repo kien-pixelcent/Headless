@@ -1,13 +1,262 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React, { useEffect } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout"
 import Slider from "react-slick";
 import HomeBanner from '../../components/HomeBanner'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Home = ({ data }) => {
-  console.log(data);
+export default () => {
+
+  const query = useStaticQuery(graphql`
+    query {
+      cms {
+        pageBy(uri: "/") {
+          id
+          template {
+            templateName
+            ... on GraphCMS_Template_Home {
+              templateName
+              homeContent {
+                flexibleContent {
+                  ... on GraphCMS_HomeContentFlexibleContentExpertsLayout {
+                    title
+                    logo {
+                      image {
+                        node {
+                          id
+                          sourceUrl
+                          link
+                        }
+                      }
+                    }
+                  }
+                  ... on GraphCMS_HomeContentFlexibleContentPatientsLayout {
+                    desc
+                    fieldGroupName
+                    backgroundImage {
+                      node {
+                        id
+                        link
+                        sourceUrl
+                        altText
+                      }
+                    }
+                    button {
+                      url
+                      title
+                      target
+                    }
+                    image {
+                      node {
+                        id
+                        sourceUrl
+                        link
+                        altText
+                      }
+                    }
+                    title
+                    video
+                  }
+                  ... on GraphCMS_HomeContentFlexibleContentYourPracticeLayout {
+                    title
+                    desc
+                    fieldGroupName
+                    backgroundImage {
+                      node {
+                        id
+                        link
+                        sourceUrl
+                      }
+                    }
+                    button {
+                      title
+                      url
+                    }
+                    item {
+                      title
+                      desc
+                      icon {
+                        node {
+                          altText
+                          id
+                          sourceUrl
+                          title
+                        }
+                      }
+                    }
+                  }
+                  ... on GraphCMS_HomeContentFlexibleContentGetMoreLayout {
+                    fieldGroupName
+                    title
+                    item {
+                      desc
+                      title
+                    }
+                  }
+                  ... on GraphCMS_HomeContentFlexibleContentHowWeCanHelpLayout {
+                    descCenter
+                    fieldGroupName
+                    boxs {
+                      borderBoxColor
+                      content
+                      icon {
+                        node {
+                          altText
+                          id
+                          sourceUrl
+                        }
+                      }
+                      title
+                    }
+                    subTitle
+                    textCenter
+                    title
+                    backgroundImage {
+                      node {
+                        id
+                        sourceUrl
+                      }
+                    }
+                    button {
+                      title
+                      url
+                      target
+                    }
+                  }
+                  ... on GraphCMS_HomeContentFlexibleContentTestimonialsLayout {
+                    authorName
+                    blockquote
+                    desc
+                    button {
+                      title
+                      url
+                      target
+                    }
+                    testimonialContent {
+                      content
+                      box {
+                        number
+                        text
+                        icon {
+                          node {
+                            sourceUrl
+                            altText
+                            id
+                          }
+                        }
+                      }
+                      tags {
+                        tag
+                      }
+                    }
+                    fieldGroupName
+                    title
+                    video
+                  }
+                  ... on GraphCMS_HomeContentFlexibleContentStatsLayout {
+                    fieldGroupName
+                    title
+                    backgroundImage {
+                      node {
+                        id
+                        sourceUrl
+                      }
+                    }
+                    item {
+                      desc
+                      title
+                      icon {
+                        node {
+                          altText
+                          id
+                          sourceUrl
+                        }
+                      }
+                    }
+                    button {
+                      title
+                      url
+                    }
+                  }
+                  ... on GraphCMS_HomeContentFlexibleContentSpecialtyLayout {
+                    fieldGroupName
+                    title
+                    backgroundImage {
+                      node {
+                        id
+                        sourceUrl
+                      }
+                    }
+                    items {
+                      image {
+                        node {
+                          altText
+                          id
+                          sourceUrl
+                        }
+                      }
+                      title
+                      link
+                    }
+                  }
+                  ... on GraphCMS_HomeContentFlexibleContentGiftBookLayout {
+                    content
+                    fieldGroupName
+                    image {
+                      node {
+                        altText
+                        sourceUrl
+                        id
+                      }
+                    }
+                    title
+                    link {
+                      title
+                      url
+                      target
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+  const experts = query.cms.pageBy.template?.homeContent?.flexibleContent[1];
+  const patients = query.cms.pageBy.template?.homeContent?.flexibleContent[2];
+  const practice = query.cms.pageBy.template?.homeContent?.flexibleContent[3];
+  const getMore = query.cms.pageBy.template?.homeContent?.flexibleContent[4];
+  const howWeCanHelp = query.cms.pageBy.template?.homeContent?.flexibleContent[5];
+  const testimonials = query.cms.pageBy.template?.homeContent?.flexibleContent[6];
+  const stats = query.cms.pageBy.template?.homeContent?.flexibleContent[7];
+  const special = query.cms.pageBy.template?.homeContent?.flexibleContent[8];
+  const giftBook = query.cms.pageBy.template?.homeContent?.flexibleContent[9];
+
+  useEffect(() => {
+    if (patients) {
+
+      const script1 = document.createElement("script");
+      script1.src = "https://fast.wistia.com/embed/medias/xf7qhxzcf3.jsonp";
+      script1.async = true;
+      document.body.appendChild(script1);
+
+
+      const script2 = document.createElement("script");
+      script2.src = "https://fast.wistia.com/assets/external/E-v1.js";
+      script2.async = true;
+      document.body.appendChild(script2);
+
+      return () => {
+        document.body.removeChild(script1);
+        document.body.removeChild(script2);
+      };
+    }
+
+  }, [patients]);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -70,33 +319,16 @@ const Home = ({ data }) => {
           <section className="section sc-experts">
             <div className="ast-container-fluid px-0">
               <h2 className="fs-22 fw-500 color-0659A9 text-center">
-                WITH EXPERTISE ON:
+                {experts?.title}
               </h2>
               <Slider {...settings} className="experts-list ast-flex align-items-center">
-                <a href="#">
-
-                  <img src="img/botox-cosmetic.png" alt="" />
-                </a>
-                <a href="#">
-
-                  <img src="img/kybella.png" alt="" />
-                </a>
-                <a href="#">
-
-                  <img src="img/juvederm.png" alt="" />
-                </a>
-                <a href="#">
-
-                  <img src="img/ultra-femme-360.png" alt="" />
-                </a>
-                <a href="#">
-
-                  <img src="img/emsculpt.png" alt="" />
-                </a>
-                <a href="#">
-
-                  <img src="img/coolsculpting.png" alt="" />
-                </a>
+                {
+                  experts?.logo?.map((item, key) => (
+                    <a key={key} href={item?.image?.node?.link ?? '#'}>
+                      <img src={item?.image?.node?.sourceUrl} alt="" />
+                    </a>
+                  ))
+                }
               </Slider>
             </div>
           </section>
@@ -108,21 +340,18 @@ const Home = ({ data }) => {
               <div className="ast-flex col-patients">
                 <div className="col-content ast-flex flex-column">
                   <div className="col-content-text">
-                    <h3 className="fs-48 f-soletoxbold">
-                      More <span>Appointments,</span> More <span>Revenue.</span>
-                    </h3>
+                    <h3 className="fs-48 f-soletoxbold" dangerouslySetInnerHTML={{ __html: patients?.title }}></h3>
                     <div className="desc f-soleto fs-26">
-                      We understand that the success of your medical practice depends
-                      on a flood of new patients.
+                      {patients?.desc}
                     </div>
                   </div>
                   <div className="sc-btn">
                     <a
-                      href="#"
+                      href={patients.button?.url}
                       target="_self"
                       className="btn-bg bg-F2771A btn-size-18 fw-700"
                     >
-                      Schedule A Strategy Session
+                      {patients.button?.title}
                     </a>
                   </div>
                 </div>
@@ -133,21 +362,11 @@ const Home = ({ data }) => {
                   >
                     <div
                       className="wistia_responsive_wrapper"
-                      style={{
-                        height: "100%",
-                        left: 0,
-                        position: "absolute",
-                        top: 0,
-                        width: "100%"
-                      }}
+                      style={{ height: "100%", left: 0, position: "absolute", top: 0, width: "100%" }}
                     >
                       <div
                         className="wistia_embed wistia_async_xf7qhxzcf3 videoFoam=true seo=false"
-                        style={{
-                          height: "100%",
-                          position: "relative",
-                          width: "100%"
-                        }}
+                        style={{ height: "100%", position: "relative", width: "100%" }}
                       >
                         <div
                           className="wistia_swatch"
@@ -159,7 +378,7 @@ const Home = ({ data }) => {
                             position: "absolute",
                             top: 0,
                             transition: "opacity 200ms",
-                            width: "100%"
+                            width: "100%",
                           }}
                         >
                           <img
@@ -168,11 +387,11 @@ const Home = ({ data }) => {
                               filter: "blur(5px)",
                               height: "100%",
                               objectFit: "contain",
-                              width: "100%"
+                              width: "100%",
                             }}
                             alt=""
                             aria-hidden="true"
-                            onload="this.parentNode.style.opacity=1;"
+                            onLoad={(e) => (e.target.parentNode.style.opacity = 1)}
                           />
                         </div>
                       </div>
@@ -185,78 +404,42 @@ const Home = ({ data }) => {
           <section
             className="section sc-practice"
             style={{
-              background: 'no-repeat center/cover url("img/bg-your-paractice-v2.jpg")'
+              background: `no-repeat center/cover url(${practice?.backgroundImage?.node?.sourceUrl})`
             }}
           >
             <div className="ast-container">
               <h2 className="h2-title fs-48 f-soletoxbold text-white text-center">
-                Your Success Strategy: Here"s The Game Plan
+                {practice?.title}
               </h2>
               <div className="desc text-white fs-22 text-center">
-                Our tested &amp; proven Practice Accelerator Program - MAR$™ can help
-                you add more cash-paying patients without wasting time &amp; money on
-                ineffective marketing strategies, so you can focus building a
-                successful medical practice.
+                {practice.desc}
               </div>
               <div className="boxies-practice-list">
-                <div className="practice-item position-relative ast-flex justify-content-center">
-                  <div className="inner ast-flex flex-column">
-                    <img src="img/megaphone-o.svg" alt="MARKETING" />
-                    <div className="practice-content f-soleto color-0659A9">
-                      <h3 className="h3-title f-soletoxbold color-0659A9">
-                        MARKETING
-                      </h3>
-                      <div className="desc f-soleto fw-500">
-                        Reach More New Potential Leads
+                {
+                  practice.item?.map((item, key) => (
+                    <div key={key} className="practice-item position-relative ast-flex justify-content-center">
+                      <div className="inner ast-flex flex-column">
+                        <img src={item?.icon?.node?.sourceUrl} alt={item?.icon?.node?.altText} />
+                        <div className="practice-content f-soleto color-0659A9">
+                          <h3 className="h3-title f-soletoxbold color-0659A9">
+                            {item.title}
+                          </h3>
+                          <div className="desc f-soleto fw-500">
+                            {item.desc}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="practice-item position-relative ast-flex justify-content-center">
-                  <div className="inner ast-flex flex-column">
-                    <img src="img/software-o.svg" alt="SOFTWARE" />
-                    <div className="practice-content f-soleto color-0659A9">
-                      <h3 className="h3-title f-soletoxbold color-0659A9">
-                        SOFTWARE
-                      </h3>
-                      <div className="desc f-soleto fw-500">
-                        Turn Leads into Appointments
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="practice-item position-relative ast-flex justify-content-center">
-                  <div className="inner ast-flex flex-column">
-                    <img src="img/automate-o.svg" alt="AUTOMATION" />
-                    <div className="practice-content f-soleto color-0659A9">
-                      <h3 className="h3-title f-soletoxbold color-0659A9">
-                        AUTOMATION
-                      </h3>
-                      <div className="desc f-soleto fw-500">
-                        Automatic Follow-Ups &amp; Reminders
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="practice-item position-relative ast-flex justify-content-center">
-                  <div className="inner ast-flex flex-column">
-                    <img src="img/AI-o.svg" alt="AI" />
-                    <div className="practice-content f-soleto color-0659A9">
-                      <h3 className="h3-title f-soletoxbold color-0659A9">AI</h3>
-                      <div className="desc f-soleto fw-500">
-                        Smart reminders for bloodwork &amp; prescriptions
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  ))
+                }
               </div>
               <div className="sc-btn ast-flex justify-content-center">
                 <a
-                  href="#"
+                  href={practice.button?.url}
                   target="_self"
                   className="btn-bg bg-F2771A btn-size-18 fw-700"
                 >
-                  Talk To A Strategist
+                  {practice.button?.title}
                 </a>
               </div>
             </div>
@@ -264,41 +447,31 @@ const Home = ({ data }) => {
           <section className="section sc-get-more">
             <div className="ast-container flex-column">
               <h2 className="h2-title fs-48 f-soleto fw-800 color-00255B text-center mb-0">
-                GET MORE...
+                {getMore.title}
               </h2>
               <div className="steps ast-flex justify-content-center align-items-center">
-                <a href="#" target="_self" className="step f-soleto fw-500">
-                  LEADS
-                </a>
-                <a href="#" target="_self" className="step f-soleto fw-500">
-                  BOOKINGS
-                </a>
-                <a href="#" target="_self" className="step f-soleto fw-500">
-                  SALES
-                </a>
-                <a href="#" target="_self" className="step f-soleto fw-500">
-                  REVIEWS
-                </a>
-                <a href="#" target="_self" className="step f-soleto fw-500">
-                  REPEAT PATIENTS
-                </a>
+                {
+                  getMore.item?.map((item, key) => (
+                    <a key={key} href="#" target="_self" className="step f-soleto fw-500">
+                      {item.title}
+                    </a>
+                  ))
+                }
               </div>
             </div>
           </section>
           <section
             className="section sc-how-we-can-help pt-100 pb-100"
             style={{
-              background: 'no-repeat center/cover url("img/bg-how-we-can-help.jpg")'
+              background: `no-repeat center/cover url(${howWeCanHelp?.backgroundImage?.node?.sourceUrl})`
             }}
           >
             <div className="ast-container">
               <div className="header-title ast-flex flex-column align-items-center text-center">
                 <div className="sub-title f-soleto fs-32 fw-500 color-00255B text-uppercase">
-                  Your Digital Growth Toolkit
+                  {howWeCanHelp?.subTitle}
                 </div>
-                <h2 className="h2-title f-soletoxbold fs-56 color-2c2c2c">
-                  To Move <span>From Clicks to Patients</span>
-                </h2>
+                <h2 className="h2-title f-soletoxbold fs-56 color-2c2c2c" dangerouslySetInnerHTML={{ __html: howWeCanHelp?.title }}></h2>
               </div>
               <div className="box-circle-list position-relative">
                 <div className="box-center position-absolute ast-flex justify-content-center">
@@ -310,109 +483,38 @@ const Home = ({ data }) => {
                   <div className="arrow arrow-6"> </div>
                   <div className="cir-box-center ast-flex flex-column align-items-center justify-content-center">
                     <h3 className="h3-title f-soleto fw-800 text-white text-uppercase">
-                      Marketing
+                      {howWeCanHelp?.textCenter}
                     </h3>
                     <div className="desc f-soleto fw-500 text-white text-uppercase text-center">
-                      Essentials for Modern Clinics
+                      {howWeCanHelp?.descCenter}
                     </div>
                   </div>
                 </div>
                 <div className="boxies-outer position-relative ast-flex">
-                  <div className="circle-box box-1">
-                    <figure>
-
-                      <img src="img/web-development.svg" alt="" />
-                    </figure>
-                    <h3 className="h3-title fs-26 f-soleto fw-800 color-000000 text-center">
-                      Website Design
-                    </h3>
-                    <div className="box-content fw-300 color-000000 border-0659A9">
-
-                      Let us help you make it perfect with a personalized website that
-                      converts website visits into new patients.
-                    </div>
-                  </div>
-                  <div className="circle-box box-2">
-                    <figure>
-
-                      <img src="img/seo.svg" alt="" />
-                    </figure>
-                    <h3 className="h3-title fs-26 f-soleto fw-800 color-000000 text-center">
-                      Search Engine Optimization
-                    </h3>
-                    <div className="box-content fw-300 color-000000 border-F2771A">
-                      Claim top positions on Google for search terms people use to
-                      look for medical wellness treatments, clinics, and doctors.
-                    </div>
-                  </div>
-                  <div className="circle-box box-3">
-                    <figure>
-
-                      <img src="img/crm.svg" alt="" />
-                    </figure>
-                    <h3 className="h3-title fs-26 f-soleto fw-800 color-000000 text-center">
-                      CRM Software
-                    </h3>
-                    <div className="box-content fw-300 color-000000 border-0659A9">
-
-                      Convert leads into patients with an automation technology that
-                      nurtures and educates prospects about your practice and
-                      services.
-                    </div>
-                  </div>
-                  <div className="circle-box box-4">
-                    <figure>
-
-                      <img src="img/meta-ads.svg" alt="" />
-                    </figure>
-                    <h3 className="h3-title fs-26 f-soleto fw-800 color-000000 text-center">
-                      Meta Ads
-                    </h3>
-                    <div className="box-content fw-300 color-000000 border-F2771A">
-
-                      Facebook advertising is a powerful marketing strategy for a
-                      medical practice looking to generate new patients for cosmetic
-                      and aesthetic procedures.
-                    </div>
-                  </div>
-                  <div className="circle-box box-5">
-                    <figure>
-
-                      <img src="img/google-ads.svg" alt="" />
-                    </figure>
-                    <h3 className="h3-title fs-26 f-soleto fw-800 color-000000 text-center">
-                      Google Ads
-                    </h3>
-                    <div className="box-content fw-300 color-000000 border-0659A9">
-
-                      There is no better way to drive interested patients to your
-                      practice sooner than Google Ads. Our paid ad strategies can help
-                      your practice achieve steady new patient flow.
-                    </div>
-                  </div>
-                  <div className="circle-box box-6">
-                    <figure>
-
-                      <img src="img/google-maps.svg" alt="" />
-                    </figure>
-                    <h3 className="h3-title fs-26 f-soleto fw-800 color-000000 text-center">
-                      Google Maps
-                    </h3>
-                    <div className="box-content fw-300 color-000000 border-F2771A">
-
-                      Position your medical practice in Google Maps for people
-                      searching local clinics for medical wellness providers.
-                    </div>
-                  </div>
+                  {
+                    howWeCanHelp.boxs?.map((item, key) => (
+                      <div item={item} className={`circle-box box-${key+1}`}>
+                        <figure>
+                          <img src={item.icon?.node?.sourceUrl} alt={item.icon?.node?.altText} />
+                        </figure>
+                        <h3 className="h3-title fs-26 f-soleto fw-800 color-000000 text-center">
+                          {item.title}
+                        </h3>
+                        <div className={`box-content fw-300 color-000000 border-${item.borderBoxColor}`}>
+                          {item.content}
+                        </div>
+                      </div>
+                    ))
+                  }
                 </div>
               </div>
               <div className="sc-btn ast-flex justify-content-center">
                 <a
-                  href="#"
+                  href={howWeCanHelp?.button?.url}
                   target="_self"
                   className="btn-bg bg-F2771A btn-size-18 fw-700"
                 >
-                  GET STARTED NOW
+                  {howWeCanHelp?.button?.title}
                 </a>
               </div>
             </div>
@@ -420,175 +522,114 @@ const Home = ({ data }) => {
           <section className="section sc-testimonials">
             <div className="ast-container">
               <h2 className="h2-title f-soleto fs-32 fw-500 color-00255B text-center text-uppercase">
-                Featured Case Study
+                {testimonials?.title}
               </h2>
               <div className="blockquote text-center">
-                <blockquote>
-                  <p>
-                    “Our average now of our monthly income has doubled. <br />
-                    As a small business, it’s easier to have that growth a lot
-                    quicker”
-                  </p>
-                </blockquote>
+                <blockquote dangerouslySetInnerHTML={{ __html: testimonials?.blockquote }}></blockquote>
                 <div className="author f-soleto">
-                  - Cameron, Founder of Carolina Health and Wellness
+                  - {testimonials?.authorName}
                 </div>
               </div>
               <div className="testimonials-list">
                 <div className="item ast-flex gap-20">
                   <div className="col-video">
-                    <div className="video-inner">
-                      <iframe
-                        width={560}
-                        height={315}
-                        src="https://www.youtube.com/embed/9KxbOA6-8VE?si=DLHTUIgzZOTJI-3s"
-                        title="YouTube video player"
-                        frameBorder={0}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen=""
-                      >
-
-                      </iframe>
-                    </div>
+                    <div className="video-inner" dangerouslySetInnerHTML={{ __html: testimonials?.video }}></div>
                   </div>
                   <div className="col-content ast-flex flex-column">
                     <div className="boxies ast-flex">
-                      <div className="box">
-                        <div className="testi-box-number ast-flex justify-content-center align-items-center">
-                          <img src="img/monthly.svg" alt="Monthly revenue doubled" />
-                          <span className="number f-soleto fw-800">2x</span>
-                        </div>
-                        <span className="box-text f-soleto fw-700 text-center">
-                          Monthly revenue doubled
-                        </span>
-                      </div>
-                      <div className="box">
-                        <div className="testi-box-number ast-flex justify-content-center align-items-center">
-                          <img
-                            src="img/patient-growth.svg"
-                            alt="Increase in patient growth"
-                          />
-                          <span className="number f-soleto fw-800">65%</span>
-                        </div>
-                        <span className="box-text f-soleto fw-700 text-center">
-                          Increase in patient growth
-                        </span>
-                      </div>
+                      {
+                        testimonials.testimonialContent.box?.map((item, key) => (
+                          <div className="box" key={key}>
+                            <div className="testi-box-number ast-flex justify-content-center align-items-center">
+                              <img src={item.icon?.node?.sourceUrl} alt={item.icon?.node?.altText} />
+                              <span className="number f-soleto fw-800">{item.number}</span>
+                            </div>
+                            <span className="box-text f-soleto fw-700 text-center">
+                              {item.text}
+                            </span>
+                          </div>
+                        ))
+                      }
                     </div>
                     <div className="testi-content">
                       <div className="tags ast-flex">
-                        <a href="#">SEO</a>
-                        <a href="#">PPC</a>
-                        <a href="#">Automation</a>
-                        <a href="#">Web Design</a>
+                        {
+                          testimonials.testimonialContent.tags?.map((item, key) => (
+                            <a href="#" key={key}>{item?.tag}</a>
+                          ))
+                        }
                       </div>
-                      <div className="content">
-                        <h3>Results</h3>
-                        <ul>
-                          <li>
-                            Monthly revenue doubled from $30k to an average of $75k
-                          </li>
-                          <li>
-                            Improved online visibility and search engine rankings
-                          </li>
-                          <li>
-                            More effective use of advertising budget with better
-                            conversion rates to appointments
-                          </li>
-                          <li>and more…</li>
-                        </ul>
-                      </div>
+                      <div className="content" dangerouslySetInnerHTML={{ __html: testimonials?.testimonialContent?.content }}></div>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="desc f-soleto fw-500 text-center">
-                Carolina Health and Wellness, specializing in men's testosterone
-                therapy and medically supervised weight loss, aimed to significantly
-                increase their monthly revenue and enhance their online presence.
+                {testimonials.desc}
               </div>
               <div className="sc-btn ast-flex justify-content-center">
+                {
+
+                }
                 <a
-                  href="#"
+                  href={testimonials?.button?.url}
                   target="_self"
                   className="btn-bg bg-F2771A btn-size-18 fw-700"
                 >
-                  View Case Study
+                  {testimonials?.button?.title}
                 </a>
               </div>
             </div>
           </section>
           <section
             className="section sc-how-we-do-it"
-            style={{ background: 'no-repeat center/cover url("img/bg-steps.jpg")' }}
+            style={{ background: `no-repeat center/cover url(${stats.backgroundImage?.node?.sourceUrl})` }}
           >
             <div className="ast-container">
               <h2 className="h2-title f-soletoxbold text-white mb-0 text-center">
-                3 Easy Steps to Get Started
+                {stats.title}
               </h2>
               <div className="number-infor ast-flex align-items-center">
-                <div className="box-number ast-flex align-items-center">
-                  <div className="ast-flex align-items-center">
-                    <div className="box-img">
-                      <figure className="mb-0">
-
-                        <img src="img/icon-step-1.svg" alt="" />
-                      </figure>
+                {
+                  stats.item?.map((x, key) => (
+                    <div key={key} className="box-number ast-flex align-items-center">
+                      <div className="ast-flex align-items-center">
+                        <div className="box-img">
+                          <figure className="mb-0">
+                            <img src={x.icon?.node?.sourceUrl} alt={x.icon?.node?.altText} />
+                          </figure>
+                        </div>
+                        <div className="desc f-soleto fw-800 text-white">
+                          {x.desc}
+                        </div>
+                      </div>
                     </div>
-                    <div className="desc f-soleto fw-800 text-white">
-                      Free Consultation With A Strategist
-                    </div>
-                  </div>
-                </div>
-                <div className="box-number ast-flex align-items-center">
-                  <div className="ast-flex align-items-center">
-                    <div className="box-img">
-                      <figure className="mb-0">
-
-                        <img src="img/icon-step-2.svg" alt="" />
-                      </figure>
-                    </div>
-                    <div className="desc f-soleto fw-800 text-white">
-                      Activate Program
-                    </div>
-                  </div>
-                </div>
-                <div className="box-number ast-flex align-items-center">
-                  <div className="ast-flex align-items-center">
-                    <div className="box-img">
-                      <figure className="mb-0">
-
-                        <img src="img/icon-step-3.svg" alt="" />
-                      </figure>
-                    </div>
-                    <div className="desc f-soleto fw-800 text-white">
-                      Watch Your Practice Grow
-                    </div>
-                  </div>
-                </div>
+                  ))
+                }
               </div>
               <div className="sc-btn ast-flex justify-content-center">
                 <a
-                  href="#"
+                  href={stats.button?.url}
                   target="_self"
                   className="btn-bg bg-F2771A btn-size-18 fw-700"
                 >
-                  Schedule Strategy Session Now
+                  {stats.button?.title}
                 </a>
               </div>
             </div>
           </section>
           <section
             className="section sc-specialty"
-            style={{ background: 'no-repeat center/cover url("img/bg-specialty.jpg")' }}
+            style={{ background: `no-repeat center/cover url(${special.backgroundImage?.node?.sourceUrl})` }}
           >
             <div className="ast-container-fluid padding-left padding-right">
               <h2 className="h2-title f-soletoxbold fs-56 color-2c2c2c text-center">
-                Designed Exclusively For...
+                {special.title}
               </h2>
               <Slider {...settings2} className="specialty-list ast-flex">
-                <div className="s-box-slide">
+              {
+                special.items?.map((item, key) => (
+                  <div key={key} className="s-box-slide">
                   <div className="s-box  position-relative first">
                     <svg
                       width={144}
@@ -599,175 +640,33 @@ const Home = ({ data }) => {
                     >
                       <path
                         d="M36.206 77.3156L66.4848 70.7025L87.784 93.7526L78.8043 123.416L48.5254 130.029L27.2263 106.979L36.206 77.3156Z"
-                        fill="#F6BA8D"
+                        fill={key%2 !== 0 ? '#A1CBED' : '#F6BA8D'}
                       />
                       <path
                         d="M22.6659 20.9445L52.9448 14.3314L74.2439 37.3815L65.2642 67.0447L34.9854 73.6578L13.6862 50.6077L22.6659 20.9445Z"
-                        fill="#F6BA8D"
+                        fill={key%2 !== 0 ? '#A1CBED' : '#F6BA8D'}
                       />
                       <path
                         d="M78.6415 37.9718L108.92 31.3587L130.22 54.4088L121.24 84.072L90.961 90.6852L69.6618 67.6351L78.6415 37.9718Z"
-                        fill="#F6BA8D"
+                        fill={key%2 !== 0 ? '#A1CBED' : '#F6BA8D'}
                       />
                     </svg>
                     <div className="s-box-inner">
-                      <a href="#" target="_self">
+                      <a href={item?.link} target="_self">
                         <figure className="mb-0">
-                          <img src="img/iStock-2083669345-1.jpg" alt="" />
+                          <img src={item.image?.node?.sourceUrl} alt={item.image?.node?.altText} />
                         </figure>
                         <div className="s-content">
                           <h3 className="h3-title f-soleto fw-700 fs-32 mb-0">
-                            Med Spa
+                            {item.title}
                           </h3>
                         </div>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div className="s-box-slide">
-                  <div className="s-box  position-relative second">
-                    <svg
-                      width={144}
-                      height={145}
-                      viewBox="0 0 144 145"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M36.206 77.3156L66.4848 70.7025L87.784 93.7526L78.8043 123.416L48.5254 130.029L27.2263 106.979L36.206 77.3156Z"
-                        fill="#F6BA8D"
-                      />
-                      <path
-                        d="M22.6659 20.9445L52.9448 14.3314L74.2439 37.3815L65.2642 67.0447L34.9854 73.6578L13.6862 50.6077L22.6659 20.9445Z"
-                        fill="#F6BA8D"
-                      />
-                      <path
-                        d="M78.6415 37.9718L108.92 31.3587L130.22 54.4088L121.24 84.072L90.961 90.6852L69.6618 67.6351L78.6415 37.9718Z"
-                        fill="#F6BA8D"
-                      />
-                    </svg>
-                    <div className="s-box-inner">
-                      <a href="#" target="_self">
-                        <figure className="mb-0">
-                          <img src="img/iStock-2163004497-2.jpg" alt="" />
-                        </figure>
-                        <div className="s-content">
-                          <h3 className="h3-title f-soleto fw-700 fs-32 mb-0">
-                            Men's Health
-                          </h3>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="s-box-slide">
-                  <div className="s-box  position-relative first">
-                    <svg
-                      width={144}
-                      height={145}
-                      viewBox="0 0 144 145"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M36.206 77.3156L66.4848 70.7025L87.784 93.7526L78.8043 123.416L48.5254 130.029L27.2263 106.979L36.206 77.3156Z"
-                        fill="#F6BA8D"
-                      />
-                      <path
-                        d="M22.6659 20.9445L52.9448 14.3314L74.2439 37.3815L65.2642 67.0447L34.9854 73.6578L13.6862 50.6077L22.6659 20.9445Z"
-                        fill="#F6BA8D"
-                      />
-                      <path
-                        d="M78.6415 37.9718L108.92 31.3587L130.22 54.4088L121.24 84.072L90.961 90.6852L69.6618 67.6351L78.6415 37.9718Z"
-                        fill="#F6BA8D"
-                      />
-                    </svg>
-                    <div className="s-box-inner">
-                      <a href="#" target="_self">
-                        <figure className="mb-0">
-                          <img src="img/iStock-846736286.jpg" alt="" />
-                        </figure>
-                        <div className="s-content">
-                          <h3 className="h3-title f-soleto fw-700 fs-32 mb-0">
-                            Women's Health
-                          </h3>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="s-box-slide">
-                  <div className="s-box  position-relative second">
-                    <svg
-                      width={144}
-                      height={145}
-                      viewBox="0 0 144 145"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M36.206 77.3156L66.4848 70.7025L87.784 93.7526L78.8043 123.416L48.5254 130.029L27.2263 106.979L36.206 77.3156Z"
-                        fill="#F6BA8D"
-                      />
-                      <path
-                        d="M22.6659 20.9445L52.9448 14.3314L74.2439 37.3815L65.2642 67.0447L34.9854 73.6578L13.6862 50.6077L22.6659 20.9445Z"
-                        fill="#F6BA8D"
-                      />
-                      <path
-                        d="M78.6415 37.9718L108.92 31.3587L130.22 54.4088L121.24 84.072L90.961 90.6852L69.6618 67.6351L78.6415 37.9718Z"
-                        fill="#F6BA8D"
-                      />
-                    </svg>
-                    <div className="s-box-inner">
-                      <a href="#" target="_self">
-                        <figure className="mb-0">
-                          <img src="img/iStock-957383074.jpg" alt="" />
-                        </figure>
-                        <div className="s-content">
-                          <h3 className="h3-title f-soleto fw-700 fs-32 mb-0">
-                            Medical Weight Loss
-                          </h3>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="s-box-slide">
-                  <div className="s-box  position-relative first">
-                    <svg
-                      width={144}
-                      height={145}
-                      viewBox="0 0 144 145"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M36.206 77.3156L66.4848 70.7025L87.784 93.7526L78.8043 123.416L48.5254 130.029L27.2263 106.979L36.206 77.3156Z"
-                        fill="#F6BA8D"
-                      />
-                      <path
-                        d="M22.6659 20.9445L52.9448 14.3314L74.2439 37.3815L65.2642 67.0447L34.9854 73.6578L13.6862 50.6077L22.6659 20.9445Z"
-                        fill="#F6BA8D"
-                      />
-                      <path
-                        d="M78.6415 37.9718L108.92 31.3587L130.22 54.4088L121.24 84.072L90.961 90.6852L69.6618 67.6351L78.6415 37.9718Z"
-                        fill="#F6BA8D"
-                      />
-                    </svg>
-                    <div className="s-box-inner">
-                      <a href="#" target="_self">
-                        <figure className="mb-0">
-                          <img src="img/iStock-1652404128.jpg" alt="" />
-                        </figure>
-                        <div className="s-content">
-                          <h3 className="h3-title f-soleto fw-700 fs-32 mb-0">
-                            Anti-Aging Procedures
-                          </h3>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                ))
+              }
               </Slider>
             </div>
           </section>
@@ -775,27 +674,11 @@ const Home = ({ data }) => {
             <div className="ast-container">
               <div className="sc-free-gift ast-flex">
                 <figure>
-
-                  <img src="img/free-gift-img.png" alt="" width={150} height={180} />
+                  <img src={giftBook?.image?.node?.sourceUrl} alt={giftBook?.image?.node?.altText} width={150} height={180} />
                 </figure>
                 <div className="free-gift-content">
-                  <h2 className="fs-36 fw-800 color-00255B">FREE GIFT!</h2>
-                  <div className="desc color-00255B">
-                    <p>
-                      Discover proven marketing strategies to attract a flood of new
-                      cash-paying patients that pay, stay, and refer in our latest
-                      book “
-                      <a
-                        href="https://e.wellnessclinicmarketing.com/free-book/"
-                        target="_blank"
-                      >
-                        Grow Your Medical Wellness Practice
-                      </a>
-                      “, an ultimate guide to marketing for hormone therapy, sexual
-                      health, medical weight loss, body contouring and other
-                      anti-aging procedures.
-                    </p>
-                  </div>
+                  <h2 className="fs-36 fw-800 color-00255B">{giftBook.title}</h2>
+                  <div className="desc color-00255B" dangerouslySetInnerHTML={{ __html: giftBook?.content }}></div>
                 </div>
               </div>
             </div>
@@ -805,15 +688,3 @@ const Home = ({ data }) => {
     </Layout>
   )
 }
-
-export default Home
-
-// export const query = graphql`
-//   query Home {
-//     categories {
-//       nodes {
-//         categoryId
-//       }
-//     }
-//   }
-// `
