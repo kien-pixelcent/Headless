@@ -265,18 +265,20 @@ export default () => {
     slidesToShow: 6,
     slidesToScroll: 1,
     arrows: true,
+    prevArrow: (<button type="button" class="slick-arrow slider-prev"><svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.6625 18.4567L0 9.65669L8.8 0.856689L9.7625 1.81919L1.925 9.65669L9.625 17.3567L8.6625 18.4567Z" fill="#AAAAAA" /></svg></button>),
+    nextArrow: (<button type="button" class="slick-arrow slider-next"><svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.33726 18.4567L9.99976 9.65669L1.19976 0.856689L0.237257 1.81919L8.07476 9.65669L0.374756 17.3567L1.33726 18.4567Z" fill="#AAAAAA" /></svg></button>),
     responsive: [{
-      breakpoint: 1200,
+      breakpoint: 1024,
       settings: {
-        slidesToShow: 2,
-        arrows: true,
+        slidesToShow: 4,
+        arrows: false,
         dots: true,
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 600,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         arrows: false,
         dots: true,
       }
@@ -305,7 +307,7 @@ export default () => {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        arrows: false,
+        arrows: true,
         dots: true,
       }
     },
@@ -336,7 +338,7 @@ export default () => {
             className="section sc-patients"
             style={{ backgroundColor: "#F3F3F3" }}
           >
-            <div className="ast-container">
+            <div className="cus-container">
               <div className="ast-flex col-patients">
                 <div className="col-content ast-flex flex-column">
                   <div className="col-content-text">
@@ -349,7 +351,7 @@ export default () => {
                     <a
                       href={patients.button?.url}
                       target="_self"
-                      className="btn-bg bg-F2771A btn-size-18 fw-700"
+                      className="btn-bg bg-F2771A patients-button btn-size-18 fw-700"
                     >
                       {patients.button?.title}
                     </a>
@@ -407,7 +409,7 @@ export default () => {
               background: `no-repeat center/cover url(${practice?.backgroundImage?.node?.sourceUrl})`
             }}
           >
-            <div className="ast-container">
+            <div className="cus-container">
               <h2 className="h2-title fs-48 f-soletoxbold text-white text-center">
                 {practice?.title}
               </h2>
@@ -445,7 +447,7 @@ export default () => {
             </div>
           </section>
           <section className="section sc-get-more">
-            <div className="ast-container flex-column">
+            <div className="cus-container flex-column">
               <h2 className="h2-title fs-48 f-soleto fw-800 color-00255B text-center mb-0">
                 {getMore.title}
               </h2>
@@ -466,7 +468,7 @@ export default () => {
               background: `no-repeat center/cover url(${howWeCanHelp?.backgroundImage?.node?.sourceUrl})`
             }}
           >
-            <div className="ast-container">
+            <div className="cus-container">
               <div className="header-title ast-flex flex-column align-items-center text-center">
                 <div className="sub-title f-soleto fs-32 fw-500 color-00255B text-uppercase">
                   {howWeCanHelp?.subTitle}
@@ -489,11 +491,14 @@ export default () => {
                       {howWeCanHelp?.descCenter}
                     </div>
                   </div>
+                  <div class="m-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="149" viewBox="0 0 24 149" fill="none">
+                    <path d="M10.9393 148.061C11.5251 148.646 12.4749 148.646 13.0607 148.061L22.6066 138.515C23.1924 137.929 23.1924 136.979 22.6066 136.393C22.0208 135.808 21.0711 135.808 20.4853 136.393L12 144.879L3.51472 136.393C2.92894 135.808 1.97919 135.808 1.3934 136.393C0.807617 136.979 0.807617 137.929 1.3934 138.515L10.9393 148.061ZM10.5 6.55671e-08L10.5 3.0625L13.5 3.0625L13.5 -6.55671e-08L10.5 6.55671e-08ZM10.5 9.1875L10.5 15.3125L13.5 15.3125L13.5 9.1875L10.5 9.1875ZM10.5 21.4375L10.5 27.5625L13.5 27.5625L13.5 21.4375L10.5 21.4375ZM10.5 33.6875L10.5 39.8125L13.5 39.8125L13.5 33.6875L10.5 33.6875ZM10.5 45.9375L10.5 52.0625L13.5 52.0625L13.5 45.9375L10.5 45.9375ZM10.5 58.1875L10.5 64.3125L13.5 64.3125L13.5 58.1875L10.5 58.1875ZM10.5 70.4375L10.5 76.5625L13.5 76.5625L13.5 70.4375L10.5 70.4375ZM10.5 82.6875L10.5 88.8125L13.5 88.8125L13.5 82.6875L10.5 82.6875ZM10.5 94.9375L10.5 101.063L13.5 101.062L13.5 94.9375L10.5 94.9375ZM10.5 107.188L10.5 113.313L13.5 113.312L13.5 107.187L10.5 107.188ZM10.5 119.438L10.5 125.563L13.5 125.562L13.5 119.437L10.5 119.438ZM10.5 131.688L10.5 137.813L13.5 137.812L13.5 131.687L10.5 131.688ZM10.5 143.938L10.5 147L13.5 147L13.5 143.937L10.5 143.938ZM10.9393 148.061C11.5251 148.646 12.4749 148.646 13.0607 148.061L22.6066 138.515C23.1924 137.929 23.1924 136.979 22.6066 136.393C22.0208 135.808 21.0711 135.808 20.4853 136.393L12 144.879L3.51472 136.393C2.92894 135.808 1.97919 135.808 1.3934 136.393C0.807617 136.979 0.807617 137.929 1.3934 138.515L10.9393 148.061ZM10.5 6.55671e-08L10.5 3.0625L13.5 3.0625L13.5 -6.55671e-08L10.5 6.55671e-08ZM10.5 9.1875L10.5 15.3125L13.5 15.3125L13.5 9.1875L10.5 9.1875ZM10.5 21.4375L10.5 27.5625L13.5 27.5625L13.5 21.4375L10.5 21.4375ZM10.5 33.6875L10.5 39.8125L13.5 39.8125L13.5 33.6875L10.5 33.6875ZM10.5 45.9375L10.5 52.0625L13.5 52.0625L13.5 45.9375L10.5 45.9375ZM10.5 58.1875L10.5 64.3125L13.5 64.3125L13.5 58.1875L10.5 58.1875ZM10.5 70.4375L10.5 76.5625L13.5 76.5625L13.5 70.4375L10.5 70.4375ZM10.5 82.6875L10.5 88.8125L13.5 88.8125L13.5 82.6875L10.5 82.6875ZM10.5 94.9375L10.5 101.063L13.5 101.062L13.5 94.9375L10.5 94.9375ZM10.5 107.188L10.5 113.313L13.5 113.312L13.5 107.187L10.5 107.188ZM10.5 119.438L10.5 125.563L13.5 125.562L13.5 119.437L10.5 119.438ZM10.5 131.688L10.5 137.813L13.5 137.812L13.5 131.687L10.5 131.688ZM10.5 143.938L10.5 147L13.5 147L13.5 143.937L10.5 143.938Z" fill="#B2B2B2"></path>
+                  </svg></div>
                 </div>
                 <div className="boxies-outer position-relative ast-flex">
                   {
                     howWeCanHelp.boxs?.map((item, key) => (
-                      <div item={item} className={`circle-box box-${key+1}`}>
+                      <div item={item} className={`circle-box box-${key + 1}`}>
                         <figure>
                           <img src={item.icon?.node?.sourceUrl} alt={item.icon?.node?.altText} />
                         </figure>
@@ -503,6 +508,9 @@ export default () => {
                         <div className={`box-content fw-300 color-000000 border-${item.borderBoxColor}`}>
                           {item.content}
                         </div>
+                        <div class="m-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="149" viewBox="0 0 24 149" fill="none">
+                          <path d="M10.9393 148.061C11.5251 148.646 12.4749 148.646 13.0607 148.061L22.6066 138.515C23.1924 137.929 23.1924 136.979 22.6066 136.393C22.0208 135.808 21.0711 135.808 20.4853 136.393L12 144.879L3.51472 136.393C2.92894 135.808 1.97919 135.808 1.3934 136.393C0.807617 136.979 0.807617 137.929 1.3934 138.515L10.9393 148.061ZM10.5 6.55671e-08L10.5 3.0625L13.5 3.0625L13.5 -6.55671e-08L10.5 6.55671e-08ZM10.5 9.1875L10.5 15.3125L13.5 15.3125L13.5 9.1875L10.5 9.1875ZM10.5 21.4375L10.5 27.5625L13.5 27.5625L13.5 21.4375L10.5 21.4375ZM10.5 33.6875L10.5 39.8125L13.5 39.8125L13.5 33.6875L10.5 33.6875ZM10.5 45.9375L10.5 52.0625L13.5 52.0625L13.5 45.9375L10.5 45.9375ZM10.5 58.1875L10.5 64.3125L13.5 64.3125L13.5 58.1875L10.5 58.1875ZM10.5 70.4375L10.5 76.5625L13.5 76.5625L13.5 70.4375L10.5 70.4375ZM10.5 82.6875L10.5 88.8125L13.5 88.8125L13.5 82.6875L10.5 82.6875ZM10.5 94.9375L10.5 101.063L13.5 101.062L13.5 94.9375L10.5 94.9375ZM10.5 107.188L10.5 113.313L13.5 113.312L13.5 107.187L10.5 107.188ZM10.5 119.438L10.5 125.563L13.5 125.562L13.5 119.437L10.5 119.438ZM10.5 131.688L10.5 137.813L13.5 137.812L13.5 131.687L10.5 131.688ZM10.5 143.938L10.5 147L13.5 147L13.5 143.937L10.5 143.938ZM10.9393 148.061C11.5251 148.646 12.4749 148.646 13.0607 148.061L22.6066 138.515C23.1924 137.929 23.1924 136.979 22.6066 136.393C22.0208 135.808 21.0711 135.808 20.4853 136.393L12 144.879L3.51472 136.393C2.92894 135.808 1.97919 135.808 1.3934 136.393C0.807617 136.979 0.807617 137.929 1.3934 138.515L10.9393 148.061ZM10.5 6.55671e-08L10.5 3.0625L13.5 3.0625L13.5 -6.55671e-08L10.5 6.55671e-08ZM10.5 9.1875L10.5 15.3125L13.5 15.3125L13.5 9.1875L10.5 9.1875ZM10.5 21.4375L10.5 27.5625L13.5 27.5625L13.5 21.4375L10.5 21.4375ZM10.5 33.6875L10.5 39.8125L13.5 39.8125L13.5 33.6875L10.5 33.6875ZM10.5 45.9375L10.5 52.0625L13.5 52.0625L13.5 45.9375L10.5 45.9375ZM10.5 58.1875L10.5 64.3125L13.5 64.3125L13.5 58.1875L10.5 58.1875ZM10.5 70.4375L10.5 76.5625L13.5 76.5625L13.5 70.4375L10.5 70.4375ZM10.5 82.6875L10.5 88.8125L13.5 88.8125L13.5 82.6875L10.5 82.6875ZM10.5 94.9375L10.5 101.063L13.5 101.062L13.5 94.9375L10.5 94.9375ZM10.5 107.188L10.5 113.313L13.5 113.312L13.5 107.187L10.5 107.188ZM10.5 119.438L10.5 125.563L13.5 125.562L13.5 119.437L10.5 119.438ZM10.5 131.688L10.5 137.813L13.5 137.812L13.5 131.687L10.5 131.688ZM10.5 143.938L10.5 147L13.5 147L13.5 143.937L10.5 143.938Z" fill="#B2B2B2"></path>
+                        </svg></div>
                       </div>
                     ))
                   }
@@ -520,7 +528,7 @@ export default () => {
             </div>
           </section>
           <section className="section sc-testimonials">
-            <div className="ast-container">
+            <div className="cus-container">
               <h2 className="h2-title f-soleto fs-32 fw-500 color-00255B text-center text-uppercase">
                 {testimonials?.title}
               </h2>
@@ -531,7 +539,7 @@ export default () => {
                 </div>
               </div>
               <div className="testimonials-list">
-                <div className="item ast-flex gap-20">
+                <div className="item ast-flex">
                   <div className="col-video">
                     <div className="video-inner" dangerouslySetInnerHTML={{ __html: testimonials?.video }}></div>
                   </div>
@@ -585,7 +593,7 @@ export default () => {
             className="section sc-how-we-do-it"
             style={{ background: `no-repeat center/cover url(${stats.backgroundImage?.node?.sourceUrl})` }}
           >
-            <div className="ast-container">
+            <div className="cus-container">
               <h2 className="h2-title f-soletoxbold text-white mb-0 text-center">
                 {stats.title}
               </h2>
@@ -627,57 +635,59 @@ export default () => {
                 {special.title}
               </h2>
               <Slider {...settings2} className="specialty-list ast-flex">
-              {
-                special.items?.map((item, key) => (
-                  <div key={key} className="s-box-slide">
-                  <div className="s-box  position-relative first">
-                    <svg
-                      width={144}
-                      height={145}
-                      viewBox="0 0 144 145"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M36.206 77.3156L66.4848 70.7025L87.784 93.7526L78.8043 123.416L48.5254 130.029L27.2263 106.979L36.206 77.3156Z"
-                        fill={key%2 !== 0 ? '#A1CBED' : '#F6BA8D'}
-                      />
-                      <path
-                        d="M22.6659 20.9445L52.9448 14.3314L74.2439 37.3815L65.2642 67.0447L34.9854 73.6578L13.6862 50.6077L22.6659 20.9445Z"
-                        fill={key%2 !== 0 ? '#A1CBED' : '#F6BA8D'}
-                      />
-                      <path
-                        d="M78.6415 37.9718L108.92 31.3587L130.22 54.4088L121.24 84.072L90.961 90.6852L69.6618 67.6351L78.6415 37.9718Z"
-                        fill={key%2 !== 0 ? '#A1CBED' : '#F6BA8D'}
-                      />
-                    </svg>
-                    <div className="s-box-inner">
-                      <a href={item?.link} target="_self">
-                        <figure className="mb-0">
-                          <img src={item.image?.node?.sourceUrl} alt={item.image?.node?.altText} />
-                        </figure>
-                        <div className="s-content">
-                          <h3 className="h3-title f-soleto fw-700 fs-32 mb-0">
-                            {item.title}
-                          </h3>
+                {
+                  special.items?.map((item, key) => (
+                    <div key={key} className="s-box-slide">
+                      <div className="s-box  position-relative first">
+                        <svg
+                          width={144}
+                          height={145}
+                          viewBox="0 0 144 145"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M36.206 77.3156L66.4848 70.7025L87.784 93.7526L78.8043 123.416L48.5254 130.029L27.2263 106.979L36.206 77.3156Z"
+                            fill={key % 2 !== 0 ? '#A1CBED' : '#F6BA8D'}
+                          />
+                          <path
+                            d="M22.6659 20.9445L52.9448 14.3314L74.2439 37.3815L65.2642 67.0447L34.9854 73.6578L13.6862 50.6077L22.6659 20.9445Z"
+                            fill={key % 2 !== 0 ? '#A1CBED' : '#F6BA8D'}
+                          />
+                          <path
+                            d="M78.6415 37.9718L108.92 31.3587L130.22 54.4088L121.24 84.072L90.961 90.6852L69.6618 67.6351L78.6415 37.9718Z"
+                            fill={key % 2 !== 0 ? '#A1CBED' : '#F6BA8D'}
+                          />
+                        </svg>
+                        <div className="s-box-inner">
+                          <a href={item?.link} target="_self">
+                            <figure className="mb-0">
+                              <img src={item.image?.node?.sourceUrl} alt={item.image?.node?.altText} />
+                            </figure>
+                            <div className="s-content">
+                              <h3 className="h3-title f-soleto fw-700 fs-32 mb-0">
+                                {item.title}
+                              </h3>
+                            </div>
+                          </a>
                         </div>
-                      </a>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                ))
-              }
+                  ))
+                }
               </Slider>
             </div>
           </section>
           <section className="section sc-gift-book">
-            <div className="ast-container">
+            <div className="cus-container">
               <div className="sc-free-gift ast-flex">
                 <figure>
                   <img src={giftBook?.image?.node?.sourceUrl} alt={giftBook?.image?.node?.altText} width={150} height={180} />
                 </figure>
                 <div className="free-gift-content">
-                  <h2 className="fs-36 fw-800 color-00255B">{giftBook.title}</h2>
+                  <h2 className="fs-36 fw-800 color-00255B">
+                    <a href={giftBook?.link?.url} target="_blank">{giftBook.title}</a>
+                  </h2>
                   <div className="desc color-00255B" dangerouslySetInnerHTML={{ __html: giftBook?.content }}></div>
                 </div>
               </div>
