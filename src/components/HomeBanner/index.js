@@ -33,6 +33,18 @@ const HomeBanner = () => {
                         }
                       }
                     }
+                    boxDesktop {
+                      node {
+                        id
+                        sourceUrl
+                      }
+                    }
+                    boxMobile {
+                      node {
+                        id
+                        sourceUrl
+                      }
+                    }
                     badgeLogo {
                       node {
                         id
@@ -66,24 +78,24 @@ const HomeBanner = () => {
             <img
               src={content?.badgeLogo?.node?.sourceUrl}
               alt="Badge"
-              className="img-badge position-absolute"
+              className="img-badge"
             />
             <div className="sub-title f-soleto fw-500 text-white">
               {content?.subTitle}
             </div>
-            <h1 className="h1-title f-soletoxbold text-white">
+            <h1 className="h1-title f-soletoxbold text-white fw-800">
               {content?.title}
             </h1>
           </div>
           <div className="banner-sep ast-flex">
             <div className="sep-left">
 
-              <img src="img/brush-stroke-1.svg" alt="" />
+              <img src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/brush-stroke-1.svg" alt="" />
             </div>
             <div className="sep-text f-soleto fw-500 text-white">{content?.sepText}</div>
             <div className="sep-right">
 
-              <img src="img/brush-stroke-2.svg" alt="" />
+              <img src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/brush-stroke-2.svg" alt="" />
             </div>
           </div>
           <div className="banner-list ast-flex  justify-content-center">
@@ -95,7 +107,13 @@ const HomeBanner = () => {
               ))
             }
           </div>
-          <div className="banner-services text-white ast-flex justify-content-center">
+          <div className="box-desktop">
+            <img src={content?.boxDesktop?.node?.sourceUrl} />
+          </div>
+          <div className="box-mobile">
+            <img src={content?.boxMobile?.node?.sourceUrl} />
+          </div>
+          {/* <div className="banner-services text-white ast-flex justify-content-center">
             {
               content?.box?.map((item, key) => (
                 <div className="box-ser" key={key}>
@@ -104,7 +122,8 @@ const HomeBanner = () => {
                 </div>
               ))
             }
-          </div>
+          </div> */}
+
           <div className="banner-desc f-soleto fw-500 text-white text-center">
             {content?.desc}
           </div>
