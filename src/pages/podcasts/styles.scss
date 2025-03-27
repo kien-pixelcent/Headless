@@ -1,12 +1,14 @@
 .sc-podcast {
   padding: 100px 0px 150px;
 }
+
 .featured-podcast .h2-title,
 .latest-podcast .h2-title {
-  font-size: 45px;
+  font-size: 32px;
   line-height: 2;
   margin-bottom: 24px;
 }
+
 .featured-podcast-box {
   padding: 26px;
   border-radius: 15px;
@@ -14,56 +16,70 @@
   align-items: flex-start;
   background: linear-gradient(90deg, #022646 18.5%, #0659a9 68%);
 }
+
 .featured-podcast-box .box-content {
   flex: 1;
   background-color: transparent;
   text-align: left;
+  padding: 0;
+  margin: 0;
 }
+
 .featured-podcast-box .box-content .h2-title {
-  font-size: 46px;
+  font-size: 32px;
   line-height: 1.2;
   margin-bottom: 10px;
 }
+
 .box-podcast {
   padding: 30px 20px 20px;
   border-radius: 15px;
-  background: no-repeat center/cover #22577a
-    url("https://agencysite.bwpsites.com/wp-content/themes/agencymarketing/assets/img/bg-img-podcast.png");
+  background: no-repeat center/cover #22577a url("https://agencysite.bwpsites.com/wp-content/themes/agencymarketing/assets/img/bg-img-podcast.png");
 }
+
 .box-host {
   max-width: 382px;
 }
+
 .box-host .author {
   color: #fff;
 }
+
 .box-podcast figure {
   margin-bottom: 10px;
   height: 40px;
   overflow: hidden;
 }
+
 .box-podcast figure img {
   object-fit: cover;
 }
+
 .box-podcast .h3-title {
-  font-size: 36px;
+  font-size: 24px;
   line-height: 1.27;
   margin-bottom: 5px;
 }
+
 .box-podcast .h3-title a {
   color: #fff;
 }
+
 .host-infor {
   margin-top: auto;
 }
+
 .box-podcast .date {
   font-weight: 300;
   font-size: 18px;
   line-height: 2.5;
 }
+
 .author-infor {
   gap: 14px;
   margin-top: 10px;
 }
+
 .author-infor figure {
   width: 56px;
   height: 56px;
@@ -73,29 +89,36 @@
   background: #d9d9d9;
   margin-bottom: 0px;
 }
+
 .author-infor figure img {
   object-fit: cover;
   height: 100%;
 }
+
 .author-infor .author {
   font-size: 16px;
   line-height: normal;
   color: #fff;
 }
+
 .author-infor .author span {
   font-weight: 500;
 }
+
 .listen-on {
   margin-top: 20px;
 }
+
 .box-content .desc {
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.7;
 }
+
 .sc-btn {
   margin-top: 25px;
 }
+
 .custom-btn {
   max-width: 210px;
   width: 100%;
@@ -104,6 +127,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .bg-orange {
   border-radius: 6px;
   background: #f0791d;
@@ -112,42 +136,69 @@
   line-height: normal;
   font-weight: 700;
 }
+
 .bg-orange:hover {
   background: #fff;
   color: #f0791d;
 }
+
 .latest-podcast {
   margin-top: 60px;
 }
+
 .latest-podcast .lists {
   gap: 30px;
 }
+
 .banner {
-  padding: 100px 0px;
+  /*padding:100px 0px;*/
+  height: 23.48vw;
+  /*451px;*/
 }
+
 .banner .h1-title {
-  font-size: 75px;
-  line-height: 122.667%;
+  font-size: 3.90625vw;
+  /*75px;*/
+  line-height: 1.2;
 }
-.banner .desc,
+
 .banner .sub-title {
-  font-size: 45px;
-  line-height: 204.444%;
+  font-size: 1.97vw;
+  /*38px;*/
+  line-height: 1.5;
 }
-@media only screen and (max-width: 1199px) {
-  .banner .h1-title {
-    font-size: 36px;
-  }
+
+.banner .desc {
+  font-size: 1.25vw;
+  /*24px;*/
+  line-height: 1.5;
+}
+
+@media only screen and (max-width:922px) {
   .banner .desc {
-    font-size: 24px;
-    line-height: 150%;
+    font-size: 18px;
   }
 }
-@media only screen and (min-width: 1920px) {
+
+@media only screen and (max-width:768px) {
   .banner {
-    height: 332px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: auto;
+    padding: 40px 0px;
+  }
+
+  .banner .h1-title {
+    font-size: 28px;
+  }
+
+  .banner .sub-title {
+    font-size: 24px;
+  }
+
+  .banner .desc {
+    font-size: 18px;
+  }
+
+  .box-host {
+    max-width: unset;
   }
 }

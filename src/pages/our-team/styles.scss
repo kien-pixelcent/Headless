@@ -1,10 +1,13 @@
 .sc-our-teams {
   background: no-repeat center/cover url('https://agencysite.bwpsites.com/wp-content/uploads/2024/11/bg-how-we-can-help.jpg');
 }
+
 .team-list {
   gap: 30px;
 }
+
 .team-list .item {
+  display: none;
   width: calc((100% - (30px * 2))/3);
   border-radius: 20px;
   background: #fff;
@@ -12,17 +15,21 @@
   padding: 40px 24px;
   transition: all 1s ease;
 }
+
 .team-list .item.show {
   display: block;
 }
+
 .team-list .item:hover {
   box-shadow: 0px 0px 10px 5px #d3e7f3b5;
 }
+
 .team-list .item .avatar {
   margin-bottom: 34px;
   width: 189px;
   height: 180px;
 }
+
 .team-list .item .avatar .bg-overlay {
   width: 100%;
   height: 100%;
@@ -30,12 +37,14 @@
   left: 0px;
   background: no-repeat center/cover url('https://agencysite.bwpsites.com/wp-content/themes/agencymarketing/assets/img/bg-overlay-member.svg');
 }
+
 .avatar figure {
   overflow: hidden;
   max-width: 189px;
   height: 180px;
   border-radius: 200px 200px 15px 200px;
 }
+
 .team-list .item .avatar img {
   object-fit: cover;
   max-width: 189px;
@@ -45,35 +54,42 @@
   z-index: 2;
   transition: all 1s linear;
 }
+
 .member-name {
   margin-bottom: 15px;
   border-bottom: 2px solid #F2771A;
   display: inline-block;
 }
+
 .position {
   font-size: 20px;
   line-height: 150%;
 }
+
 .loadmore {
   max-width: 430px;
   border-radius: 0px;
   margin-top: 60px;
 }
+
 .overlay-gradient {
   background: radial-gradient(50% 50% at 50% 50%, #83B7EA 0%, #0659A9 100%);
   border-radius: 200px 200px 15px 200px;
 }
+
 @media only screen and (max-width:767px) {
   .team-list div.item {
-      width: 100%;
+    width: 100%;
   }
+
   .loadmore {
-      max-width: unset;
-      width: auto;
+    max-width: unset;
+    width: auto;
   }
 }
+
 @media only screen and (max-width:999px) {
   .team-list .item {
-      width: calc((100% - 30px)/2);
+    width: calc((100% - 30px)/2);
   }
 }
