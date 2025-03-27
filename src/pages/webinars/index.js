@@ -2,48 +2,79 @@ import React from "react"
 import Layout from "../../components/layout"
 import AboutBanner from "../../components/AboutBanner"
 import './styles.scss';
+import { graphql, useStaticQuery } from "gatsby"
 
 const Webinars = () => {
+  const query = useStaticQuery(graphql`
+    query MyQuery {
+      cms {
+        pageBy(uri: "/webinars") {
+          template {
+            ... on GraphCMS_Template_Webinars {
+              templateName
+              banner {
+                backgroundImage {
+                  node {
+                    id
+                    sourceUrl
+                  }
+                }
+                button {
+                  target
+                  title
+                  url
+                }
+                desc
+                subTitle
+                isShow
+                title
+                type
+                fieldGroupName
+                image {
+                  node {
+                    id
+                    sourceUrl
+                  }
+                }
+              }
+              webinarsList {
+                list {
+                  desc
+                  title
+                  link
+                  image {
+                    node {
+                      id
+                      sourceUrl
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
+  const banner = query?.cms?.pageBy?.template?.banner;
+  const data = query?.cms?.pageBy?.template?.webinarsList;
   return (
     <Layout>
       <div id="content" className="site-content">
         <div className="main-content">
-          <AboutBanner title="Webinars" description=""/>
+          <AboutBanner title={banner?.title} description={banner?.desc} subtitle={banner?.subtitle} image={banner?.image} backgroundImage={banner?.backgroundImage} button={banner?.button} type={banner?.type} isShow={banner?.isShow} />
           <section className="section sc-webinars page-content">
             <div className="ast-container">
               <div className="webinars-lists">
                 <div className="lists ast-flex">
-                  <div className="box box-webinar ast-flex flex-column-">
-                    <figure className="thumb"><a href="#" target="_blank"><img src="https://agencysite.bwpsites.com/wp-content/uploads/2025/02/webinar-1-2.gif" alt="Your 2025 Digital Marketing Plan" /></a></figure>
-                    <h3 className="h3-title f-soleto text-black fw-500"><a href="#" className="text-black" target="_blank">Your 2025 Digital Marketing Plan</a></h3>
-                    <div className="desc f-soleto fw-300 text-black">Join Alex Sidorenkov, CEO of Wellness Clinic Marketing, for an exclusive webinar where he’ll break down Your 2025 Digital Marketing Playbook. Learn exactly what your wellness clinic needs to do to thrive in the ever-changing digital landscape.</div>
-                  </div>
-                  <div className="box box-webinar ast-flex flex-column-">
-                    <figure className="thumb"><a href="#" target="_blank"><img src="https://agencysite.bwpsites.com/wp-content/uploads/2025/02/webinar-1-2.gif" alt="Webinar Title Heading" /></a></figure>
-                    <h3 className="h3-title f-soleto text-black fw-500"><a href="#" className="text-black" target="_blank">Webinar Title Heading</a></h3>
-                    <div className="desc f-soleto fw-300 text-black">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-                  </div>
-                  <div className="box box-webinar ast-flex flex-column-">
-                    <figure className="thumb"><a href="#" target="_blank"><img src="https://agencysite.bwpsites.com/wp-content/uploads/2025/02/webinar-1-2.gif" alt="Webinar Title Heading" /></a></figure>
-                    <h3 className="h3-title f-soleto text-black fw-500"><a href="#" className="text-black" target="_blank">Webinar Title Heading</a></h3>
-                    <div className="desc f-soleto fw-300 text-black">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-                  </div>
-                  <div className="box box-webinar ast-flex flex-column-">
-                    <figure className="thumb"><a href="#" target="_blank"><img src="https://agencysite.bwpsites.com/wp-content/uploads/2025/02/webinar-1-2.gif" alt="Webinar Title Heading" /></a></figure>
-                    <h3 className="h3-title f-soleto text-black fw-500"><a href="#" className="text-black" target="_blank">Webinar Title Heading</a></h3>
-                    <div className="desc f-soleto fw-300 text-black">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-                  </div>
-                  <div className="box box-webinar ast-flex flex-column-">
-                    <figure className="thumb"><a href="#" target="_blank"><img src="https://agencysite.bwpsites.com/wp-content/uploads/2025/02/webinar-1-2.gif" alt="Webinar Title Heading" /></a></figure>
-                    <h3 className="h3-title f-soleto text-black fw-500"><a href="#" className="text-black" target="_blank">Webinar Title Heading</a></h3>
-                    <div className="desc f-soleto fw-300 text-black">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-                  </div>
-                  <div className="box box-webinar ast-flex flex-column-">
-                    <figure className="thumb"><a href="#" target="_blank"><img src="https://agencysite.bwpsites.com/wp-content/uploads/2025/02/webinar-1-2.gif" alt="Webinar Title Heading" /></a></figure>
-                    <h3 className="h3-title f-soleto text-black fw-500"><a href="#" className="text-black" target="_blank">Webinar Title Heading</a></h3>
-                    <div className="desc f-soleto fw-300 text-black">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-                  </div>
+                  {data?.list.map((item, index) => (
+                    <div className="box box-webinar ast-flex flex-column-">
+                      <figure className="thumb"><a href={item?.link} target="_blank"><img src={item?.image?.node?.sourceUrl} alt="Your 2025 Digital Marketing Plan" /></a></figure>
+                      <h3 className="h3-title f-soleto text-black fw-500"><a href={item?.link} className="text-black" target="_blank">{item?.title}</a></h3>
+                      <div className="desc f-soleto fw-300 text-black">{item?.desc}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

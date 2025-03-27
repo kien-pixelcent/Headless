@@ -1,39 +1,46 @@
 .sc-about-our-mission .h2-title {
   margin-bottom: 20px;
 }
+
 .sc-about-our-mission .list {
   margin: 50px 0px;
   gap: 30px;
 }
+
 .sc-about-our-mission .list a {
   background: #0659a9;
   padding: 8px 20px;
   border-radius: 100px;
   color: #fff;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 22px;
   line-height: 33px;
 }
+
 @media only screen and (max-width: 767px) {
   .sc-about-our-mission.list {
     margin: 20px 0px;
     gap: 20px;
   }
 }
+
 @media only screen and (max-width: 1199px) {
   .sc-about-our-mission.list a {
     font-size: 18px;
     line-height: normal;
   }
 }
+
 .sc-about-core-values {
   padding: 60px 0px 150px;
 }
+
 .core-boxies {
   gap: 32px;
   margin-top: 30px;
 }
+
 .core-boxies .box {
   width: calc((100% - (32px * 2)) / 3);
   border: 2px dashed #accbdf;
@@ -43,66 +50,89 @@
   overflow: hidden;
   height: unset;
 }
+
 .core-boxies figure {
   margin-bottom: 12px;
 }
+
 .core-boxies .desc {
   font-size: 20px;
   line-height: 32px;
   margin-top: 14px;
 }
+
+@media (max-width: 921px) {
+
+  .sc-about-core-values h3 {
+    font-size: 20px !important;
+  }
+}
+
 @media only screen and (max-width: 767px) {
-  .core-boxies.box {
+  .core-boxies .box {
     width: 100%;
   }
 }
+
 .sc-about-main-content .h2-title {
   margin-bottom: 20px;
 }
+
 .wcm-logo {
   margin-bottom: 30px;
 }
+
 .wcm-logo img {
   object-fit: cover;
   height: 97px;
 }
+
 .a-gallery {
   margin-top: 54px;
   gap: 20px;
 }
+
 .a-gallery img {
   width: calc((100% - 20px) / 2);
   border-radius: 20px;
   object-fit: cover;
 }
+
 .sc-about-main-content p {
   font-family: "Soleto";
   font-size: 22px;
   line-height: 150%;
   color: #000;
 }
+
 .sc-about-main-content .sc-btn {
   margin-top: 70px;
 }
+
 .sc-about-main-content .sc-btn a {
   max-width: 430px;
   width: 100%;
   border: 2px solid transparent;
 }
+
 .sc-about-main-content .sc-btn a:hover {
   border: 2px solid #f2771a;
 }
+
 @media only screen and (max-width: 767px) {
   .a-gallery {
     margin-top: 24px;
   }
+
   .a-gallery img {
     width: 100%;
   }
+
   .sc-about-main-content .sc-btn {
     margin-top: 24px;
   }
 }
+
 @media only screen and (max-width: 1199px) {
   .sc-about-main-content p {
     font-size: 18px;
