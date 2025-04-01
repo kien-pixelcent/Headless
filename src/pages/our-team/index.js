@@ -82,13 +82,13 @@ const OurTeam = () => {
       <div className="hfeed site" id="page">
         <div id="content" className="site-content">
           <div className="main-content">
-            <AboutBanner title={banner?.title} description={banner?.desc} subtitle={banner?.subtitle} image={banner?.image} backgroundImage={banner?.backgroundImage} button={banner?.button} type={banner?.type} isShow={banner?.isShow} />
+            <AboutBanner banner={banner} />
             <section className="section sc-our-teams pt-100 pb-100">
               <div className="ast-container">
                 <div className="team-list ast-flex">
 
                   {member.slice(0, visibleCount).map((item, index) => (
-                    <div className="item text-center justify-items-center show">
+                    <div key={index} className="item text-center justify-items-center show">
                       <div className="avatar position-relative mx-auto">
                         <div className="overlay-gradient">
                           <figure><img src={item?.featuredImage?.node?.sourceUrl} alt="Alex" /></figure>

@@ -1120,6 +1120,11 @@ footer a:hover {
   border: 2px solid #F0791D;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  content: none !important;
+}
+
 @media only screen and (max-width:544px) {
   .event-sidebar {
     width: 100%;

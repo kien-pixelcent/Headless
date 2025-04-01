@@ -126,7 +126,7 @@ const AboutUs = () => {
   return (
     <Layout>
       <div className="main-content">
-        <AboutBanner title={banner?.title} description={banner?.desc} subtitle={banner?.subtitle} image={banner?.image} backgroundImage={banner?.backgroundImage} button={banner?.button} type={banner?.type} isShow={banner?.isShow} />
+        <AboutBanner banner={banner} />
         <section className="section sc-about-main-content pt-100 pb-100">
           <div className="ast-container">
             <figure className="wcm-logo"><img src={data?.flexibleContent[0]?.image?.node?.sourceUrl} height={97} alt="Who We Are" /></figure>
@@ -149,7 +149,7 @@ const AboutUs = () => {
             <h2 className="h2-title f-soleto fw-800 color-0659A9 fs-48 text-center">{data?.flexibleContent[1]?.title}</h2>
             <div className="boxies core-boxies ast-flex justify-content-center">
               {data?.flexibleContent[1]?.box.map((item, index) => (
-                <div className="box text-center">
+                <div key={index} className="box text-center">
                   <figure><img src={item?.icon?.node?.sourceUrl} alt="CARING" /></figure>
                   <h3 className="h3-title f-soleto fw-800 color-0659A9 fs-26 mb-0 text-center">{item?.title}</h3>
                   <div className="desc f-soleto color-0659A9 text-center">{item?.content}</div>
@@ -164,7 +164,7 @@ const AboutUs = () => {
             <div className="desc f-soleto color-000000 fs-22 text-center" dangerouslySetInnerHTML={{ __html: data?.flexibleContent[2]?.content }} ></div>
             <div className="list ast-flex justify-content-center">
               {data?.flexibleContent[2]?.list.map((item, index) => (
-                <a href={item?.link} target="_self">{item?.title}</a>
+                <a key={index} href={item?.link} target="_self">{item?.title}</a>
               ))}
             </div>
             <div className="bottom-content f-soleto color-000000 fs-22 text-center" dangerouslySetInnerHTML={{ __html: data?.flexibleContent[2]?.bottomContent }}></div>

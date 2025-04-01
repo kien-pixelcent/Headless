@@ -6,7 +6,7 @@ const CardEpisodes = (remainingEpisodes) => {
   return (
     <>
       {remainingEpisodes?.remainingEpisodes.map((item, index) => (
-        <div className="box box-podcast f-soleto text-white ast-flex flex-column text-center">
+        <div key={index} className="box box-podcast f-soleto text-white ast-flex flex-column text-center">
           <figure className="logo"><img src="https://agencysite.bwpsites.com/wp-content/uploads/2024/11/footer-logo.png" alt /></figure>
           <h3 className="h3-title f-soleto text-white fw-800"><a href={item?.link} target="_self">{item?.title}</a></h3>
           <div className="host-infor">
