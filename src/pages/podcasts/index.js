@@ -77,7 +77,6 @@ const Podcasts = () => {
 
   const episodes = query?.cms?.episodes?.nodes;
   const banner = query?.cms?.pageBy?.template?.banner;
-
   const latestEpisodes = episodes.reduce((latest, episodes) =>
     new Date(episodes.date) > new Date(latest.date) ? episodes : latest
     , episodes[0]);
@@ -90,7 +89,7 @@ const Podcasts = () => {
     <Layout>
       <div id="content" className="site-content">
         <div className="main-content">
-          <AboutBanner title={banner?.title} description={banner?.desc} subtitle={banner?.subTitle} image={banner?.image} backgroundImage={banner?.backgroundImage} button={banner?.button} type={banner?.type} isShow={banner?.isShow} />
+          <AboutBanner banner={banner} />
           <section className="section sc-podcast page-content">
             <div className="ast-container">
               <div className="featured-podcast">

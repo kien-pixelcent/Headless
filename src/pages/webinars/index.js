@@ -63,14 +63,14 @@ const Webinars = () => {
     <Layout>
       <div id="content" className="site-content">
         <div className="main-content">
-          <AboutBanner title={banner?.title} description={banner?.desc} subtitle={banner?.subtitle} image={banner?.image} backgroundImage={banner?.backgroundImage} button={banner?.button} type={banner?.type} isShow={banner?.isShow} />
+          <AboutBanner banner={banner} />
           <section className="section sc-webinars page-content">
             <div className="ast-container">
               <div className="webinars-lists">
                 <div className="lists ast-flex">
                   {data?.list.map((item, index) => (
-                    <div className="box box-webinar ast-flex flex-column-">
-                      <figure className="thumb"><a href={item?.link} target="_blank"><img src={item?.image?.node?.sourceUrl} alt="Your 2025 Digital Marketing Plan" /></a></figure>
+                    <div key={index} className="box box-webinar ast-flex flex-column-">
+                      <figure className="thumb"><a href={item?.link} target="_blank"><img src={item?.image?.node?.sourceUrl} alt="" /></a></figure>
                       <h3 className="h3-title f-soleto text-black fw-500"><a href={item?.link} className="text-black" target="_blank">{item?.title}</a></h3>
                       <div className="desc f-soleto fw-300 text-black">{item?.desc}</div>
                     </div>
