@@ -3,9 +3,7 @@
 }
 
 .banner {
-  /*padding:100px 0px;*/
-  height: 18.75vw;
-  /*360px;*/
+  height: 360px;
 }
 
 .banner .h1-title {
@@ -21,15 +19,18 @@
 }
 
 .banner .desc {
-  font-size: 1.25vw;
-  /*24px;*/
+  font-size: 1.66vw;
+  /*32px;*/
   line-height: 1.5;
+  margin-top: 0.62vw;
+  /*12px; */
 }
 
 @media only screen and (max-width:922px) {
   .banner .desc {
     font-size: 18px;
   }
+
 }
 
 @media only screen and (max-width:768px) {

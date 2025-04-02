@@ -8,7 +8,7 @@ const CardEpisodes = (remainingEpisodes) => {
       {remainingEpisodes?.remainingEpisodes.map((item, index) => (
         <div key={index} className="box box-podcast f-soleto text-white ast-flex flex-column text-center">
           <figure className="logo"><img src="https://agencysite.bwpsites.com/wp-content/uploads/2024/11/footer-logo.png" alt /></figure>
-          <h3 className="h3-title f-soleto text-white fw-800"><a href={item?.link} target="_self">{item?.title}</a></h3>
+          <h3 className="h3-title f-soleto text-white fw-800"><a href={item?.uri} target="_self">{item?.title}</a></h3>
           <div className="host-infor">
             <div className="date">{item?.date ? new Date(item.date).toLocaleDateString('en-CA') : 'N/A'}</div>
             <div className="author-infor ast-flex align-items-center  justify-content-center">

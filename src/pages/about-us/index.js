@@ -144,7 +144,7 @@ const AboutUs = () => {
             )}
           </div>
         </section>
-        <section className="section sc-about-core-values" style={{ "background": `no-repeat center/cover url("${data?.flexibleContent[1]?.backgroundImage?.node?.sourceUrl}");` }}>
+        <section className="section sc-about-core-values" style={{ background: `no-repeat center/cover url("${data?.flexibleContent[1]?.backgroundImage?.node?.sourceUrl}")` }}>
           <div className="ast-container">
             <h2 className="h2-title f-soleto fw-800 color-0659A9 fs-48 text-center">{data?.flexibleContent[1]?.title}</h2>
             <div className="boxies core-boxies ast-flex justify-content-center">

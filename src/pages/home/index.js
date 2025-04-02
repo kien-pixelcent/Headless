@@ -680,11 +680,16 @@ export default () => {
           </section>
           <section className="section sc-gift-book">
             <div className="cus-container">
+              <div className="free-gift-content mobile">
+                <h2 className="fs-36 fw-800 color-00255B">
+                  <a href={giftBook?.link?.url} target="_blank">{giftBook.title}</a>
+                </h2>
+              </div>
               <div className="sc-free-gift ast-flex">
                 <figure>
                   <img src={giftBook?.image?.node?.sourceUrl} alt={giftBook?.image?.node?.altText} width={150} height={180} />
                 </figure>
-                <div className="free-gift-content">
+                <div className="free-gift-content desktop">
                   <h2 className="fs-36 fw-800 color-00255B">
                     <a href={giftBook?.link?.url} target="_blank">{giftBook.title}</a>
                   </h2>

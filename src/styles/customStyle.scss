@@ -254,17 +254,21 @@
     font-size: 1.66vw !important;
   }
 
+  .fs-36 {
+    font-size: 1.87vw !important;
+  }
+
   .fs-56 {
-    font-size: 3.33vw !important;
+    font-size: 2.51vw !important;
   }
 }
 
 @media only screen and (max-width:767.98px) {
-  .fs-48 {
-    font-size: 7.77vw
-      /*28px*/
-      !important;
-  }
+  // .fs-48 {
+  //   font-size: 7.77vw
+  //     /*28px*/
+  //     !important;
+  // }
 }
 
 .btn-bg {
@@ -799,6 +803,42 @@ footer a:hover {
 
 .slick-active button {
   background-color: #F2771A !important;
+}
+
+@media(min-width:992px) {
+  .btn-bg {
+    padding: 0.41vw 1.04vw;
+    /*8px 20px;*/
+    min-height: 3.12vw;
+    /*60px;*/
+  }
+
+  .free-gift-content.mobile h2 {
+    display: none;
+  }
+}
+
+@media(max-width:922px) {
+  .free-gift-content h2 a {
+    font-size: 25px !important;
+    line-height: 1.2px !important;
+    text-decoration: none !important;
+    text-align: center;
+  }
+
+  .free-gift-content h2 {
+    text-align: center;
+  }
+
+  .free-gift-content .desc p,
+  .sc-gift-book .free-gift-content .desc {
+    font-size: 18px;
+  }
+
+  .free-gift-content.desktop h2 {
+    display: none;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width:767px) {
