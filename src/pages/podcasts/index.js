@@ -45,7 +45,7 @@ const Podcasts = () => {
           nodes {
             content
             excerpt
-            link
+            uri
             date
             title
             customPodcasts {
@@ -113,7 +113,7 @@ const Podcasts = () => {
                     <h2 className="h2-title f-soleto fw-800 text-white">{latestEpisodes?.title}</h2>
                     <div className="desc" dangerouslySetInnerHTML={{ __html: latestEpisodes?.excerpt }}></div>
                     <div className="sc-btn">
-                      <a href={latestEpisodes?.link} className="custom-btn bg-orange" target="_self">Listen Now</a>
+                      <a href={latestEpisodes?.uri} className="custom-btn bg-orange" target="_self">Listen Now</a>
                     </div>
                   </div>
                 </div>

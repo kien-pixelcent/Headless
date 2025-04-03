@@ -1,18 +1,20 @@
 .sc-our-teams {
-  background: no-repeat center/cover url('https://agencysite.bwpsites.com/wp-content/uploads/2024/11/bg-how-we-can-help.jpg');
+  background: no-repeat center/cover url('https://www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/bg-how-we-can-help.jpg');
 }
 
 .team-list {
-  gap: 30px;
+  gap: 1.56vw;
+  /*30px;*/
 }
 
 .team-list .item {
   display: none;
-  width: calc((100% - (30px * 2))/3);
+  width: calc((100% - (1.56vw * 2))/3);
   border-radius: 20px;
   background: #fff;
   border: 2px solid #D3E7F3;
-  padding: 40px 24px;
+  padding: 2.08vw 1.25vw;
+  /*40px 24px;*/
   transition: all 1s ease;
 }
 
@@ -25,9 +27,12 @@
 }
 
 .team-list .item .avatar {
-  margin-bottom: 34px;
-  width: 189px;
-  height: 180px;
+  margin-bottom: 1.77vw;
+  /*34px;*/
+  width: 9.84vw;
+  /*189px;*/
+  height: 9.37vw;
+  /*180px;*/
 }
 
 .team-list .item .avatar .bg-overlay {
@@ -35,61 +40,111 @@
   height: 100%;
   top: 0px;
   left: 0px;
-  background: no-repeat center/cover url('https://agencysite.bwpsites.com/wp-content/themes/agencymarketing/assets/img/bg-overlay-member.svg');
+  background: no-repeat center/cover url('https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/bg-overlay-member.svg');
 }
 
 .avatar figure {
   overflow: hidden;
-  max-width: 189px;
-  height: 180px;
-  border-radius: 200px 200px 15px 200px;
+  max-width: 9.84vw;
+  /*189px;*/
+  height: 9.37vw;
+  /*180px;*/
+  border-radius: 10.41vw 10.41vw 0.78vw 10.41vw;
+  /*200px 200px 15px 200px;*/
 }
 
 .team-list .item .avatar img {
   object-fit: cover;
-  max-width: 189px;
+  max-width: 9.84vw;
+  /*189px;*/
   width: 100%;
-  min-height: 180px;
+  min-height: 9.37vw;
+  /*180px;*/
   position: relative;
   z-index: 2;
   transition: all 1s linear;
 }
 
 .member-name {
-  margin-bottom: 15px;
+  margin-bottom: 0.78vw;
+  /*15px;*/
   border-bottom: 2px solid #F2771A;
   display: inline-block;
 }
 
 .position {
-  font-size: 20px;
-  line-height: 150%;
+  font-size: 1.04vw;
+  /*20px;*/
+  line-height: 1.5;
 }
 
 .loadmore {
-  max-width: 430px;
+  max-width: 22.39vw;
+  /*430px;*/
   border-radius: 0px;
-  margin-top: 60px;
+  margin-top: 3.12vw;
+  /*60px;*/
 }
 
 .overlay-gradient {
   background: radial-gradient(50% 50% at 50% 50%, #83B7EA 0%, #0659A9 100%);
-  border-radius: 200px 200px 15px 200px;
+  border-radius: 10.41vw 10.41vw 0.78vw 10.41vw;
+  /*200px 200px 15px 200px;*/
 }
 
-@media only screen and (max-width:767px) {
-  .team-list div.item {
-    width: 100%;
+@media only screen and (max-width:922px) {
+  .team-list {
+    gap: 24px;
+  }
+
+  .team-list .item {
+    width: calc((100% - 24px)/2);
+    padding: 20px;
+  }
+
+  .team-list .item .avatar {
+    margin-bottom: 24px;
+    width: 189px;
+    height: 180px;
+  }
+
+  .avatar figure {
+    max-width: 189px;
+    height: 180px;
+  }
+
+  .avatar figure,
+  .overlay-gradient {
+    border-radius: 200px 200px 15px 200px;
+  }
+
+  .team-list .item .avatar img {
+    max-width: 189px;
+    min-height: 180px;
+  }
+
+  .member-name {
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+
+  .position {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .team-list {
+    justify-content: center;
   }
 
   .loadmore {
     max-width: unset;
     width: auto;
   }
-}
 
-@media only screen and (max-width:999px) {
   .team-list .item {
-    width: calc((100% - 30px)/2);
+    width: 100%;
+    max-width: 433px;
   }
 }
