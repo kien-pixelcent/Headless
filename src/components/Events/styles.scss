@@ -1,0 +1,214 @@
+.banner {
+    padding: 5.20vw 0px;
+    /*100px 0px;*/
+    height: auto !important;
+}
+
+.banner .ast-container,
+.banner-inner,
+.banner-content {
+    height: 100%;
+}
+
+.banner .h1-title {
+    font-size: 3.90vw;
+    /*75px;*/
+    line-height: 1.2;
+}
+
+.banner .h3-title {
+    margin-bottom: 1.04vw;
+    /*20px;*/
+}
+
+.banner .desc {
+    font-size: 2.34vw;
+    /*45px;*/
+    line-height: 2;
+    margin-bottom: 1.56vw;
+    /*30px;*/
+}
+
+.banner p {
+    font-size: 1.14vw;
+    /*22px;*/
+}
+
+.sc-event-single {
+    overflow: visible;
+    padding: 2.81vw 0px 7.81vw;
+    /*54px 0px 150px;*/
+    background: no-repeat center/cover url('https://www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/bg-how-we-can-help.jpg');
+}
+
+.gallery-slider {
+    overflow: hidden;
+    padding: 0px 1.56vw;
+    /*0px 30px;*/
+    margin-top: 1.56vw;
+    /*30px;*/
+}
+
+.gallery-slider .slick-list,
+.gallery-slider .slick-track {
+    height: 15.62vw;
+    /*300px;*/
+}
+
+.gallery-slider a {
+    padding: 0px 0.52vw;
+    /*10px;*/
+    display: block;
+    height: 100%;
+}
+
+.gallery-slider img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.gallery-slider .slick-arrow {
+    padding: 0px;
+    border: 0px;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gallery-slider .slick-arrow:focus,
+.gallery-slider .slick-arrow:hover {
+    outline: none;
+    box-shadow: none;
+    border: 0px;
+}
+
+.gallery-slider .slick-prev {
+    left: 0px;
+}
+
+.gallery-slider .slick-next {
+    right: 0px;
+}
+
+.banner wistia-player {
+    display: none !important;
+}
+
+.gallery-box h2 {
+    font-family: 'Soleto';
+    font-size: 2.08vw;
+    /*40px;*/
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 1.04vw;
+    /*20px;*/
+}
+
+.sc-event-video {
+    margin-top: -7.81vw;
+    /*-150px;*/
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.breadcrumb a:hover {
+    color: rgb(240, 121, 29);
+}
+
+.breadcrumb a:focus,
+.breadcrumb a:hover {
+    outline: none;
+    border: 0px solid;
+}
+
+.breadcrumb a,
+.breadcrumb span {
+    color: #fff;
+    font-size: 0.93vw;
+    /*18px;*/
+}
+
+.breadcrumb svg {
+    transform: rotate(-180deg);
+    fill: #fff;
+    width: 0.41vw;
+    /*8px;*/
+    height: 1.25vw;
+    /*24px;*/
+}
+
+.breadcrumb svg path {
+    fill: #fff;
+}
+
+.gallery-box {
+    margin-top: 2.08vw;
+    /*40px;*/
+}
+
+.gallery-slider .slick-arrow svg path,
+.gallery-slider .slick-arrow svg path {
+    fill: #0659A9 !important;
+    stroke: #0659A9 !important;
+}
+
+@media only screen and (max-width:922px) {
+    .sc-events-list {
+        padding: 40px 0px !important;
+    }
+
+    .banner {
+        padding: 40px 0px 100px;
+    }
+
+    .banner .h3-title {
+        font-size: 28px !important;
+        margin-bottom: 20px;
+    }
+
+    .banner .desc {
+        font-size: 22px !important;
+        margin-bottom: 24px;
+    }
+
+    .banner p {
+        font-size: 18px;
+    }
+
+    .breadcrumb a,
+    .breadcrumb span {
+        font-size: 16px;
+    }
+
+    .sc-event-video {
+        margin-top: -120px;
+    }
+
+    .gallery-box {
+        margin-top: 24px;
+    }
+
+    .gallery-slider {
+        margin-top: 24px;
+        padding: 0px 30px;
+    }
+
+    .gallery-slider .slick-list,
+    .gallery-slider .slick-track {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width:544px) {
+
+    .gallery-slider .slick-list,
+    .gallery-slider .slick-track {
+        height: auto;
+    }
+}

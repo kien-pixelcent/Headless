@@ -1,0 +1,764 @@
+// method solution
+.sc-method-solution {
+    background: no-repeat bottom/cover url('https://www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/bg-solution.png');
+}
+
+.method-list .item {
+    display: flex;
+    gap: 21px;
+    align-items: center;
+}
+
+.method-list .item:nth-child(odd) .h3-title {
+    color: #2A87D3;
+}
+
+.method-list .item:nth-child(even) .h3-title {
+    color: #F2771A;
+}
+
+.method-list .item figure {
+    max-width: 170px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.method-list .item figure img {
+    height: 100%;
+}
+
+.method-list .content .h3-title {
+    line-height: 1.2;
+    margin-bottom: 7px;
+}
+
+.method-list .content .desc {
+    line-height: 1.5;
+    color: #000;
+}
+
+.sc-method-solution .sc-btn a {
+    max-width: 361px;
+    width: 100%;
+}
+
+@media only screen and (min-width:922px) {
+    .sc-method-solution {
+        padding: 4.42vw 0px 5.20vw;
+        /*85px 0px 100px;*/
+    }
+
+    .method-solution .sc-header {
+        padding: 0 4.63vw;
+        /*89px;*/
+        gap: 1.35vw;
+        /*26px;*/
+    }
+
+    .sc-method-solution .h2-title {
+        font-size: 2.60vw;
+        /*50px;*/
+    }
+
+    .method-list {
+        margin-top: 4.16vw;
+        /*80px;*/
+        padding: 0px 6.04vw;
+        /*116px;*/
+    }
+
+    .method-list .item {
+        gap: 1.09vw;
+        /*21px;*/
+    }
+
+    .method-list .item:not(:first-child) {
+        margin-top: -0.88vw;
+        /*-17px;*/
+    }
+
+    .method-list .item figure {
+        max-width: 8.85vw;
+        /*170px;*/
+    }
+
+    .method-list .content .h3-title {
+        font-size: 1.87vw;
+        /*36px;*/
+    }
+
+    .method-list .content .desc {
+        font-size: 1.35vw;
+        /*26px;*/
+    }
+
+    .sc-method-solution .sc-btn {
+        margin-top: 3.02vw;
+        /*58px;*/
+    }
+}
+
+@media only screen and (max-width:921.98px) {
+    .sc-method-solution {
+        padding: 40px 0px;
+    }
+
+    .method-solution .sc-header {
+        padding: 0px;
+        gap: 24px;
+    }
+
+    .method-solution .sc-header,
+    .sc-method-solution .sc-btn a {
+        font-size: 18px !important;
+    }
+
+    .method-list {
+        margin-top: 24px;
+        padding: 0px;
+    }
+
+    .method-list .item {
+        gap: 15px;
+    }
+
+    .method-list .item:not(:first-child) {
+        margin-top: -10px;
+    }
+
+    .method-list .item figure {
+        max-width: 100px;
+    }
+
+    .method-list .content .h3-title {
+        font-size: 22px;
+    }
+
+    .method-list .content .desc {
+        font-size: 18px;
+    }
+
+    .sc-method-solution .sc-btn {
+        margin-top: 24px;
+    }
+}
+
+@media only screen and (max-width:767.98px) {
+    .method-list .item:not(:first-child) {
+        margin: 24px 0px 0px;
+    }
+}
+
+// method content
+.sc-method-content {
+    padding: 5.20vw 0px 6.51vw;
+    /*100px 0px 125px;*/
+}
+
+.bg-ffffff {
+    background-color: #ffffff !important;
+}
+
+.bg-f6f6f6 {
+    background-color: #f6f6f6 !important;
+}
+
+.sc-header {
+    gap: 1.35vw;
+    /*26px;*/
+}
+
+.sc-method-content .cols-2 {
+    gap: 2.08vw;
+    /*40px;*/
+    margin-top: 2.29vw;
+    /*44px;*/
+}
+
+.sc-method-content .cols-2 figure {
+    margin-bottom: 0px;
+    max-width: 25.62vw;
+    /*492px;*/
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.sc-method-content .cols-2 figure img {
+    width: 100%;
+}
+
+/*.sc-method-content:nth-child(odd) .cols-2 figure{
+    order:1;
+}
+.sc-method-content:nth-child(odd) .cols-2 .content{
+    order:2;
+}*/
+.sc-method-content.col-reverse .cols-2 figure {
+    order: 2;
+}
+
+.sc-method-content.col-reverse .cols-2.content {
+    order: 1;
+}
+
+.sc-method-content .cols-2 .content {
+    flex: 1;
+}
+
+.sc-method-content .cols-2 .content h3 {
+    font-family: 'Soleto';
+    font-size: 1.35vw;
+    /*26px;*/
+    line-height: 1.4;
+    font-weight: 700;
+    color: #0659A9;
+    margin-bottom: 0.98vw;
+    /*19px;*/
+}
+
+.sc-method-content .cols-2 .content p,
+.sc-method-content .cols-2 .content li {
+    font-family: 'Soleto';
+    font-size: 1.14vw;
+    /*22px;*/
+    line-height: 1.5;
+}
+
+.sc-method-content .cols-2 .content p {
+    font-weight: 300;
+}
+
+.sc-method-content .cols-2 .content ul {
+    margin-top: 0.98vw;
+    /*19px;*/
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.sc-method-content .cols-2 .content ul>li {
+    position: relative;
+    padding-left: 1.92vw;
+    /*37px;*/
+    font-weight: 400;
+}
+
+.sc-method-content .cols-2 .content ul>li:not(:last-child) {
+    margin-bottom: 1.45vw;
+    /*28px;*/
+}
+
+.sc-method-content .cols-2 .content ul>li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: no-repeat center/cover url('https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/cirle-check-green.svg');
+    width: 1.14vw;
+    /*22px;*/
+    height: 1.14vw;
+    /*22px;*/
+    top: 0.41vw;
+    /*8px;*/
+    left: 0px;
+}
+
+.sc-method-content .bottom-content {
+    margin-top: 2.55vw;
+    /*49px;*/
+}
+
+.sc-method-content-2 .bottom-content p {
+    font-weight: 300;
+}
+
+.sc-method-content .sc-btn {
+    margin-top: 3.02vw;
+    /*58px;*/
+}
+
+.sc-method-content.col-reverse .sc-btn a {
+    max-width: 20.83vw;
+    /*400px;*/
+}
+
+.sc-method-content .desc,
+.sc-method-content .bottom-content {
+    font-weight: 300;
+}
+
+.sc-method-content .sc-btn a {
+    max-width: 28.12vw;
+    /*540px;*/
+    width: 100%;
+}
+
+.sc-method-content .sc-btn a.btn-fluid {
+    max-width: unset;
+    min-width: 19.27vw;
+    /*370px;*/
+    width: auto;
+    padding-left: 4.16vw;
+    /*80px;*/
+    padding-right: 4.16vw;
+    /*80px;*/
+}
+
+@media only screen and (max-width:922px) {
+    .sc-method-content {
+        padding: 40px 0px;
+    }
+
+    .sc-method-content .cols-2 figure {
+        max-width: 30%;
+    }
+
+    .sc-method-content .cols-2 .content h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .sc-method-content .cols-2 .content p,
+    .sc-method-content .cols-2 .content li {
+        font-size: 18px;
+    }
+
+    .sc-method-content .bottom-content {
+        font-size: 18px !important;
+    }
+
+    .sc-method-content .cols-2 .content ul {
+        margin-top: 10px;
+    }
+
+    .sc-method-content .cols-2 .content ul>li {
+        padding-left: 29px;
+    }
+
+    .sc-method-content .cols-2 .content ul>li:before {
+        width: 14px;
+        height: 14px;
+        top: 5px;
+    }
+
+    .sc-method-content .cols-2 .content ul>li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .sc-method-content .cols-2,
+    .sc-method-content .bottom-content,
+    .sc-method-content .sc-btn {
+        margin-top: 24px;
+    }
+
+    .sc-method-content .sc-btn a,
+    .sc-method-content.col-reverse .sc-btn a {
+        max-width: 540px;
+        font-size: 18px !important;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .sc-method-content .cols-2 figure {
+        max-width: 492px;
+        margin: 0px auto;
+    }
+
+    .sc-method-content .cols-2 .content {
+        flex: 0 0 100%;
+    }
+}
+
+@media only screen and (max-width:544px) {
+    .sc-method-content .cols-2 figure {
+        max-width: unset;
+    }
+}
+
+// Mar why choose
+
+.sc-mar-why-choose {
+    padding: 3.85vw 0px 4.11vw;
+    /*74px 0px 79px;*/
+}
+
+.sc-mar-why-choose .list {
+    gap: 1.56vw;
+    /*30px;*/
+    margin-top: 2.44vw;
+    /* 47px;*/
+}
+
+.sc-mar-why-choose .item {
+    width: calc((100% - (1.56vw * 3))/4);
+    gap: 0.62vw;
+    /*12px;*/
+    position: relative;
+    padding: 0.98vw 0px 2.39vw;
+    /*19px 0px 46px;*/
+}
+
+.sc-mar-why-choose .item:not(:last-child):after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #000;
+    top: 0px;
+    right: -0.78vw;
+    /*-15px;*/
+}
+
+.sc-mar-why-choose h3 {
+    min-height: 4.16vw;
+    /*80px;*/
+    display: flex;
+    align-items: center;
+    color: #F2771A;
+}
+
+@media only screen and (max-width:922px) {
+    .sc-mar-why-choose {
+        padding: 40px 0px;
+    }
+
+    .sc-mar-why-choose .list {
+        margin-top: 24px;
+    }
+
+    .sc-mar-why-choose .item {
+        padding: 19px 0px;
+    }
+
+    .sc-mar-why-choose h3 {
+        font-size: 24px !important;
+        min-height: 108px;
+    }
+
+    .sc-mar-why-choose .desc {
+        font-size: 18px !important;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .sc-mar-why-choose .list {
+        max-width: 318px;
+        margin: 24px auto 0px;
+        gap: 24px;
+    }
+
+    .sc-mar-why-choose .item {
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    .sc-mar-why-choose .item:not(:last-child):after {
+        width: 100%;
+        height: 1px;
+        right: unset;
+        top: unset;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sc-mar-why-choose h3 {
+        min-height: unset;
+    }
+}
+
+// Mar growth
+
+.sc-mar-growth .ast-container-fluid {
+    max-width: 53.64vw;
+    /*1030px;*/
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+}
+
+.sc-strategist {
+    padding: 0px 0.78vw 1.04vw 0px;
+    /*0px 15px 20px 0px;*/
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.strategist-infor {
+    max-width: 31.77vw;
+    /*610px;*/
+    background: #00255B;
+    padding: 0.83vw 1.82vw 1.71vw;
+    /*16px 35px 33px;*/
+
+}
+
+.strategist-infor .position {
+    padding-bottom: 0.78vw;
+    /*15px;*/
+    border-bottom: 1px solid #fff;
+    margin-bottom: 0.78vw;
+    /*15px;*/
+    display: inline-block;
+    font-weight: 700;
+    font-size: 0.93vw;
+    /*18px;*/
+    line-height: 1.5;
+}
+
+.strategist-infor .desc {
+    font-style: italic;
+    font-size: 1.04vw;
+    /*20px;*/
+    line-height: 1;
+}
+
+.sc-mar-growth .cus-container {
+    position: relative;
+    z-index: 2;
+}
+
+.col-growth-content {
+    max-width: 32.91vw;
+    /*632px;*/
+    padding: 5.93vw 0px 7.60vw;
+    /*114px 0px 146px;*/
+}
+
+.build-growth,
+.col-growth-content .items {
+    margin-top: 1.82vw;
+    /*35px;*/
+}
+
+.build-growth a {
+    gap: 0.78vw;
+    /*15px;*/
+}
+
+.build-growth svg {
+    width: 1.66vw;
+    /*32px;*/
+    height: 1.66vw;
+    /*32px;*/
+}
+
+.build-growth .title {
+    flex: 1;
+}
+
+.col-growth-content .items {
+    gap: 0.98vw;
+    /*19px;*/
+}
+
+.col-growth-content .items .item {
+    gap: 10px;
+    align-items: center;
+}
+
+.col-growth-content .items .item svg {
+    width: 1.35vw;
+    /*26px;*/
+    height: 1.35vw;
+    /*26px;*/
+}
+
+.col-growth-content .items .item .title {
+    flex: 1;
+    font-size: 1.14vw;
+    /*22px;*/
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.col-growth-content .sc-btn {
+    margin-top: 1.66vw;
+    /*32px;*/
+    max-width: 22.55vw;
+    /*433px;*/
+}
+
+.col-growth-content .sc-btn .disclaimer {
+    margin-top: 7px;
+    font-style: italic;
+    text-align: center;
+}
+
+@media only screen and (max-width:922px) {
+    .sc-mar-growth {
+        padding: 40px 0px;
+    }
+
+    .sc-mar-growth .ast-container-fluid {
+        max-width: 60%;
+    }
+
+    .build-growth a {
+        gap: 10px;
+    }
+
+    .build-growth svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .build-growth .title {
+        font-size: 24px !important;
+    }
+
+    .build-growth,
+    .col-growth-content .items,
+    .col-growth-content .sc-btn {
+        margin-top: 24px;
+    }
+
+    .col-growth-content {
+        max-width: 50%;
+        padding: 40px 0px;
+    }
+
+    .col-growth-content .items {
+        gap: 19px;
+    }
+
+    .col-growth-content .items .item .title,
+    .col-growth-content .sc-btn .disclaimer,
+    .strategist-infor .desc,
+    .col-growth-content .sc-btn a {
+        font-size: 18px !important;
+    }
+
+    .col-growth-content .items .item svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .strategist-infor {
+        max-width: 65%;
+        padding: 20px;
+    }
+
+    .strategist-infor h3 {
+        font-size: 22px !important;
+    }
+
+    .strategist-infor .position {
+        font-size: 16px;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .col-growth-content .sc-btn {
+        max-width: unset;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .sc-mar-growth {
+        padding: 0px;
+    }
+
+    .col-growth-content {
+        padding: 60px 0px;
+    }
+
+    .sc-mar-growth .ast-container-fluid {
+        max-width: unset;
+        height: 570px;
+        padding: 0px 30px;
+        position: relative !important;
+    }
+
+    .sc-strategist {
+        height: 100%;
+        justify-content: center;
+        padding: 0px 30px 24px;
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    .strategist-infor,
+    .col-growth-content,
+    .col-growth-content .sc-btn {
+        max-width: unset;
+    }
+
+    .strategist-infor {
+        padding: 20px;
+    }
+}
+
+// Mar your practice
+
+.sc-mar-your-practice {
+    padding: 3.33vw 0px 4.37vw;
+    /*64px 0px 84px;*/
+}
+
+.your-practice-content {
+    margin-top: 1.35vw;
+    /*26px;*/
+    padding: 0px 4.47vw;
+    /*86px;*/
+}
+
+.your-practice-content p {
+    color: #000;
+    font-size: 1.14vw;
+    /*22px;*/
+    line-height: 1.5;
+}
+
+.your-practice-content .practice-phone {
+    margin-top: 2.60vw;
+    /*50px;*/
+}
+
+.your-practice-content .practice-phone a {
+    gap: 10px;
+}
+
+.practice-phone svg {
+    width: 1.51vw;
+    /*29px;*/
+    height: 1.51vw;
+    /*29px;*/
+}
+
+.practice-phone .call-text {
+    color: #F2771A;
+    flex: 1;
+    text-align: left;
+}
+
+@media only screen and (max-width:922px) {
+    .sc-mar-your-practice {
+        padding: 40px 0px;
+    }
+
+    .your-practice-content,
+    .your-practice-content .practice-phone {
+        margin-top: 24px;
+    }
+
+    .your-practice-content {
+        padding: 0px;
+    }
+
+    .your-practice-content p {
+        font-size: 18px;
+    }
+
+    .practice-phone svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .practice-phone .call-text {
+        font-size: 18px !important;
+        line-height: 1.5;
+    }
+}

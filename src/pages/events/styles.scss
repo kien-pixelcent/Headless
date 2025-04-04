@@ -1,0 +1,259 @@
+.sc-events-list {
+  padding: 4.16vw 0px 5.20vw;
+  /*80px 0px 100px;*/
+}
+
+.sc-events-list .cols-2 {
+  gap: 1.82vw;
+  /*35px;*/
+}
+
+.e-main-content {
+  max-width: 42.91vw;
+  /*824px;*/
+  padding-top: 3.64vw;
+  /*70px;*/
+}
+
+.gallery-slider {
+  overflow: hidden;
+  padding: 0px 1.56vw;
+  /*0px 30px;*/
+}
+
+.gallery-slider .slick-list,
+.gallery-slider .slick-track {
+  height: 15.62vw;
+  /*300px;*/
+}
+
+.gallery-slider a {
+  padding: 0px 10px;
+  display: block;
+  height: 100%;
+}
+
+.gallery-slider img {
+  object-fit: cover;
+  height: 100%;
+  max-height: 300px;
+}
+
+.gallery-box h2 {
+  font-family: 'Soleto';
+  font-size: 2.08vw;
+  /*40px;*/
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 1.04vw;
+  /*20px;*/
+}
+
+.gallery-box {
+  padding: 4.16vw 0px 5.20vw;
+  /*80px 0px 100px;*/
+}
+
+.gallery-box .slick-slide>div {
+  height: 100%;
+}
+
+.event-sidebar.new {
+  max-width: 100%;
+  border: none;
+  border-radius: unset;
+  background: unset;
+  padding: 0;
+}
+
+.event-sidebar.new h2 {
+  line-height: normal;
+  margin-bottom: 1.14vw;
+  /*22px;*/
+}
+
+.event-sidebar.new .list {
+  gap: 0px;
+}
+
+.event-sidebar.new .list .item {
+  padding: 0.78vw;
+  /*15px;*/
+  flex: 0 0 50%;
+  margin: 0px;
+  border: none;
+}
+
+.event-sidebar.new figure {
+  margin-bottom: 1.56vw;
+  /*30px;*/
+  overflow: hidden;
+}
+
+.event-sidebar.new figure img {
+  aspect-ratio: 425 / 285;
+  object-fit: cover;
+  transition: all 1s linear;
+}
+
+.event-sidebar figure:hover img {
+  transform: scale(1.25);
+}
+
+.event-sidebar .item .h3-title {
+  font-family: 'Minion';
+  font-size: 1.35vw;
+  /*26px;*/
+  font-weight: 700;
+  line-height: normal;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.event-sidebar .item .desc {
+  font-family: "Anek Devanagari", sans-serif;
+  color: #62676E;
+  font-size: 0.93vw;
+  /*18px;*/
+  line-height: 1.2;
+}
+
+.event-sidebar .item .sc-btn {
+  margin-top: 2.08vw;
+  /*40px;*/
+}
+
+.event-sidebar .item .sc-btn a {
+  border: 2px solid transparent;
+}
+
+.event-sidebar .item .sc-btn a:hover {
+  border: 2px solid #F0791D;
+}
+
+.events-video {
+  padding: 3.12vw 0px;
+  /*60px 0px;*/
+}
+
+.gallery-slider .slick-arrow {
+  padding: 0px;
+  border: 0px;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gallery-slider .slick-arrow svg path {
+  stroke: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+.gallery-slider .slick-arrow:focus,
+.gallery-slider .slick-arrow:hover {
+  outline: none;
+  box-shadow: none;
+  border: 0px;
+}
+
+.gallery-slider .slick-prev {
+  left: 0px;
+}
+
+.gallery-slider .slick-next {
+  right: 0px;
+}
+
+.max-w-custom {
+  max-width: 50.52vw;
+  /*970px;*/
+}
+
+.event-sidebar figure {
+  margin-bottom: 1.56vw;
+  /*30px;*/
+}
+
+/*@media only screen and (max-width:1440px)
+{
+	.e-main-content{max-width:calc(100% - 375px)}
+}
+@media only screen and (min-width:768px) and (max-width:999px)
+{
+	.e-main-content{flex: 0 0 auto;width:100%;padding-top:0px;}
+}*/
+@media only screen and (max-width:922px) {
+  .sc-events-list {
+    padding: 40px 0px !important;
+  }
+
+  .e-main-content {
+    max-width: 100%;
+    padding-top: 0px;
+  }
+
+  .gallery-slider {
+    padding: 0px 30px;
+  }
+
+  .gallery-slider .slick-list,
+  .gallery-slider .slick-track {
+    height: 300px;
+  }
+
+  .events-video,
+  .gallery-box {
+    padding: 40px 0;
+  }
+
+  .event-sidebar.new figure {
+    margin-bottom: 24px;
+  }
+
+  .gallery-box h2 {
+    font-size: 24px;
+  }
+
+  .max-w-custom {
+    max-width: unset;
+    padding: 0px 30px;
+  }
+
+  .gallery-box h2,
+  .event-sidebar.new h2 {
+    margin-bottom: 20px;
+  }
+
+  .event-sidebar.new .list .item {
+    padding: 15px;
+  }
+
+  .event-sidebar .item .h3-title {
+    font-size: 22px;
+  }
+
+  .event-sidebar .item .desc {
+    font-size: 16px;
+  }
+
+  .event-sidebar .item .sc-btn {
+    margin-top: 24px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .e-main-content .list {
+    gap: 30px;
+  }
+
+  .event-sidebar.new .list .item {
+    flex: 0 0 100%;
+  }
+}
+
+@media only screen and (max-width:544px) {
+  .e-main-content .list a {
+    width: 100%;
+  }
+}
