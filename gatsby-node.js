@@ -22,7 +22,7 @@ exports.createPages = async ({ actions, graphql }) => {
             }
           }
         }
-        services {
+        services(first: 99) {
           nodes {
             id
             slug
@@ -40,7 +40,7 @@ exports.createPages = async ({ actions, graphql }) => {
     if (!page.node.isFrontPage) {
       actions.createPage({
         path: page.node.slug,
-        component: path.resolve(`./src/pages/dynamicPages.js`),
+        component: path.resolve(`./src/components/templates/dynamicPages.js`),
         context: {
           ...page.node
         },
@@ -50,7 +50,7 @@ exports.createPages = async ({ actions, graphql }) => {
   data.cms.services.nodes.forEach(service => {
     actions.createPage({
       path: `service/${service.slug}`,
-      component: path.resolve(`./src/components/events/eventsDetail.js`),
+      component: path.resolve(`./src/components/templates/dynamicPages.js`),
       context: {
         ...service
       },
