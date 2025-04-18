@@ -1,5 +1,5 @@
 {
-  "buildCommand": "gatsby clean env-cmd -f .env.staging gatsby build",
+  "buildCommand": "env-cmd -f .env.staging gatsby build",
   "git": {
     "deploymentEnabled": {
       "development": true
