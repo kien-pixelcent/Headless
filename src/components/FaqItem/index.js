@@ -2,6 +2,20 @@ import * as React from "react"
 // import "./styles.scss"
 
 const FaqItem = ({ title, description }) => {
+  React.useEffect(() => {
+    const faqList = document.querySelectorAll('.faq-item');
+    faqList.forEach((item, index)=>{
+        faqList[index].addEventListener('click',function(){
+            if (faqList[index].classList.contains('active'))
+            {
+                faqList[index].classList.remove('active');
+            }else{
+                faqList[index].classList.add('active');
+            }
+        });
+        
+    });
+  }, []);
   return (
     <>
       <div className="faq-item position-relative">

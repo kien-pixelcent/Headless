@@ -3,8 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../../components/layout"
 import Slider from "react-slick";
 import HomeBanner from '../../components/HomeBanner'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export default () => {
 
