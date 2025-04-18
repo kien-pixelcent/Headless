@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cross-env GENERATE_SOURCEMAP=false env-cmd -f .env.staging gatsby build",
+  "buildCommand": "gatsby clean env-cmd -f .env.staging gatsby build",
   "git": {
     "deploymentEnabled": {
       "development": true
