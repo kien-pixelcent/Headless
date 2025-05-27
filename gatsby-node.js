@@ -1,9 +1,6 @@
 const path = require(`path`)
 const remark = require(`remark`)
 const html = require(`remark-html`)
-const dateformat = require(`dateformat`)
-const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
-const { makeBlogPath } = require(`./src/utils`)
 
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
@@ -32,22 +29,63 @@ exports.createPages = async ({ actions, graphql }) => {
             date
           }
         }
+        events(first: 99) {
+          nodes {
+            id
+            slug
+            uri
+            title
+            flexibleContentHtml
+            date
+          }
+        }
+        posts(first: 99) {
+          nodes {
+            id
+            slug
+            uri
+            title
+            flexibleContentHtml
+            date
+          }
+        }
       }
     }
   `)
 
-  data.cms.pages.edges.forEach(page => {
-    if (!page.node.isFrontPage) {
+
+  // Duyệt và thay thế trong pages
+  const pages = data.cms.pages.edges.map(({ node }) => ({
+    ...node,
+    flexibleContentHtml: node.flexibleContentHtml,
+  }));
+
+  // Duyệt và thay thế trong services
+  const services = data.cms.services.nodes.map((node) => ({
+    ...node,
+    flexibleContentHtml: node.flexibleContentHtml,
+  }));
+  const events = data.cms.events.nodes.map((node) => ({
+    ...node,
+    flexibleContentHtml: node.flexibleContentHtml,
+  }));
+  const blogs = data.cms.posts.nodes.map((node) => ({
+    ...node,
+    flexibleContentHtml: node.flexibleContentHtml,
+  }));
+
+  pages.forEach(page => {
+    if (!page.isFrontPage) {
       actions.createPage({
-        path: page.node.slug,
+        path: page.slug,
         component: path.resolve(`./src/components/templates/dynamicPages.js`),
         context: {
-          ...page.node
+          ...page
         },
       })
     }
   })
-  data.cms.services.nodes.forEach(service => {
+  services.forEach(service => {
     actions.createPage({
       path: `service/${service.slug}`,
       component: path.resolve(`./src/components/templates/dynamicPages.js`),
@@ -56,44 +94,36 @@ exports.createPages = async ({ actions, graphql }) => {
       },
     })
   })
-}
 
-// exports.createResolvers = ({
-//   actions,
-//   cache,
-//   createNodeId,
-//   createResolvers,
-//   store,
-//   reporter,
-// }) => {
-//   const { createNode } = actions
-//   createResolvers({
-//     GraphCMS_BlogPost: {
-//       createdAt: {
-//         type: `String`,
-//         resolve(source, args, context, info) {
-//           return dateformat(source.date, `fullDate`)
-//         },
-//       },
-//       post: {
-//         resolve(source, args, context, info) {
-//           return remark().use(html).processSync(source.post).contents
-//         },
-//       },
-//     },
-//     GraphCMS_Asset: {
-//       imageFile: {
-//         type: `File`,
-//         // projection: { url: true },
-//         resolve(source, args, context, info) {
-//           return createRemoteFileNode({
-//             url: source.url,
-//             cache,
-//             createNode,
-//             createNodeId,
-//           })
-//         },
-//       },
-//     },
-//   })
-// }
+  events.forEach(event => {
+    actions.createPage({
+      path: `events/${event.slug}`,
+      component: path.resolve(`./src/components/templates/dynamicPages.js`),
+      context: {
+        ...event
+      },
+    })
+  })
+
+  blogs.forEach(blog => {
+    actions.createPage({
+      path: `blog/${blog.slug}`,
+      component: path.resolve(`./src/components/templates/dynamicPages.js`),
+      context: {
+        ...blog
+      },
+    })
+  })
+
+
+  
+
+  // const { createRedirect } = actions;
+
+  // createRedirect({
+  //   fromPath: '/',
+  //   toPath: '/',
+  //   isPermanent: true,
+  //   redirectInBrowser: true,
+  // });
+}

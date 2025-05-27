@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphql',
       options: {
-        url: 'https://agencysite.pixelcent.com/graphql',
+        url: 'https://www.wellnessclinicmarketing.com/graphql',
         fieldName: `cms`,
         typeName: `GraphCMS`,
       }

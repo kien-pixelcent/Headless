@@ -2,8 +2,13 @@ import * as React from "react"
 import "./styles.scss"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
+import { useLocation } from "@reach/router"
 
-const Header = () => {
+const Header = ({ to }) => {
+
+  const location = useLocation()
+  const isActive = location.pathname === to
+
   React.useEffect(() => {
     const menuTriggers = document.querySelectorAll(".mega-menu-item");
 
@@ -471,7 +476,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        {/* <div className="ast-mobile-header-content content-align-flex-start ">
+        <div className="ast-mobile-header-content content-align-flex-start ">
           <div className="ast-builder-menu-mobile ast-builder-menu ast-builder-menu-mobile-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-header-mobile-menu">
             <div className="ast-main-header-bar-alignment"><div className="main-header-bar-navigation">
               <nav className="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="ast-mobile-site-navigation" aria-label="Site Navigation: Primary Menu" itemType="https://schema.org/SiteNavigationElement" itemScope="itemscope">
@@ -560,7 +565,7 @@ const Header = () => {
                     </li><li id="menu-item-2177" className="hide-mobile menu-item menu-item-type-custom menu-item-object-custom menu-item-2177"><a href="#" className="menu-link"><span className="ast-icon icon-arrow"><svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                       <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
                     </svg></span><span className="menu-text">Call Text</span></a></li></ul></div></nav></div></div>		</div>
-        </div> */}
+        </div>
       </div>
     </header>
   )
