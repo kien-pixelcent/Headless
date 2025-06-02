@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 const HomeBanner = () => {
   const data = useStaticQuery(graphql`
@@ -66,7 +66,9 @@ const HomeBanner = () => {
       }
     }
   `);
+
   const content = data.cms.pageBy.template.homeContent.flexibleContent[0]
+
   return (
     <>
       <section
@@ -100,11 +102,24 @@ const HomeBanner = () => {
           </div>
           <div className="banner-list ast-flex  justify-content-center">
             {
-              content?.serviceList?.map((item, key) => (
-                <a key={key} href="#" target="_self" className="link-item">
-                  {item?.title}
-                </a>
-              ))
+              content?.serviceList?.map((item, key) => {
+                let pathForLink = item?.link;
+
+                if (item?.link) {
+                  try {
+                    const urlObject = new URL(item.link);
+                    pathForLink = urlObject.pathname;
+                  } catch (error) {
+                    console.error("Đã xảy ra lỗi khi phân tích URL:", item.link, error);
+                  }
+                }
+
+                return (
+                  <Link key={key} to={pathForLink} className="link-item">
+                    {item?.title}
+                  </Link>
+                );
+              })
             }
           </div>
           <div className="box-desktop">
