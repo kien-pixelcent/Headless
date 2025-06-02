@@ -1,10 +1,10 @@
 import React, { useEffect } from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../../components/layout"
 import Slider from "react-slick";
 import HomeBanner from '../../components/HomeBanner'
 
-export default () => {
+const Home = () => {
 
   const query = useStaticQuery(graphql`
     query {
@@ -452,9 +452,9 @@ export default () => {
               <div className="steps ast-flex justify-content-center align-items-center">
                 {
                   getMore.item?.map((item, key) => (
-                    <a key={key} href="#" target="_self" className="step f-soleto fw-500">
+                    <Link key={key} to="/" className="step f-soleto fw-500">
                       {item.title}
-                    </a>
+                    </Link>
                   ))
                 }
               </div>
@@ -701,3 +701,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default Home;
