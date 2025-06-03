@@ -2,8 +2,6 @@ import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../layout"
 import SEO from "../SEO"
-import parse from 'html-react-parser';
-import { fetchSeoData } from '../../utils/seo'
 
 
 const Home = ({ data, pageContext }) => {

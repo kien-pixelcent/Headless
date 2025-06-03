@@ -4,8 +4,6 @@ import Layout from "../../components/layout"
 import Slider from "react-slick";
 import HomeBanner from '../../components/HomeBanner'
 import SEO from '../../components/SEO'
-import parse, { domToReact } from 'html-react-parser';
-import { fetchSeoData } from '../../utils/seo'
 
 const Home = ({ pageContext }) => {
   const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'

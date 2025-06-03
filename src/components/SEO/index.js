@@ -4,7 +4,6 @@ import parse from 'html-react-parser';
 const SEO = ({
     seoData,
 }) => {
-    console.log('seoData', seoData)
     if (!seoData) {
         return null
     }
