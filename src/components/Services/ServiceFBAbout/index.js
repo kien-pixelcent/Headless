@@ -3,6 +3,8 @@ import { graphql, useStaticQuery } from "gatsby";
 import './styles.scss';
 
 const ServiceFBAbout = () => {
+  const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
+  const siteBaseUrl = process.env.REACT_APP_BASE_URL
   const query = useStaticQuery(graphql`
     query {
       cms {
@@ -59,11 +61,11 @@ const ServiceFBAbout = () => {
                 {(index + 1) !== data?.item?.length && (
                   (index + 1) % 2 === 0 ? (
                     <div className="sep-curve-line sep-line-2">
-                      <img src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/curve-line-2.png" alt="" />
+                      <img src={`${WP_BASE_URL}/wp-content/themes/agencymarketing/assets/img/curve-line-2.png`} alt="" />
                     </div>
                   ) : (
                     <div className="sep-curve-line">
-                      <img src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/curve-line-1.png" alt="" />
+                      <img src={`${WP_BASE_URL}/wp-content/themes/agencymarketing/assets/img/curve-line-1.png`} alt="" />
                     </div>
                   )
                 )}

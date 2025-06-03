@@ -1,6 +1,6 @@
 const cheerio = require('cheerio');
 
-const OLD_DOMAIN = 'https://www.wellnessclinicmarketing.com';
+const OLD_DOMAIN = 'https://agencysitestaging.mystagingwebsite.com';
 const NEW_DOMAIN = 'http://localhost:8000';
 
 /**

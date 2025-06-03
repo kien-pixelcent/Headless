@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphql',
       options: {
-        url: 'https://www.wellnessclinicmarketing.com/graphql',
+        url:  process.env.REACT_APP_WPGRAPHQL_URL,
         fieldName: `cms`,
         typeName: `GraphCMS`,
       }
@@ -23,5 +23,7 @@ module.exports = {
   ],
   siteMetadata: {
     title: `Gatsby Redux`,
+    // description: "Professional marketing services for wellness clinics and healthcare providers. Top Google rankings for keywords your ideal patients are already searching.",
+    // siteUrl: process.env.REACT_APP_BASE_URL || "http://localhost:8000",
   },
 }

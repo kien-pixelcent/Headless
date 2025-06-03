@@ -2,6 +2,8 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
 const HomeBanner = () => {
+  const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
+  const siteBaseUrl = process.env.REACT_APP_BASE_URL
   const data = useStaticQuery(graphql`
     query {
       cms {
@@ -92,16 +94,16 @@ const HomeBanner = () => {
           <div className="banner-sep ast-flex">
             <div className="sep-left">
 
-              <img src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/brush-stroke-1.svg" alt="" />
+              <img src={`${WP_BASE_URL}/wp-content/themes/agencymarketing/assets/img/brush-stroke-1.svg`} alt="" />
             </div>
             <div className="sep-text f-soleto fw-500 text-white">{content?.sepText}</div>
             <div className="sep-right">
 
-              <img src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/brush-stroke-2.svg" alt="" />
+              <img src={`${WP_BASE_URL}/wp-content/themes/agencymarketing/assets/img/brush-stroke-2.svg`} alt="" />
             </div>
           </div>
           <div className="banner-list ast-flex  justify-content-center">
-            {
+            {/* {
               content?.serviceList?.map((item, key) => {
                 let pathForLink = item?.link;
 
@@ -116,6 +118,15 @@ const HomeBanner = () => {
 
                 return (
                   <Link key={key} to={pathForLink} className="link-item">
+                    {item?.title}
+                  </Link>
+                );
+              })
+            } */}
+            {
+              content?.serviceList?.map((item, key) => {
+                return (
+                  <Link key={key} to={item?.link} className="link-item">
                     {item?.title}
                   </Link>
                 );

@@ -52,8 +52,6 @@ const ServiceAbout = () => {
   `);
 
   const data = query?.cms?.serviceBy?.services?.flexibleContent[1];
-
-  console.log(data, "websiteAboutLayouts");
   return (
     <>
       <section className="section service-about website-about">

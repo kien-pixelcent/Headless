@@ -3,13 +3,16 @@ import { graphql, useStaticQuery } from "gatsby"
 // import "./styles.scss"
 
 const Footer = () => {
+  const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
+  const siteBaseUrl = process.env.REACT_APP_BASE_URL // Giữ nguyên để siteBaseUrl được khởi tạo đúng
+
   const data = useStaticQuery(graphql`
     query {
       cms {
         themeSettings {
           themeOptionsSettings {
             socials {
-             facebook
+              facebook
               fieldGroupName
               instagram
               linkedin
@@ -31,7 +34,7 @@ const Footer = () => {
               <div class="site-footer-primary-section-1 site-footer-section site-footer-section-1">
                 <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-2" aria-label="Footer Widget 2">
                   <section id="media_image-3" class="widget widget_media_image">
-                    <img width="300" height="86" src="https://www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-foot-300x86.png" class="image wp-image-1952  attachment-medium size-medium" alt="" style={{ maxWidth: "100%", height: "auto", width: "auto" }} decoding="async" loading="lazy" srcset="https://www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-foot-300x86.png 300w, https://www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-foot-1024x295.png 1024w, https://www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-foot-768x221.png 768w, https://www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-foot.png 1039w" sizes="auto, (max-width: 300px) 100vw, 300px" />
+                    <img width="300" height="86" src={`${WP_BASE_URL}/wp-content/uploads/2025/03/logo-foot-300x86.png`} class="image wp-image-1952  attachment-medium size-medium" alt="" style={{ maxWidth: "100%", height: "auto", width: "auto" }} decoding="async" loading="lazy" srcset={`${WP_BASE_URL}/wp-content/uploads/2025/03/logo-foot-300x86.png 300w, ${WP_BASE_URL}/wp-content/uploads/2025/03/logo-foot-1024x295.png 1024w, ${WP_BASE_URL}/wp-content/uploads/2025/03/logo-foot-768x221.png 768w, ${WP_BASE_URL}/wp-content/uploads/2025/03/logo-foot.png 1039w`} sizes="auto, (max-width: 300px) 100vw, 300px" />
                   </section>
                   <section id="text-3" class="widget widget_text">
                     <div class="textwidget">
@@ -41,8 +44,8 @@ const Footer = () => {
                   <section id="text-21" class="widget widget_text">
                     <div class="textwidget">
                       <div class="ast-flex gap-20">
-                        <a class="btn-bg bg-F2771A btn-size-16 fw-600" href="https://www.wellnessclinicmarketing.com/get-started-b/">FREE ASSESSMENT</a>
-                        <img loading="lazy" decoding="async" class="alignnone size-full wp-image-38" src="https://www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/a4m-logo.png" alt="" width="62" height="60" />
+                        <a class="btn-bg bg-F2771A btn-size-16 fw-600" href={`${WP_BASE_URL}/get-started-b/`}>FREE ASSESSMENT</a>
+                        <img loading="lazy" decoding="async" class="alignnone size-full wp-image-38" src={`${WP_BASE_URL}/wp-content/uploads/2024/11/a4m-logo.png`} alt="" width="62" height="60" />
                       </div>
                     </div>
                   </section>
@@ -64,20 +67,20 @@ const Footer = () => {
                     <h2 class="widget-title">Connect with Us</h2>
                     <div class="textwidget">
                       <div class="ast-flex socials">
-                        <a class="fb" href={data?.cms?.themeSettings?.themeOptionsSettings?.socials?.facebook} target="_blank">
-                          <img decoding="async" src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/socials/icon-fb.svg" alt="" />
+                        <a class="fb" href={data?.cms?.themeSettings?.themeOptionsSettings?.socials?.facebook} target="_blank" rel="noopener noreferrer">
+                          <img decoding="async" src={`${WP_BASE_URL}/wp-content/themes/agencymarketing/assets/img/socials/icon-fb.svg`} alt="Facebook" />
                         </a>
-                        <a class="youtube" href={data?.cms?.themeSettings?.themeOptionsSettings?.socials?.youtube} target="_blank">
-                          <img decoding="async" src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/socials/icon-youtube.svg" alt="" />
+                        <a class="youtube" href={data?.cms?.themeSettings?.themeOptionsSettings?.socials?.youtube} target="_blank" rel="noopener noreferrer">
+                          <img decoding="async" src={`${WP_BASE_URL}/wp-content/themes/agencymarketing/assets/img/socials/icon-youtube.svg`} alt="YouTube" />
                         </a>
-                        <a class="twitter" href={data?.cms?.themeSettings?.themeOptionsSettings?.socials?.twitter} target="_blank">
-                          <img decoding="async" src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/socials/icon-twitter.svg" alt="" />
+                        <a class="twitter" href={data?.cms?.themeSettings?.themeOptionsSettings?.socials?.twitter} target="_blank" rel="noopener noreferrer">
+                          <img decoding="async" src={`${WP_BASE_URL}/wp-content/themes/agencymarketing/assets/img/socials/icon-twitter.svg`} alt="Twitter" />
                         </a>
-                        <a class="instagram" href={data?.cms?.themeSettings?.themeOptionsSettings?.socials?.instagram} target="_blank">
-                          <img decoding="async" src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/socials/icon-ig.svg" alt="" />
+                        <a class="instagram" href={data?.cms?.themeSettings?.themeOptionsSettings?.socials?.instagram} target="_blank" rel="noopener noreferrer">
+                          <img decoding="async" src={`${WP_BASE_URL}/wp-content/themes/agencymarketing/assets/img/socials/icon-ig.svg`} alt="Instagram" />
                         </a>
-                        <a class="linkedin" href={data?.cms?.themeSettings?.themeOptionsSettings?.socials?.linkedin} target="_blank">
-                          <img decoding="async" src="https://www.wellnessclinicmarketing.com/wp-content/themes/agencymarketing/assets/img/socials/icon-linkedin.svg" alt="" />
+                        <a class="linkedin" href={data?.cms?.themeSettings?.themeOptionsSettings?.socials?.linkedin} target="_blank" rel="noopener noreferrer">
+                          <img decoding="async" src={`${WP_BASE_URL}/wp-content/themes/agencymarketing/assets/img/socials/icon-linkedin.svg`} alt="LinkedIn" />
                         </a>
                       </div>
                     </div>
@@ -97,8 +100,8 @@ const Footer = () => {
                   <section id="text-19" class="widget widget_text">
                     <div class="textwidget">
                       <div class="ast-flex gap-20">
-                        <a class="btn-bg bg-F2771A btn-size-16 fw-600" href="https://www.wellnessclinicmarketing.com/get-started-b/">FREE ASSESSMENT</a>
-                        <img loading="lazy" decoding="async" class="alignnone size-full wp-image-38" src="https://www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/a4m-logo.png" alt="" width="62" height="60" />
+                        <a class="btn-bg bg-F2771A btn-size-16 fw-600" href={`${WP_BASE_URL}/get-started-b/`}>FREE ASSESSMENT</a>
+                        <img loading="lazy" decoding="async" class="alignnone size-full wp-image-38" src={`${WP_BASE_URL}/wp-content/uploads/2024/11/a4m-logo.png`} alt="" width="62" height="60" />
                       </div>
                     </div>
                   </section>
@@ -112,8 +115,9 @@ const Footer = () => {
             <div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
               <div class="site-footer-below-section-1 site-footer-section site-footer-section-1">
                 <div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright" data-section="section-footer-builder">
-                  <div class="ast-footer-copyright"><p>© 2025 All rights reserved | MD Marketing Agency |&nbsp;<a href="https://www.wellnessclinicmarketing.com/privacy-policy/" target="_self">Privacy Policy</a>&nbsp;|&nbsp;<a href="https://www.wellnessclinicmarketing.com/contact-us/" target="_self">Contact Us</a></p>
-                  </div>			</div>
+                  <div class="ast-footer-copyright"><p>© 2025 All rights reserved | MD Marketing Agency |&nbsp;<a href={`${WP_BASE_URL}/privacy-policy/`} target="_self">Privacy Policy</a>&nbsp;|&nbsp;<a href={`${WP_BASE_URL}/contact-us/`} target="_self">Contact Us</a></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -9,10 +9,16 @@ import "../styles/customStyle.scss"
 import "../styles/dashicons.min.css"
 import Header from './Header'
 import Footer from './Footer'
+import { Helmet } from "react-helmet"
 
 const DefaultLayout = ({children}) => {
   return (
     <div>
+      <Helmet>
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      </Helmet>
       <Header />
         {children}
       <Footer />
