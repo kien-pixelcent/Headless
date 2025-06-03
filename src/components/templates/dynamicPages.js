@@ -7,22 +7,7 @@ import { fetchSeoData } from '../../utils/seo'
 
 
 const Home = ({ data, pageContext }) => {
-  const { flexibleContentHtml, title, slug, uri } = pageContext
-  const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
-  /**
-    * xử lý SEO cho trang
-    */
-
-  const [SeoData, setSeoData] = React.useState(null)
-
-  React.useEffect(() => {
-    (async () => {
-      setSeoData(await fetchSeoData({
-        url: `${WP_BASE_URL}${uri}`,
-      }))
-    })()
-  }, [])
-  //----
+  const { flexibleContentHtml, uri, seoData } = pageContext
 
   React.useEffect(() => {
     // Tạo các script tag mới và thêm vào DOM
@@ -185,7 +170,7 @@ const Home = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO
-        seoData={SeoData}
+        seoData={seoData}
       />
       <div id="content" className="site-content" dangerouslySetInnerHTML={{ __html: flexibleContentHtml }}></div>
     </Layout>

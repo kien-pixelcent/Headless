@@ -3,48 +3,41 @@ const remark = require(`remark`)
 const html = require(`remark-html`)
 const fetch = require('node-fetch')
 
-const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
-const siteBaseUrl = process.env.REACT_APP_BASE_URL
-
-// async function fetchSeoData(url) {
-//   try {
-//     const apiUrl = `${WP_BASE_URL}/wp-json/rankmath/v1/getHead?url=${encodeURIComponent(url)}`;
-//     console.log('Fetching SEO data from:', apiUrl);
-    
-//     const response = await fetch(apiUrl);
-    
-//     // Check if response is actually JSON
-//     const contentType = response.headers.get('content-type');
-//     if (!contentType || !contentType.includes('application/json')) {
-//       console.error(`API returned non-JSON response (${contentType}) for URL: ${url}`);
-//       console.error('Response status:', response.status);
-//       const text = await response.text();
-//       console.error('Response body preview:', text.substring(0, 200));
-//       return null;
-//     }
-    
-//     if (!response.ok) {
-//       console.error(`HTTP ${response.status} error for SEO data request: ${url}`);
-//       return null;
-//     }
-    
-//     const data = await response.json();
-
-//     if (data.success && data.head) {
-//       console.log('SEO data fetched successfully for:', url);
-//       return data.head;
-//     }
-    
-//     console.warn('SEO data fetch unsuccessful or missing head for:', url);
-//     return null;
-//   } catch (error) {
-//     console.error('Error fetching SEO data for URL:', url, error.message);
-//     return null;
-//   }
-// }
 
 
 exports.createPages = async ({ actions, graphql }) => {
+  const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
+
+  async function fetchSeoData({ url }) {
+    try {
+      const response = await fetch(`https://www.wellnessclinicmarketing.com/wp-json/rankmath/v1/getHead?url=${encodeURIComponent(url)}`, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; GatsbyJS/4.0; +https://agencysitestaging.mystagingwebsite.com/)',
+          'Accept': 'application/json',
+        },
+        timeout: 15000,
+      })
+
+      const contentType = response.headers.get('content-type')
+      if (!contentType || !contentType.includes('application/json')) {
+        console.warn(`Non-JSON response for ${url}`)
+        return null
+      }
+
+      if (!response.ok) {
+        console.error(`HTTP error! status: ${response.status} for ${url}`)
+        return null
+      }
+
+      const data = await response.json()
+      return data.success && data.head ? data.head : null
+    } catch (error) {
+      console.error(`Error fetching SEO data for ${url}:`, error.message)
+      return null
+    }
+  }
+
+
   const { data } = await graphql(`
     query {
       cms {
@@ -95,34 +88,71 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
 
+  // truyền seo cho home
+  const homeDataSeo = await fetchSeoData({
+    url: `https://www.wellnessclinicmarketing.com`,
+  });
+
+  actions.createPage({
+    path: `/`,
+    component: path.resolve(`./src/pages/home/index.js`), // Point đến file Home hiện tại
+    context: {
+      seoData: homeDataSeo // Truyền homeDataSeo vào context
+    },
+  });
+
 
   // Duyệt và thay thế trong pages
-  // const pages = data.cms.pages.edges.map(({ node }) => ({
-  //   ...node,
-  //   flexibleContentHtml: node.flexibleContentHtml,
-  // }));
   const pages = await Promise.all(
     data.cms.pages.edges.map(async ({ node }) => {
       return {
         ...node,
         flexibleContentHtml: node.flexibleContentHtml,
+        seoData: await fetchSeoData({
+          url: `https://www.wellnessclinicmarketing.com${node.uri}`,
+        }),
       }
     })
   )
 
   // Duyệt và thay thế trong services
-  const services = data.cms.services.nodes.map((node) => ({
-    ...node,
-    flexibleContentHtml: node.flexibleContentHtml,
-  }));
-  const events = data.cms.events.nodes.map((node) => ({
-    ...node,
-    flexibleContentHtml: node.flexibleContentHtml,
-  }));
-  const blogs = data.cms.posts.nodes.map((node) => ({
-    ...node,
-    flexibleContentHtml: node.flexibleContentHtml,
-  }));
+  const services = await Promise.all(
+    data.cms.services.nodes.map(async (node) => {
+      return {
+        ...node,
+        flexibleContentHtml: node.flexibleContentHtml,
+        seoData: await fetchSeoData({
+          url: `https://www.wellnessclinicmarketing.com${node.uri}`,
+        }),
+      }
+    })
+  );
+
+  // Duyệt và thay thế trong events
+  const events = await Promise.all(
+    data.cms.events.nodes.map(async (node) => {
+      return {
+        ...node,
+        flexibleContentHtml: node.flexibleContentHtml,
+        seoData: await fetchSeoData({
+          url: `https://www.wellnessclinicmarketing.com${node.uri}`,
+        }),
+      }
+    })
+  );
+
+  // Duyệt và thay thế trong posts (blogs)
+  const blogs = await Promise.all(
+    data.cms.posts.nodes.map(async (node) => {
+      return {
+        ...node,
+        flexibleContentHtml: node.flexibleContentHtml,
+        seoData: await fetchSeoData({
+          url: `https://www.wellnessclinicmarketing.com${node.uri}`,
+        }),
+      }
+    })
+  );
 
   pages.forEach(page => {
     if (!page.isFrontPage) {

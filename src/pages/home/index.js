@@ -7,9 +7,11 @@ import SEO from '../../components/SEO'
 import parse, { domToReact } from 'html-react-parser';
 import { fetchSeoData } from '../../utils/seo'
 
-const Home = () => {
+const Home = ({ pageContext }) => {
   const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
   const siteBaseUrl = process.env.REACT_APP_BASE_URL
+
+  const { seoData } = pageContext || {}
 
   const query = useStaticQuery(graphql`
     query {
@@ -239,19 +241,19 @@ const Home = () => {
   const special = query.cms.pageBy.template?.homeContent?.flexibleContent[8];
   const giftBook = query.cms.pageBy.template?.homeContent?.flexibleContent[9];
 
-  /**
-   * xử lý SEO cho trang chủ
-   */
-  const [homeSeoData, setHomeSeoData] = React.useState(null)
+  // /**
+  //  * xử lý SEO cho trang chủ
+  //  */
+  // const [homeSeoData, setHomeSeoData] = React.useState(null)
 
-  React.useEffect(() => {
-    (async () => {
-      setHomeSeoData(await fetchSeoData({
-        url: WP_BASE_URL
-      }))
-    })()
-  }, [])
-  //----
+  // React.useEffect(() => {
+  //   (async () => {
+  //     setHomeSeoData(await fetchSeoData({
+  //       url: WP_BASE_URL
+  //     }))
+  //   })()
+  // }, [])
+  // //----
 
   useEffect(() => {
     if (patients) {
@@ -335,7 +337,7 @@ const Home = () => {
   return (
     <Layout>
       <SEO
-        seoData={homeSeoData}
+        seoData={seoData}
       />
       <div id="content" className="site-content">
         <div className="main-content">
