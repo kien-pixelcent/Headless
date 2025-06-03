@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import HomeBanner from '../../components/HomeBanner'
 import SEO from '../../components/SEO'
 import parse, { domToReact } from 'html-react-parser';
+import { fetchSeoData } from '../../utils/seo'
 
 const Home = () => {
   const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
@@ -238,24 +239,19 @@ const Home = () => {
   const special = query.cms.pageBy.template?.homeContent?.flexibleContent[8];
   const giftBook = query.cms.pageBy.template?.homeContent?.flexibleContent[9];
 
+  /**
+   * xử lý SEO cho trang chủ
+   */
   const [homeSeoData, setHomeSeoData] = React.useState(null)
 
   React.useEffect(() => {
-    const fetchHomeSeo = async () => {
-      try {
-        const response = await fetch(`${WP_BASE_URL}/wp-json/rankmath/v1/getHead?url=${WP_BASE_URL}`)
-        const data = await response.json()
-        if (data.success && data.head) {
-          const seoElements = parse(data.head);
-          setHomeSeoData(seoElements);
-        }
-      } catch (error) {
-        console.error('Error fetching home SEO data:', error)
-      }
-    }
-
-    fetchHomeSeo()
+    (async () => {
+      setHomeSeoData(await fetchSeoData({
+        url: WP_BASE_URL
+      }))
+    })()
   }, [])
+  //----
 
   useEffect(() => {
     if (patients) {

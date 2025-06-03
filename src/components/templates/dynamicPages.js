@@ -1,10 +1,29 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
 import Layout from "../layout"
+import SEO from "../SEO"
+import parse from 'html-react-parser';
+import { fetchSeoData } from '../../utils/seo'
 
 
 const Home = ({ data, pageContext }) => {
-  const { flexibleContentHtml } = pageContext
+  const { flexibleContentHtml, title, slug, uri } = pageContext
+  const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
+  /**
+    * xử lý SEO cho trang
+    */
+
+  const [SeoData, setSeoData] = React.useState(null)
+
+  React.useEffect(() => {
+    (async () => {
+      setSeoData(await fetchSeoData({
+        url: `${WP_BASE_URL}${uri}`,
+      }))
+    })()
+  }, [])
+  //----
+
   React.useEffect(() => {
     // Tạo các script tag mới và thêm vào DOM
     const scripts = [
@@ -165,6 +184,9 @@ const Home = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO
+        seoData={SeoData}
+      />
       <div id="content" className="site-content" dangerouslySetInnerHTML={{ __html: flexibleContentHtml }}></div>
     </Layout>
   )

@@ -6,41 +6,42 @@ const fetch = require('node-fetch')
 const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
 const siteBaseUrl = process.env.REACT_APP_BASE_URL
 
-async function fetchSeoData(url) {
-  try {
-    const response = await fetch(`${WP_BASE_URL}/wp-json/rankmath/v1/getHead?url=${encodeURIComponent(url)}`)
-    const data = await response.json()
+// async function fetchSeoData(url) {
+//   try {
+//     const apiUrl = `${WP_BASE_URL}/wp-json/rankmath/v1/getHead?url=${encodeURIComponent(url)}`;
+//     console.log('Fetching SEO data from:', apiUrl);
+    
+//     const response = await fetch(apiUrl);
+    
+//     // Check if response is actually JSON
+//     const contentType = response.headers.get('content-type');
+//     if (!contentType || !contentType.includes('application/json')) {
+//       console.error(`API returned non-JSON response (${contentType}) for URL: ${url}`);
+//       console.error('Response status:', response.status);
+//       const text = await response.text();
+//       console.error('Response body preview:', text.substring(0, 200));
+//       return null;
+//     }
+    
+//     if (!response.ok) {
+//       console.error(`HTTP ${response.status} error for SEO data request: ${url}`);
+//       return null;
+//     }
+    
+//     const data = await response.json();
 
-    if (data.success && data.head) {
-      return parseSeoHead(data.head)
-    }
-    return null
-  } catch (error) {
-    console.error('Error fetching SEO data:', error)
-    return null
-  }
-}
-
-// Function để parse HTML head và extract SEO data
-function parseSeoHead(headHtml) {
-  const cheerio = require('cheerio')
-  const $ = cheerio.load(headHtml)
-
-  return {
-    title: $('title').text() || '',
-    description: $('meta[name="description"]').attr('content') || '',
-    canonical: $('link[rel="canonical"]').attr('href') || '',
-    ogTitle: $('meta[property="og:title"]').attr('content') || '',
-    ogDescription: $('meta[property="og:description"]').attr('content') || '',
-    ogImage: $('meta[property="og:image"]').attr('content') || '',
-    ogUrl: $('meta[property="og:url"]').attr('content') || '',
-    twitterCard: $('meta[name="twitter:card"]').attr('content') || '',
-    twitterTitle: $('meta[name="twitter:title"]').attr('content') || '',
-    twitterDescription: $('meta[name="twitter:description"]').attr('content') || '',
-    robots: $('meta[name="robots"]').attr('content') || '',
-    schemaJson: $('script[type="application/ld+json"]').html() || ''
-  }
-}
+//     if (data.success && data.head) {
+//       console.log('SEO data fetched successfully for:', url);
+//       return data.head;
+//     }
+    
+//     console.warn('SEO data fetch unsuccessful or missing head for:', url);
+//     return null;
+//   } catch (error) {
+//     console.error('Error fetching SEO data for URL:', url, error.message);
+//     return null;
+//   }
+// }
 
 
 exports.createPages = async ({ actions, graphql }) => {
@@ -96,10 +97,18 @@ exports.createPages = async ({ actions, graphql }) => {
 
 
   // Duyệt và thay thế trong pages
-  const pages = data.cms.pages.edges.map(({ node }) => ({
-    ...node,
-    flexibleContentHtml: node.flexibleContentHtml,
-  }));
+  // const pages = data.cms.pages.edges.map(({ node }) => ({
+  //   ...node,
+  //   flexibleContentHtml: node.flexibleContentHtml,
+  // }));
+  const pages = await Promise.all(
+    data.cms.pages.edges.map(async ({ node }) => {
+      return {
+        ...node,
+        flexibleContentHtml: node.flexibleContentHtml,
+      }
+    })
+  )
 
   // Duyệt và thay thế trong services
   const services = data.cms.services.nodes.map((node) => ({
