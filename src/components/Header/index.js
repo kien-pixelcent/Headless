@@ -122,7 +122,7 @@ const Header = ({ to }) => {
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-8" id="mega-menu-item-media_image-8">
                                         <img alt style={{ "max-width": "100%", "height": "auto" }} nitro-lazy-src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-1.svg" className="image wp-image-238 attachment-full size-full lazyloaded" decoding="async" nitro-lazy-empty id="MjUxOjM0OQ==-1" src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-1.svg" /></li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-857" id="mega-menu-item-857">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/website-development`}>
+                                        <Link className="mega-menu-link" to={`/service/website-development`}>
                                           Website Development
                                         </Link>
                                       </li>
@@ -138,7 +138,7 @@ const Header = ({ to }) => {
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-9" id="mega-menu-item-media_image-9">
                                         <img alt style={{ "max-width": "100%", "height": "auto" }} nitro-lazy-src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-5.svg" className="image wp-image-239 attachment-full size-full lazyloaded" decoding="async" nitro-lazy-empty id="MjU2OjM0OQ==-1" src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-5.svg" /></li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-858" id="mega-menu-item-858">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/facebook-advertising`}>
+                                        <Link className="mega-menu-link" to={`/service/facebook-advertising`}>
                                           Facebook Advertising
                                         </Link>
                                       </li>
@@ -158,7 +158,7 @@ const Header = ({ to }) => {
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-11" id="mega-menu-item-media_image-11">
                                         <img alt style={{ "max-width": "100%", "height": "auto" }} nitro-lazy-src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-2.svg" className="image wp-image-240 attachment-full size-full lazyloaded" decoding="async" nitro-lazy-empty id="MjY0OjM1MQ==-1" src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-2.svg" /></li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-859" id="mega-menu-item-859">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/search-engine-optimization`}>
+                                        <Link className="mega-menu-link" to={`/service/search-engine-optimization`}>
                                           Search Engine Marketing
                                         </Link>
                                       </li>
@@ -174,7 +174,7 @@ const Header = ({ to }) => {
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-12" id="mega-menu-item-media_image-12">
                                         <img alt style={{ "max-width": "100%", "height": "auto" }} nitro-lazy-src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-6.svg" className="image wp-image-241 attachment-full size-full lazyloaded" decoding="async" nitro-lazy-empty id="MjY5OjM1MQ==-1" src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-6.svg" /></li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-860" id="mega-menu-item-860">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/lead-management`}>
+                                        <Link className="mega-menu-link" to={`/service/lead-management`}>
                                           Lead Management (CRM)
                                         </Link>
                                       </li>
@@ -193,7 +193,7 @@ const Header = ({ to }) => {
                                     <ul className="mega-sub-menu">
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-13" id="mega-menu-item-media_image-13"><img alt style={{ "max-width": "100%", "height": "auto" }} nitro-lazy-src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-3.svg" className="image wp-image-242 attachment-full size-full lazyloaded" decoding="async" nitro-lazy-empty id="Mjc3OjM1MQ==-1" src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-3.svg" /></li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-861" id="mega-menu-item-861">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/google-maps-marketing`}>
+                                        <Link className="mega-menu-link" to={`/service/google-maps-marketing`}>
                                           Google Maps Marketing
                                         </Link>
                                       </li>
@@ -208,7 +208,7 @@ const Header = ({ to }) => {
                                     <ul className="mega-sub-menu">
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-16" id="mega-menu-item-media_image-16"><img width={40} height={40} alt style={{ "max-width": "100%", "height": "auto" }} nitro-lazy-src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/12/icon-reputation-management.png" className="image wp-image-864 attachment-full size-full lazyloaded" decoding="async" nitro-lazy-empty id="MjgyOjM4Nw==-1" src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/12/icon-reputation-management.png" /></li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-862" id="mega-menu-item-862">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/reputation-management`}>
+                                        <Link className="mega-menu-link" to={`/service/reputation-management`}>
                                           Reputation Management
                                         </Link>
                                       </li>
@@ -227,7 +227,7 @@ const Header = ({ to }) => {
                                     <ul className="mega-sub-menu">
                                       <li className="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-15" id="mega-menu-item-media_image-15"><img alt style={{ "max-width": "100%", "height": "auto" }} nitro-lazy-src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-4.svg" className="image wp-image-244 attachment-full size-full lazyloaded" decoding="async" nitro-lazy-empty id="MjkwOjM1MQ==-1" src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2024/11/improvement-4.svg" /></li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-863" id="mega-menu-item-863">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/google-advertising`}>
+                                        <Link className="mega-menu-link" to={`/service/google-advertising`}>
                                           Google Paid Advertising
                                         </Link>
                                       </li>
@@ -251,27 +251,27 @@ const Header = ({ to }) => {
                                   <li className="mega-menu-column mega-menu-columns-6-of-12 mega-hide-on-mobile" style={{ "--span": "6" }} id="mega-menu-1641-0-0">
                                     <ul className="mega-sub-menu">
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-1644">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/medical-weight-loss-marketing`}>
+                                        <Link className="mega-menu-link" to={`/service/medical-weight-loss-marketing`}>
                                           Medical Weight Loss Marketing
                                         </Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-1645">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/sexual-health-marketing`}>
+                                        <Link className="mega-menu-link" to={`/service/sexual-health-marketing`}>
                                           Sexual Health Marketing
                                         </Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-2617">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/multi-location-marketing`}>
+                                        <Link className="mega-menu-link" to={`/service/multi-location-marketing`}>
                                           Multi-Location Clinic Marketing
                                         </Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-2033">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/med-spa-marketing`}>
+                                        <Link className="mega-menu-link" to={`/service/med-spa-marketing`}>
                                           Medspa Marketing
                                         </Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-3429">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/franchise-marketing`}>
+                                        <Link className="mega-menu-link" to={`/service/franchise-marketing`}>
                                           Franchise Marketing
                                         </Link>
                                       </li>
@@ -280,22 +280,22 @@ const Header = ({ to }) => {
                                   <li className="mega-menu-column mega-menu-columns-6-of-12 mega-hide-on-mobile" style={{ "--span": "6" }} id="mega-menu-1641-0-1">
                                     <ul className="mega-sub-menu">
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-1643">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/hormone-clinic-marketing`}>
+                                        <Link className="mega-menu-link" to={`/service/hormone-clinic-marketing`}>
                                           Hormone Optimization Marketing
                                         </Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-2031">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/wellness-medical-clinic-marketing`}>
+                                        <Link className="mega-menu-link" to={`/service/wellness-medical-clinic-marketing`}>
                                           Medical Wellness Clinic Marketing
                                         </Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-2032">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/mens-health-clinic-marketing`}>
+                                        <Link className="mega-menu-link" to={`/service/mens-health-clinic-marketing`}>
                                           Men’s Health Clinic Marketing
                                         </Link>
                                       </li>
                                       <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-service mega-menu-item-3343">
-                                        <Link className="mega-menu-link" to={`${siteBaseUrl}/service/ai-search-optimization`}>
+                                        <Link className="mega-menu-link" to={`/service/ai-search-optimization`}>
                                           AI Search Optimization
                                         </Link>
                                       </li>
@@ -305,34 +305,34 @@ const Header = ({ to }) => {
                               </li>
                             </ul>
                           </li>
-                          <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-2155" id="mega-menu-item-2155"><a className="mega-menu-link" href={`${siteBaseUrl}/our-method-mars/`} tabIndex={0}>Method</a></li>
+                          <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-2155" id="mega-menu-item-2155"><a className="mega-menu-link" href={`/our-method-mars/`} tabIndex={0}>Method</a></li>
                           <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-372" id="mega-menu-item-372">
-                            <Link className="mega-menu-link" to={`${siteBaseUrl}/about-us`} aria-expanded="false" tabIndex={0}>
+                            <Link className="mega-menu-link" to={`/about-us`} aria-expanded="false" tabIndex={0}>
                               About Us
                               <span className="mega-indicator" aria-hidden="true" />
                             </Link>
                             <ul className="mega-sub-menu">
                               <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-409" id="mega-menu-item-409">
-                                <Link className="mega-menu-link" to={`${siteBaseUrl}/our-team`}>Our Team</Link>
+                                <Link className="mega-menu-link" to={`/our-team`}>Our Team</Link>
                               </li>
                               <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-408" id="mega-menu-item-408">
-                                <Link className="mega-menu-link" to={`${siteBaseUrl}/events`}>Events</Link>
+                                <Link className="mega-menu-link" to={`/events`}>Events</Link>
                               </li>
                               <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-941" id="mega-menu-item-941">
-                                <Link className="mega-menu-link" to={`${siteBaseUrl}/webinars`}>Webinars</Link>
+                                <Link className="mega-menu-link" to={`/webinars`}>Webinars</Link>
 
                               </li>
                               <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-942" id="mega-menu-item-942">
-                                <Link className="mega-menu-link" to={`${siteBaseUrl}/podcast`}>Podcasts</Link>
+                                <Link className="mega-menu-link" to={`/podcast`}>Podcasts</Link>
                               </li>
                               <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-2736" id="mega-menu-item-2736">
-                                <Link className="mega-menu-link" to={`${siteBaseUrl}/case-study`}>Case Studies</Link>
+                                <Link className="mega-menu-link" to={`/case-study`}>Case Studies</Link>
                               </li>
                               <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1263" id="mega-menu-item-1263">
-                                <Link className="mega-menu-link" to={`${siteBaseUrl}/blogs`}>Blogs</Link>
+                                <Link className="mega-menu-link" to={`/blogs`}>Blogs</Link>
                               </li>
                               <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-2853" id="mega-menu-item-2853">
-                                <Link className="mega-menu-link" to={`${siteBaseUrl}/in-the-news`}>In The News</Link>
+                                <Link className="mega-menu-link" to={`/in-the-news`}>In The News</Link>
                               </li>
                             </ul>
                           </li>
@@ -358,7 +358,7 @@ const Header = ({ to }) => {
                   </div>
                   <div className="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1" data-section="section-hb-button-1">
                     <div className="ast-builder-button-wrap ast-builder-button-size-default">
-                      <Link className="mega-menu-link" to={`${siteBaseUrl}/get-started`} target="_self" role="button" aria-label="Get Started">
+                      <Link className="mega-menu-link" to={`/get-started`} target="_self" role="button" aria-label="Get Started">
                         <div className="ast-custom-button">Get Started</div>
                       </Link>
                     </div>
@@ -387,7 +387,7 @@ const Header = ({ to }) => {
               <div className="site-header-above-section-right site-header-section ast-flex ast-grid-right-section">
                 <div className="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1" data-section="section-hb-button-1">
                   <div className="ast-builder-button-wrap ast-builder-button-size-default">
-                    <Link className="ast-custom-button-link" to={`${siteBaseUrl}/get-started`} target="_self" role="button" aria-label="Get Started">
+                    <Link className="ast-custom-button-link" to={`/get-started`} target="_self" role="button" aria-label="Get Started">
                       <div className="ast-custom-button">Get Started</div>
                     </Link>
                   </div>
@@ -401,7 +401,7 @@ const Header = ({ to }) => {
             <div className="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
               <div className="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
                 <div className="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
-                  <div className="site-branding ast-site-identity" itemType="https://schema.org/Organization" itemScope="itemscope"> <span className="site-logo-img"><a href={`${siteBaseUrl}/`} className="custom-logo-link" rel="home"><img width={250} height={72} alt="Wellness Clinic Marketing" sizes="(max-width: 250px) 100vw, 250px" nitro-lazy-srcset="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head-250x72.png 250w, https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head-300x87.png 300w, https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head-1024x296.png 1024w, https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head-768x222.png 768w, https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head.png 1038w" nitro-lazy-src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head-250x72.png" className="custom-logo nitro-lazy" decoding="async" nitro-lazy-empty id="NTgxOjgyOA==-1" src="data:image/svg+xml;nitro-empty-id=NTgxOjgyOA==-1;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjUwIDcyIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjcyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" /></a></span> </div>
+                  <div className="site-branding ast-site-identity" itemType="https://schema.org/Organization" itemScope="itemscope"> <span className="site-logo-img"><a href={`/`} className="custom-logo-link" rel="home"><img width={250} height={72} alt="Wellness Clinic Marketing" sizes="(max-width: 250px) 100vw, 250px" nitro-lazy-srcset="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head-250x72.png 250w, https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head-300x87.png 300w, https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head-1024x296.png 1024w, https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head-768x222.png 768w, https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head.png 1038w" nitro-lazy-src="https://cdn-ildkbbb.nitrocdn.com/fkaQeaaaKzvRPORNguIPgjvTQBtCcEbQ/assets/images/optimized/rev-22f84eb/www.wellnessclinicmarketing.com/wp-content/uploads/2025/03/logo-head-250x72.png" className="custom-logo nitro-lazy" decoding="async" nitro-lazy-empty id="NTgxOjgyOA==-1" src="data:image/svg+xml;nitro-empty-id=NTgxOjgyOA==-1;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjUwIDcyIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjcyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" /></a></span> </div>
                 </div>
               </div>
               <div className="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
@@ -460,7 +460,7 @@ const Header = ({ to }) => {
                           </button>
                           <ul className="sub-menu">
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-857">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/website-development`}>
+                              <Link className="menu-link" to={`/service/website-development`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -470,7 +470,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-858">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/facebook-advertising`}>
+                              <Link className="menu-link" to={`/service/facebook-advertising`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -480,7 +480,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-859">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/search-engine-optimization`}>
+                              <Link className="menu-link" to={`/service/search-engine-optimization`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -490,7 +490,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-860">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/lead-management`}>
+                              <Link className="menu-link" to={`/service/lead-management`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -500,7 +500,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-861">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/google-maps-marketing`}>
+                              <Link className="menu-link" to={`/service/google-maps-marketing`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -510,7 +510,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-862">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/reputation-management`}>
+                              <Link className="menu-link" to={`/service/reputation-management`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -520,7 +520,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-863">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/google-advertising`}>
+                              <Link className="menu-link" to={`/service/google-advertising`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -557,7 +557,7 @@ const Header = ({ to }) => {
                           </button>
                           <ul className="sub-menu">
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-1644">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/medical-weight-loss-marketing`}>
+                              <Link className="menu-link" to={`/service/medical-weight-loss-marketing`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -567,7 +567,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-1645">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/sexual-health-marketing`}>
+                              <Link className="menu-link" to={`/service/sexual-health-marketing`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -577,7 +577,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-1643">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/hormone-clinic-marketing`}>
+                              <Link className="menu-link" to={`/service/hormone-clinic-marketing`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -587,7 +587,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-2031">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/wellness-medical-clinic-marketing`}>
+                              <Link className="menu-link" to={`/service/wellness-medical-clinic-marketing`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -597,7 +597,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-2032">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/mens-health-clinic-marketing`}>
+                              <Link className="menu-link" to={`/service/mens-health-clinic-marketing`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -607,7 +607,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-2033">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/med-spa-marketing`}>
+                              <Link className="menu-link" to={`/service/med-spa-marketing`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -617,7 +617,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-2617">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/multi-location-marketing`}>
+                              <Link className="menu-link" to={`/service/multi-location-marketing`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -627,7 +627,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-3343">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/ai-search-optimization`}>
+                              <Link className="menu-link" to={`/service/ai-search-optimization`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -637,7 +637,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-service menu-item-3429">
-                              <Link className="menu-link" to={`${siteBaseUrl}/service/franchise-marketing`}>
+                              <Link className="menu-link" to={`/service/franchise-marketing`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -649,7 +649,7 @@ const Header = ({ to }) => {
                           </ul>
                         </li>
                         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2155">
-                          <Link className="menu-link" to={`${siteBaseUrl}/our-method-mars`}>
+                          <Link className="menu-link" to={`/our-method-mars`}>
                             <span className="ast-icon icon-arrow">
                               <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                 <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -659,7 +659,7 @@ const Header = ({ to }) => {
                           </Link>
                         </li>
                         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-372">
-                          <Link className="menu-link" to={`${siteBaseUrl}/about-us`}>
+                          <Link className="menu-link" to={`/about-us`}>
                             <span className="ast-icon icon-arrow">
                               <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                 <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -684,7 +684,7 @@ const Header = ({ to }) => {
                           </button>
                           <ul className="sub-menu">
                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-409">
-                              <Link className="menu-link" to={`${siteBaseUrl}/our-team`}>
+                              <Link className="menu-link" to={`/our-team`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -694,7 +694,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-408">
-                              <Link className="menu-link" to={`${siteBaseUrl}/events`}>
+                              <Link className="menu-link" to={`/events`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -704,7 +704,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-941">
-                              <Link className="menu-link" to={`${siteBaseUrl}/webinars`}>
+                              <Link className="menu-link" to={`/webinars`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -714,7 +714,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-942">
-                              <Link className="menu-link" to={`${siteBaseUrl}/podcast`}>
+                              <Link className="menu-link" to={`/podcast`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -724,7 +724,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2736">
-                              <Link className="menu-link" to={`${siteBaseUrl}/case-study`}>
+                              <Link className="menu-link" to={`/case-study`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -734,7 +734,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1263">
-                              <Link className="menu-link" to={`${siteBaseUrl}/blogs`}>
+                              <Link className="menu-link" to={`/blogs`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
@@ -744,7 +744,7 @@ const Header = ({ to }) => {
                               </Link>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2853">
-                              <Link className="menu-link" to={`${siteBaseUrl}/in-the-news`}>
+                              <Link className="menu-link" to={`/in-the-news`}>
                                 <span className="ast-icon icon-arrow">
                                   <svg className="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enableBackground="new 57 35.171 26 16.043" xmlSpace="preserve">
                                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
