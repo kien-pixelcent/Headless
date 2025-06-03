@@ -10,6 +10,7 @@ const Home = ({ pageContext }) => {
   const siteBaseUrl = process.env.REACT_APP_BASE_URL
 
   const { seoData } = pageContext || {}
+  console.log('seoData', seoData)
 
   const query = useStaticQuery(graphql`
     query {

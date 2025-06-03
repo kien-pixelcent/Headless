@@ -15,7 +15,6 @@ exports.createPages = async ({ actions, graphql }) => {
           'User-Agent': 'Mozilla/5.0 (compatible; GatsbyJS/4.0; +https://agencysitestaging.mystagingwebsite.com/)',
           'Accept': 'application/json',
         },
-        timeout: 15000,
       })
 
       const contentType = response.headers.get('content-type')
@@ -94,7 +93,7 @@ exports.createPages = async ({ actions, graphql }) => {
   });
 
   actions.createPage({
-    path: `/`,
+    path: `/home`,
     component: path.resolve(`./src/pages/home/index.js`), // Point đến file Home hiện tại
     context: {
       seoData: homeDataSeo // Truyền homeDataSeo vào context
