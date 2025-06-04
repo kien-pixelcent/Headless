@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphql',
       options: {
-        url:  process.env.REACT_APP_WPGRAPHQL_URL,
+        url:  process.env.REACT_APP_WPGRAPHQL_URL || 'https://agencysitestaging.mystagingwebsite.com/graphql',
         fieldName: `cms`,
         typeName: `GraphCMS`,
       }
