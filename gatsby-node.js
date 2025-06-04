@@ -1,42 +1,34 @@
 const path = require(`path`)
 const remark = require(`remark`)
 const html = require(`remark-html`)
-const fetch = require('node-fetch')
+const fs = require('fs')
 
+const CACHE_DIR = path.join(__dirname, 'cache/seo')
 
+function sanitizeFilename(url) {
+  return url.replace(/[^a-z0-9]/gi, '_').toLowerCase()
+}
+
+function getCachedSeoData(url) {
+  try {
+    const filename = sanitizeFilename(url)
+    const filePath = path.join(CACHE_DIR, `${filename}.json`)
+    
+    if (fs.existsSync(filePath)) {
+      const cached = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+      console.log(`Using cached SEO data for ${url}`)
+      return cached.seoData
+    }
+  } catch (error) {
+    console.error(`Error reading cached SEO data for ${url}:`, error.message)
+  }
+  
+  console.log(`No cached SEO data found for ${url}`)
+  return null
+}
 
 exports.createPages = async ({ actions, graphql }) => {
   const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
-
-  async function fetchSeoData({ url }) {
-    try {
-      const response = await fetch(`${WP_BASE_URL}/wp-json/rankmath/v1/getHead?url=${encodeURIComponent(url)}`, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; GatsbyJS/4.0; +https://agencysitestaging.mystagingwebsite.com/)',
-          'Accept': 'application/json',
-        },
-        timeout: 30000
-      })
-
-      const contentType = response.headers.get('content-type')
-      if (!contentType || !contentType.includes('application/json')) {
-        console.warn(`Non-JSON response for ${url}`)
-        return null
-      }
-
-      if (!response.ok) {
-        console.error(`HTTP error! status: ${response.status} for ${url}`)
-        return null
-      }
-
-      const data = await response.json()
-      return data.success && data.head ? data.head : null
-    } catch (error) {
-      console.error(`Error fetching SEO data for ${url}:`, error.message)
-      return null
-    }
-  }
-
 
   const { data } = await graphql(`
     query {
@@ -89,73 +81,72 @@ exports.createPages = async ({ actions, graphql }) => {
   `)
 
   // truyền seo cho home
-  console.log('Fetching home SEO data...')
-  const homeDataSeo = await fetchSeoData({
-    url: `${WP_BASE_URL}/`,
-  });
-  console.log('Home SEO data result:', homeDataSeo)
+  console.log('Getting home SEO data from cache...')
+  const homeDataSeo = getCachedSeoData(`${WP_BASE_URL}/`)
+  console.log('Home SEO data result:', homeDataSeo ? 'SUCCESS' : 'FAILED')
 
   // Always create home page programmatically
   actions.createPage({
     path: `/`,
-    component: path.resolve(`./src/components/templates/home.js`), // Changed path
+    component: path.resolve(`./src/components/templates/home.js`),
     context: {
       seoData: homeDataSeo || null
     },
   });
 
-  // Duyệt và thay thế trong pages
-  const pages = await Promise.all(
-    data.cms.pages.edges.map(async ({ node }) => {
-      return {
-        ...node,
-        flexibleContentHtml: node.flexibleContentHtml,
-        seoData: await fetchSeoData({
-          url: `${WP_BASE_URL}${node.uri}`,
-        }),
-      }
-    })
-  )
+  // Process pages with cached SEO data
+  console.log('Processing pages...')
+  const pages = data.cms.pages.edges.map(({ node }) => {
+    console.log(`Processing page: ${node.slug}`)
+    const seoData = getCachedSeoData(`${WP_BASE_URL}${node.uri}`)
+    return {
+      ...node,
+      flexibleContentHtml: node.flexibleContentHtml,
+      seoData: seoData,
+    }
+  })
+  console.log('Pages processing completed')
 
-  // Duyệt và thay thế trong services
-  const services = await Promise.all(
-    data.cms.services.nodes.map(async (node) => {
-      return {
-        ...node,
-        flexibleContentHtml: node.flexibleContentHtml,
-        seoData: await fetchSeoData({
-          url: `${WP_BASE_URL}${node.uri}`,
-        }),
-      }
-    })
-  );
+  // Process services with cached SEO data
+  console.log('Processing services...')
+  const services = data.cms.services.nodes.map(node => {
+    console.log(`Processing service: ${node.slug}`)
+    const seoData = getCachedSeoData(`${WP_BASE_URL}${node.uri}`)
+    return {
+      ...node,
+      flexibleContentHtml: node.flexibleContentHtml,
+      seoData: seoData,
+    }
+  })
+  console.log('Services processing completed')
 
-  // Duyệt và thay thế trong events
-  const events = await Promise.all(
-    data.cms.events.nodes.map(async (node) => {
-      return {
-        ...node,
-        flexibleContentHtml: node.flexibleContentHtml,
-        seoData: await fetchSeoData({
-          url: `${WP_BASE_URL}${node.uri}`,
-        }),
-      }
-    })
-  );
+  // Process events with cached SEO data
+  console.log('Processing events...')
+  const events = data.cms.events.nodes.map(node => {
+    console.log(`Processing event: ${node.slug}`)
+    const seoData = getCachedSeoData(`${WP_BASE_URL}${node.uri}`)
+    return {
+      ...node,
+      flexibleContentHtml: node.flexibleContentHtml,
+      seoData: seoData,
+    }
+  })
+  console.log('Events processing completed')
 
-  // Duyệt và thay thế trong posts (blogs)
-  const blogs = await Promise.all(
-    data.cms.posts.nodes.map(async (node) => {
-      return {
-        ...node,
-        flexibleContentHtml: node.flexibleContentHtml,
-        seoData: await fetchSeoData({
-          url: `${WP_BASE_URL}${node.uri}`,
-        }),
-      }
-    })
-  );
+  // Process blogs with cached SEO data
+  console.log('Processing blogs...')
+  const blogs = data.cms.posts.nodes.map(node => {
+    console.log(`Processing blog: ${node.slug}`)
+    const seoData = getCachedSeoData(`${WP_BASE_URL}${node.uri}`)
+    return {
+      ...node,
+      flexibleContentHtml: node.flexibleContentHtml,
+      seoData: seoData,
+    }
+  })
+  console.log('Blogs processing completed')
 
+  // Create pages
   pages.forEach(page => {
     if (!page.isFrontPage) {
       actions.createPage({
@@ -167,6 +158,7 @@ exports.createPages = async ({ actions, graphql }) => {
       })
     }
   })
+
   services.forEach(service => {
     actions.createPage({
       path: `service/${service.slug}`,
@@ -196,16 +188,4 @@ exports.createPages = async ({ actions, graphql }) => {
       },
     })
   })
-
-
-
-
-  // const { createRedirect } = actions;
-
-  // createRedirect({
-  //   fromPath: '/',
-  //   toPath: '/',
-  //   isPermanent: true,
-  //   redirectInBrowser: true,
-  // });
 }
