@@ -24,6 +24,7 @@
     "gatsby-source-wordpress": "^7.15.0-next.1",
     "gatsby-transformer-sharp": "^5.14.0",
     "graphql": "^16.10.0",
+    "graphql-request": "^7.2.0",
     "html-react-parser": "^5.2.5",
     "install": "^0.13.0",
     "jquery": "^3.7.1",
@@ -50,7 +51,13 @@
     "build:stag": "cross-env GENERATE_SOURCEMAP=false env-cmd -f .env.staging gatsby build",
     "build:prod": "cross-env GENERATE_SOURCEMAP=false env-cmd -f .env.prod gatsby build",
     "start": "env-cmd -f .env.development gatsby develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "cache-seo": "node scripts/cache-seo-data.js",
+    "cache-seo:stag": "cross-env NODE_ENV=staging node scripts/cache-seo-data.js",
+    "cache-seo:prod": "cross-env NODE_ENV=prod node scripts/cache-seo-data.js",
+    "clean-seo-cache": "node scripts/clean-seo-cache.js",
+    "clean-gatsby": "gatsby clean",
+    "clean-all-cache": "npm run clean-gatsby && npm run clean-seo-cache"
   },
   "devDependencies": {
     "ajv": "^7.2.4"
