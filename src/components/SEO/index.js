@@ -10,6 +10,9 @@ const SEO = ({
 
     return (
         <Helmet>
+            <html lang="en-US" />
+            <meta charSet="utf-8" />
+            <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
             {parse(seoData)}
             <link rel="icon" href="/favicon.png" sizes="32x32" />
             <link rel="icon" href="/favicon.png" sizes="192x192" />

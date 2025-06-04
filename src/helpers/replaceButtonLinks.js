@@ -1,7 +1,7 @@
 const cheerio = require('cheerio');
 
 const OLD_DOMAIN = 'https://agencysitestaging.mystagingwebsite.com';
-const NEW_DOMAIN = 'http://localhost:8000';
+const NEW_DOMAIN = process.env.REACT_APP_BASE_URL;
 
 /**
  * Thay domain trong các thẻ <a>, KHÔNG đụng tới <img>

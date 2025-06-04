@@ -147,17 +147,7 @@ exports.createPages = async ({ actions, graphql }) => {
   console.log('Blogs processing completed')
 
   // Create pages
-  pages.forEach(page => {
-    if (!page.isFrontPage) {
-      actions.createPage({
-        path: page.slug,
-        component: path.resolve(`./src/components/templates/dynamicPages.js`),
-        context: {
-          ...page
-        },
-      })
-    }
-  })
+
 
   services.forEach(service => {
     actions.createPage({

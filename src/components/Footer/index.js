@@ -100,7 +100,7 @@ const Footer = () => {
                   <section id="text-19" class="widget widget_text">
                     <div class="textwidget">
                       <div class="ast-flex gap-20">
-                        <a class="btn-bg bg-F2771A btn-size-16 fw-600" href={`${WP_BASE_URL}/get-started-b/`}>FREE ASSESSMENT</a>
+                        <a class="btn-bg bg-F2771A btn-size-16 fw-600" href={`${WP_BASE_URL}/get-started/`}>FREE ASSESSMENT</a>
                         <img loading="lazy" decoding="async" class="alignnone size-full wp-image-38" src={`${WP_BASE_URL}/wp-content/uploads/2024/11/a4m-logo.png`} alt="" width="62" height="60" />
                       </div>
                     </div>
