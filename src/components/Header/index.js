@@ -305,7 +305,9 @@ const Header = ({ to }) => {
                               </li>
                             </ul>
                           </li>
-                          <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-2155" id="mega-menu-item-2155"><a className="mega-menu-link" href={`/our-method-mars/`} tabIndex={0}>Method</a></li>
+                          <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-2155" id="mega-menu-item-2155">
+                            <Link className="mega-menu-link" to={`/our-method-mars/`}  tabIndex={0}>Method</Link>
+                          </li>
                           <li className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-372" id="mega-menu-item-372">
                             <Link className="mega-menu-link" to={`/about-us`} aria-expanded="false" tabIndex={0}>
                               About Us
