@@ -15,6 +15,7 @@ exports.createPages = async ({ actions, graphql }) => {
           'User-Agent': 'Mozilla/5.0 (compatible; GatsbyJS/4.0; +https://agencysitestaging.mystagingwebsite.com/)',
           'Accept': 'application/json',
         },
+        timeout: 30000
       })
 
       const contentType = response.headers.get('content-type')
@@ -88,18 +89,20 @@ exports.createPages = async ({ actions, graphql }) => {
   `)
 
   // truyền seo cho home
+  console.log('Fetching home SEO data...')
   const homeDataSeo = await fetchSeoData({
     url: `https://www.wellnessclinicmarketing.com`,
   });
+  console.log('Home SEO data result:', homeDataSeo)
 
+  // Always create home page programmatically
   actions.createPage({
-    path: `/home`,
-    component: path.resolve(`./src/pages/home/index.js`), // Point đến file Home hiện tại
+    path: `/`,
+    component: path.resolve(`./src/components/templates/home.js`), // Changed path
     context: {
-      seoData: homeDataSeo // Truyền homeDataSeo vào context
+      seoData: homeDataSeo || null
     },
   });
-
 
   // Duyệt và thay thế trong pages
   const pages = await Promise.all(
