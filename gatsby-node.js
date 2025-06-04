@@ -10,7 +10,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   async function fetchSeoData({ url }) {
     try {
-      const response = await fetch(`https://www.wellnessclinicmarketing.com/wp-json/rankmath/v1/getHead?url=${encodeURIComponent(url)}`, {
+      const response = await fetch(`${WP_BASE_URL}/wp-json/rankmath/v1/getHead?url=${encodeURIComponent(url)}`, {
         headers: {
           'User-Agent': 'Mozilla/5.0 (compatible; GatsbyJS/4.0; +https://agencysitestaging.mystagingwebsite.com/)',
           'Accept': 'application/json',
@@ -91,7 +91,7 @@ exports.createPages = async ({ actions, graphql }) => {
   // truyền seo cho home
   console.log('Fetching home SEO data...')
   const homeDataSeo = await fetchSeoData({
-    url: `https://www.wellnessclinicmarketing.com`,
+    url: `${WP_BASE_URL}/`,
   });
   console.log('Home SEO data result:', homeDataSeo)
 
@@ -111,7 +111,7 @@ exports.createPages = async ({ actions, graphql }) => {
         ...node,
         flexibleContentHtml: node.flexibleContentHtml,
         seoData: await fetchSeoData({
-          url: `https://www.wellnessclinicmarketing.com${node.uri}`,
+          url: `${WP_BASE_URL}${node.uri}`,
         }),
       }
     })
@@ -124,7 +124,7 @@ exports.createPages = async ({ actions, graphql }) => {
         ...node,
         flexibleContentHtml: node.flexibleContentHtml,
         seoData: await fetchSeoData({
-          url: `https://www.wellnessclinicmarketing.com${node.uri}`,
+          url: `${WP_BASE_URL}${node.uri}`,
         }),
       }
     })
@@ -137,7 +137,7 @@ exports.createPages = async ({ actions, graphql }) => {
         ...node,
         flexibleContentHtml: node.flexibleContentHtml,
         seoData: await fetchSeoData({
-          url: `https://www.wellnessclinicmarketing.com${node.uri}`,
+          url: `${WP_BASE_URL}${node.uri}`,
         }),
       }
     })
@@ -150,7 +150,7 @@ exports.createPages = async ({ actions, graphql }) => {
         ...node,
         flexibleContentHtml: node.flexibleContentHtml,
         seoData: await fetchSeoData({
-          url: `https://www.wellnessclinicmarketing.com${node.uri}`,
+          url: `${WP_BASE_URL}${node.uri}`,
         }),
       }
     })
