@@ -4,6 +4,7 @@ import Layout from "../../components/layout"
 import Slider from "react-slick";
 import HomeBanner from '../../components/HomeBanner'
 import SEO from '../../components/SEO'
+import { Helmet } from "react-helmet"
 
 const Home = ({ pageContext }) => {
     const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
@@ -334,6 +335,9 @@ const Home = ({ pageContext }) => {
 
     return (
         <Layout>
+            <Helmet>
+                <meta name="keywords" data-otto-pixel="dynamic-seo" content="Medical Wellness, Hormone Optimization, Sexual Wellness, Anti-Aging Procedures, Hormones Optimization, Medical Weight Loss, Cash-based Medical Practice, Practice Accelerator Program, Lead Generating Strategies"></meta>
+            </Helmet>
             <SEO
                 seoData={seoData}
             />
