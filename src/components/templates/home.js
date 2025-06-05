@@ -335,9 +335,9 @@ const Home = ({ pageContext }) => {
 
     return (
         <Layout>
-            <Helmet>
+            {/* <Helmet>
                 <meta name="keywords" data-otto-pixel="dynamic-seo" content="Medical Wellness, Hormone Optimization, Sexual Wellness, Anti-Aging Procedures, Hormones Optimization, Medical Weight Loss, Cash-based Medical Practice, Practice Accelerator Program, Lead Generating Strategies"></meta>
-            </Helmet>
+            </Helmet> */}
             <SEO
                 seoData={seoData}
             />
