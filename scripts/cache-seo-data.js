@@ -7,6 +7,8 @@ require('dotenv').config({
 })
 
 const WP_BASE_URL = process.env.REACT_APP_BASE_URL_SITE || 'https://agencysitestaging.mystagingwebsite.com'
+const SEO_QUERY_URL = `https://headless-plum-eight.vercel.app`
+
 const CACHE_DIR = path.join(__dirname, '../cache/seo')
 
 // Tạo thư mục cache nếu chưa có
@@ -56,7 +58,7 @@ async function cacheSeoData() {
 
     // List of URLs to cache
     const urls = [
-        `${WP_BASE_URL}/`, // Home page
+        `${SEO_QUERY_URL}/`, // Home page
         // Add more URLs here or fetch from GraphQL
     ]
 
@@ -100,19 +102,19 @@ async function cacheSeoData() {
 
         // Add all URLs to cache list
         data.pages.edges.forEach(({ node }) => {
-            urls.push(`${WP_BASE_URL}${node.uri}`)
+            urls.push(`${SEO_QUERY_URL}${node.uri}`)
         })
 
         data.services.nodes.forEach(node => {
-            urls.push(`${WP_BASE_URL}${node.uri}`)
+            urls.push(`${SEO_QUERY_URL}${node.uri}`)
         })
 
         data.events.nodes.forEach(node => {
-            urls.push(`${WP_BASE_URL}${node.uri}`)
+            urls.push(`${SEO_QUERY_URL}${node.uri}`)
         })
 
         data.posts.nodes.forEach(node => {
-            urls.push(`${WP_BASE_URL}${node.uri}`)
+            urls.push(`${SEO_QUERY_URL}${node.uri}`)
         })
 
         console.log(`Found ${urls.length} URLs to cache`)
