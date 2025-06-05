@@ -4,6 +4,7 @@ const html = require(`remark-html`)
 const fs = require('fs')
 
 const CACHE_DIR = path.join(__dirname, 'cache/seo')
+const SEO_QUERY_URL = `https://headless-plum-eight.vercel.app`
 
 function sanitizeFilename(url) {
   return url.replace(/[^a-z0-9]/gi, '_').toLowerCase()
@@ -82,7 +83,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // truyền seo cho home
   console.log('Getting home SEO data from cache...')
-  const homeDataSeo = getCachedSeoData(`${WP_BASE_URL}/`)
+  const homeDataSeo = getCachedSeoData(`${SEO_QUERY_URL}/`)
   console.log('Home SEO data result:', homeDataSeo ? 'SUCCESS' : 'FAILED')
 
   // Always create home page programmatically
@@ -98,7 +99,7 @@ exports.createPages = async ({ actions, graphql }) => {
   console.log('Processing pages...')
   const pages = data.cms.pages.edges.map(({ node }) => {
     console.log(`Processing page: ${node.slug}`)
-    const seoData = getCachedSeoData(`${WP_BASE_URL}${node.uri}`)
+    const seoData = getCachedSeoData(`${SEO_QUERY_URL}${node.uri}`)
     return {
       ...node,
       flexibleContentHtml: node.flexibleContentHtml,
@@ -111,7 +112,7 @@ exports.createPages = async ({ actions, graphql }) => {
   console.log('Processing services...')
   const services = data.cms.services.nodes.map(node => {
     console.log(`Processing service: ${node.slug}`)
-    const seoData = getCachedSeoData(`${WP_BASE_URL}${node.uri}`)
+    const seoData = getCachedSeoData(`${SEO_QUERY_URL}${node.uri}`)
     return {
       ...node,
       flexibleContentHtml: node.flexibleContentHtml,
@@ -124,7 +125,7 @@ exports.createPages = async ({ actions, graphql }) => {
   console.log('Processing events...')
   const events = data.cms.events.nodes.map(node => {
     console.log(`Processing event: ${node.slug}`)
-    const seoData = getCachedSeoData(`${WP_BASE_URL}${node.uri}`)
+    const seoData = getCachedSeoData(`${SEO_QUERY_URL}${node.uri}`)
     return {
       ...node,
       flexibleContentHtml: node.flexibleContentHtml,
@@ -137,7 +138,7 @@ exports.createPages = async ({ actions, graphql }) => {
   console.log('Processing blogs...')
   const blogs = data.cms.posts.nodes.map(node => {
     console.log(`Processing blog: ${node.slug}`)
-    const seoData = getCachedSeoData(`${WP_BASE_URL}${node.uri}`)
+    const seoData = getCachedSeoData(`${SEO_QUERY_URL}${node.uri}`)
     return {
       ...node,
       flexibleContentHtml: node.flexibleContentHtml,
